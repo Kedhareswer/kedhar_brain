@@ -1,0 +1,80 @@
+name: vault-validate
+
+# Runs on every push to verify vault structural invariants. If anything fails,
+# auto-opens an issue tagged `vault-conflict` so the curator finds out without
+# depending on the affected user reporting. See vault/README.md for the
+# conflict-resolution fallback.
+#
+# Checks (deliberately narrow — heavier audit lives in /neo-core:lint-vault):
+#   1. vault/index.md and vault/drafts/index.md parse as expected (have
+#      category headers + at least one list-item line each, OR contain
+#      "(none yet)" for empty categories).
+#   2. vault/log.md and vault/drafts/log.md are append-only and chronologically
+#      ordered (newest entry at the top, dates parse, no out-of-order dates).
+#   3. No unresolved <<<<<<< / ======= / >>>>>>> conflict markers anywhere
+#      under vault/.
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run vault validators
+        id: validate
+        run: |
+          set -euo pipefail
+          node .github/workflows/scripts/vault-validate.mjs
+        continue-on-error: true
+
+      - name: Open issue on failure
+        if: steps.validate.outcome == 'failure' && github.event_name == 'push'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const sha = context.sha;
+            const branch = context.ref.replace('refs/heads/', '');
+            const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${context.runId}`;
+            const title = `[vault-conflict] Vault validation failed on ${branch}@${sha.slice(0, 7)}`;
+            const body = [
+              `**Branch**: \`${branch}\``,
+              `**Commit**: ${sha}`,
+              `**Run**: ${runUrl}`,
+              ``,
+              `Vault validation failed. Likely causes:`,
+              `- Malformed \`vault/index.md\` or \`vault/drafts/index.md\` (missing category headers or list items).`,
+              `- \`vault/log.md\` or \`vault/drafts/log.md\` not append-only / dates out of order.`,
+              `- Unresolved \`<<<<<<<\` / \`=======\` / \`>>>>>>>\` conflict markers in any vault file.`,
+              ``,
+              `See the workflow log linked above for the specific failure. Fix on a feature branch off \`dev\` and let the curator know if it blocks your work.`,
+            ].join("\n");
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              body,
+              labels: ["vault-conflict"],
+            });
+
+      - name: Fail the workflow if validation failed
+        if: steps.validate.outcome == 'failure'
+        run: exit 1

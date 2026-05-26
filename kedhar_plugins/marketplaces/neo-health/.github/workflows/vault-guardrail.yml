@@ -1,0 +1,154 @@
+name: vault-guardrail
+
+# Auto-revert workflow scoped to the boss's identity.
+#
+# The boss has full read access to the vault in his Obsidian (so he can browse
+# tech context with the graph view), AND has an Obsidian Git deploy key with
+# write permission. This workflow is the safety net that prevents accidental
+# edits to the curated tier from sticking.
+#
+# Logic:
+#   1. Trigger: push to default branch.
+#   2. For each commit in the push, check commit.author.email.
+#   3. If author email is NOT in BOSS_EMAILS (env var) -> exit 0, no-op.
+#   4. If it IS in BOSS_EMAILS, check whether the commit touches any path
+#      OUTSIDE vault/drafts/**. If yes, REVERT THE WHOLE COMMIT (single
+#      `git revert HEAD --no-edit && git push`) and open an issue tagged
+#      `boss-overreach` with the offending paths.
+#   5. Whole-commit revert (not partial) for robustness across merge commits,
+#      mixed-path commits, etc.
+#
+# Curator and dev commits are unaffected — this workflow only constrains the
+# boss's identity. Disable temporarily via GitHub Actions UI ("Disable
+# workflow"), permanently by deleting/renaming this file.
+#
+# BOSS_EMAILS is configured as a repo-level variable (Settings -> Variables ->
+# Actions). Format: comma-separated emails. Example:
+# "boss@neo.health,founder@neo.health"
+
+on:
+  push:
+    branches: [dev, main]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  guardrail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history needed for revert)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Identify boss commits and offending paths
+        id: scan
+        env:
+          BOSS_EMAILS: ${{ vars.BOSS_EMAILS }}
+        run: |
+          set -euo pipefail
+          if [ -z "${BOSS_EMAILS:-}" ]; then
+            echo "BOSS_EMAILS variable not set; nothing to enforce. Configure at Settings > Variables > Actions."
+            echo "should_revert=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Get the list of commits in this push.
+          before="${{ github.event.before }}"
+          after="${{ github.event.after }}"
+          if [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            # New branch push — only check the latest commit.
+            commits=$(git rev-parse "$after")
+          else
+            commits=$(git rev-list "$before..$after")
+          fi
+
+          IFS=',' read -ra emails <<< "$BOSS_EMAILS"
+          offending_commit=""
+          offending_paths=""
+
+          for sha in $commits; do
+            author=$(git show -s --format='%ae' "$sha")
+            is_boss="false"
+            for email in "${emails[@]}"; do
+              if [ "$author" = "${email// /}" ]; then
+                is_boss="true"
+                break
+              fi
+            done
+            if [ "$is_boss" != "true" ]; then
+              continue
+            fi
+            # Boss commit — check paths.
+            paths=$(git diff-tree --no-commit-id --name-only -r "$sha" || true)
+            outside=$(echo "$paths" | grep -v -E '^vault/drafts/' || true)
+            if [ -n "$outside" ]; then
+              offending_commit="$sha"
+              offending_paths="$outside"
+              break
+            fi
+          done
+
+          if [ -n "$offending_commit" ]; then
+            echo "Found offending boss commit $offending_commit touching:"
+            echo "$offending_paths"
+            echo "should_revert=true" >> "$GITHUB_OUTPUT"
+            echo "offending_commit=$offending_commit" >> "$GITHUB_OUTPUT"
+            {
+              echo "offending_paths<<PATHS_EOF"
+              echo "$offending_paths"
+              echo "PATHS_EOF"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "No boss-overreach commits in this push."
+            echo "should_revert=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Revert offending commit and push
+        if: steps.scan.outputs.should_revert == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "vault-guardrail[bot]"
+          git config user.email "vault-guardrail@users.noreply.github.com"
+          # If the offending commit is HEAD, revert it. If it's deeper in the
+          # push, revert it specifically (creates a new revert commit).
+          git revert --no-edit ${{ steps.scan.outputs.offending_commit }}
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Open boss-overreach issue
+        if: steps.scan.outputs.should_revert == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const offendingCommit = `${{ steps.scan.outputs.offending_commit }}`;
+            const offendingPaths = `${{ steps.scan.outputs.offending_paths }}`;
+            const { owner, repo } = context.repo;
+            const branch = context.ref.replace('refs/heads/', '');
+            const title = `[boss-overreach] Auto-reverted commit ${offendingCommit.slice(0, 7)} on ${branch}`;
+            const body = [
+              `**Branch**: \`${branch}\``,
+              `**Reverted commit**: ${offendingCommit}`,
+              `**Reason**: commit author is in BOSS_EMAILS and the commit touched paths outside \`vault/drafts/\`.`,
+              ``,
+              `**Offending paths**:`,
+              `\`\`\``,
+              offendingPaths,
+              `\`\`\``,
+              ``,
+              `The whole commit has been reverted (a new revert commit is on \`${branch}\`). The boss will see the revert in his Obsidian on next pull.`,
+              ``,
+              `**To fix**: re-do the work as a separate commit that ONLY touches \`vault/drafts/\`, OR ask the curator to land the curated-tier change on the boss's behalf.`,
+              ``,
+              `To disable this workflow temporarily: GitHub Actions tab → "vault-guardrail" → Disable workflow.`,
+              `To disable permanently: delete \`.github/workflows/vault-guardrail.yml\`.`,
+            ].join("\n");
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              body,
+              labels: ["boss-overreach"],
+            });

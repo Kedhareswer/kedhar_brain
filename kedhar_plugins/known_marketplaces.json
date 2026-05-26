@@ -1,0 +1,27 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "C:\\Users\\mbkhn\\.claude\\plugins\\marketplaces\\claude-plugins-official",
+    "lastUpdated": "2026-05-26T05:46:50.531Z"
+  },
+  "neo-health": {
+    "source": {
+      "source": "github",
+      "repo": "neohealth-org/claude-config",
+      "ref": "dev"
+    },
+    "installLocation": "C:\\Users\\mbkhn\\.claude\\plugins\\marketplaces\\neo-health",
+    "lastUpdated": "2026-05-21T17:28:34.717Z"
+  },
+  "understand-anything": {
+    "source": {
+      "source": "github",
+      "repo": "Lum1104/Understand-Anything"
+    },
+    "installLocation": "C:\\Users\\mbkhn\\.claude\\plugins\\marketplaces\\understand-anything",
+    "lastUpdated": "2026-05-23T15:16:49.738Z"
+  }
+}

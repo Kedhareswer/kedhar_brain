@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "neo-core",
+  "description": "Core skills and agents for the Neo Health monorepo: code review, FHIR/Medplum/HIPAA audits, vault tooling. Skills are namespaced as /neo-core:<skill-name>.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Neo Health Engineering",
+    "email": "engineering@neo.health"
+  }
+}

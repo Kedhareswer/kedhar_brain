@@ -1,0 +1,31 @@
+{
+  "name": "@neo-health/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hosted MCP server for the Neo Health team-shared Claude knowledge base. Serves vault search/read, module summaries, related-PRD lookup, and FHIR-resource introspection over HTTP (for boss/Claude.ai via Custom Connector) and stdio (for devs via .mcp.json). Reads from a local clone of neohealth-org/claude-config that's git-pulled on a schedule.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start:http": "MCP_TRANSPORT=http node dist/server.js",
+    "start:stdio": "MCP_TRANSPORT=stdio node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^16.4.5",
+    "fast-glob": "^3.3.2",
+    "fuse.js": "^7.0.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

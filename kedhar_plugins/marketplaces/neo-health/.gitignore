@@ -1,0 +1,27 @@
+# Dependencies (for the future MCP server in Phase 3)
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Claude Code per-developer files
+.claude/settings.local.json
+.claude/launch.json
+.claude/scheduled_tasks.lock
+.claude/worktrees/
+CLAUDE.local.md

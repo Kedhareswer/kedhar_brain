@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "plugins": {
+    "neo-core@neo-health": [
+      {
+        "scope": "project",
+        "projectPath": "c:\\Users\\mbkhn\\Downloads\\neo-health\\neo-monorepo",
+        "installPath": "C:\\Users\\mbkhn\\.claude\\plugins\\cache\\neo-health\\neo-core\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-21T18:18:03.354Z",
+        "lastUpdated": "2026-05-21T18:18:03.354Z",
+        "gitCommitSha": "0d4c45a4b7cc9c285714e4ef969a315b1fccc251"
+      }
+    ],
+    "understand-anything@understand-anything": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\mbkhn\\.claude\\plugins\\cache\\understand-anything\\understand-anything\\2.7.4",
+        "version": "2.7.4",
+        "installedAt": "2026-05-23T15:18:06.610Z",
+        "lastUpdated": "2026-05-23T15:18:06.610Z",
+        "gitCommitSha": "35699dd82bdaa29f56c9e09aa2878a7254d1a512"
+      }
+    ]
+  }
+}
