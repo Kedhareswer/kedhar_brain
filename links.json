@@ -1,0 +1,61 @@
+{
+  "done__quantampdf": {
+    "github": "https://github.com/Kedhareswer/QuantumPDF_ChatApp_VectorDB",
+    "live": "https://v0-rag-pdf-chatbot-eight.vercel.app"
+  },
+  "done__pdfchatbot": {
+    "github": "https://github.com/Kedhareswer/PDFChatBot",
+    "live": "https://kedhareswer.github.io/PDFChatBot/"
+  },
+  "done__image-to-sketch-model": {
+    "github": "https://github.com/Kedhareswer/MLGeneFunction",
+    "live": "https://image-to-sketch-wine.vercel.app/"
+  },
+  "done__speech-emotion-recognition": {
+    "github": "https://github.com/Kedhareswer/Speech-Emotion-Recognition",
+    "live": null
+  },
+  "done__data-science-portfolio": {
+    "github": "https://github.com/Kedhareswer/MyPortfolio",
+    "live": "https://kedhareswer.github.io/MyPortfolio/"
+  },
+  "done__ai-data-sciene-platform": {
+    "github": "https://github.com/Kedhareswer/Data_Science_Platform",
+    "live": "https://data-science-platform.vercel.app/"
+  },
+  "done__ml-dl-educational-website": {
+    "github": "https://github.com/Kedhareswer/ML_Notebook",
+    "live": "https://ml-notebook.vercel.app/"
+  },
+  "done__interactive-periodic-table": {
+    "github": "https://github.com/Kedhareswer/interactive-periodic-table",
+    "live": "https://v0-interactive-periodic-table-rose.vercel.app/"
+  },
+  "done__llm-agentic-chess": {
+    "github": "https://github.com/Kedhareswer/llm-chess-agentic",
+    "live": "https://llm-chess-agentic.vercel.app/"
+  },
+  "done__traffic-monitoring-system": {
+    "github": "https://github.com/Kedhareswer/Object-Detection-and-Tracking"
+  },
+  "done__image-to-oil-paint-model": {
+    "github": "https://github.com/Kedhareswer/Image-to-Oil_Paint"
+  },
+  "done__thesis-flow-ai": {
+    "live": "https://thesisflow-ai.vercel.app/"
+  },
+  "done__email-spam-case-study": {
+    "github": "https://github.com/Kedhareswer/Mail_Classification_Case_Study",
+    "live": "https://mail-classification-case-study.vercel.app"
+  },
+  "done__100-mini-web-development-projects": {
+    "live": "https://v0-vintage-web-development-app.vercel.app/"
+  },
+  "done__update-portfolio": {
+    "github": "https://github.com/Kedhareswer/blueprint_portfolio",
+    "live": "https://kedhar.vercel.app/"
+  },
+  "done__pillar": {
+    "github": "https://github.com/warpirate/pillar-dynamic-island-for-windows"
+  }
+}

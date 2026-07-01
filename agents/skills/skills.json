@@ -1,0 +1,1909 @@
+{
+  "$schema": "https://agentskills.io/specification/v1/index.schema.json",
+  "name": "kedhar-agent-skills",
+  "version": "1.0.0",
+  "description": "Agent skills for building projects FOR Kedhar — 257 skills (5 custom playbooks + catalog). NOT Kedhar's personal skills.",
+  "categories": [
+    {
+      "id": "kedhar-playbooks",
+      "name": "Kedhar Playbooks (custom)",
+      "count": 5
+    },
+    {
+      "id": "ai-and-llm",
+      "name": "AI & LLM Development",
+      "count": 29
+    },
+    {
+      "id": "rag-and-search",
+      "name": "RAG & Vector Search",
+      "count": 20
+    },
+    {
+      "id": "ml-training",
+      "name": "ML Training & Infra",
+      "count": 9
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "count": 20
+    },
+    {
+      "id": "frontend-web",
+      "name": "Frontend / Web",
+      "count": 12
+    },
+    {
+      "id": "backend-api",
+      "name": "Backend / API",
+      "count": 8
+    },
+    {
+      "id": "database-data",
+      "name": "Database & Data",
+      "count": 10
+    },
+    {
+      "id": "testing-quality",
+      "name": "Testing & Quality",
+      "count": 15
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & CI/CD",
+      "count": 9
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "count": 3
+    },
+    {
+      "id": "design-ui-ux",
+      "name": "Design / UI / UX",
+      "count": 16
+    },
+    {
+      "id": "docs-writing",
+      "name": "Docs & Writing",
+      "count": 5
+    },
+    {
+      "id": "workflow-meta",
+      "name": "Workflow & Meta",
+      "count": 18
+    },
+    {
+      "id": "research-scraping",
+      "name": "Research & Scraping",
+      "count": 15
+    },
+    {
+      "id": "seo-marketing",
+      "name": "SEO & Marketing",
+      "count": 20
+    },
+    {
+      "id": "document-processing",
+      "name": "Document Processing",
+      "count": 9
+    },
+    {
+      "id": "media-content",
+      "name": "Media & Content",
+      "count": 5
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized",
+      "count": 4
+    },
+    {
+      "id": "animation-motion",
+      "name": "Animation & Motion Graphics",
+      "count": 25
+    }
+  ],
+  "skills": [
+    {
+      "name": "agentic-engineering",
+      "folder": "agentic-engineering",
+      "category": "ai-and-llm",
+      "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+      "path": "ai-and-llm/agentic-engineering"
+    },
+    {
+      "name": "ai-agents-architect",
+      "folder": "ai-agents-architect",
+      "category": "ai-and-llm",
+      "description": "Expert in designing and building autonomous AI agents. Masters tool use, memory systems, planning strategies, and multi-agent orchestration. Use when \"build agent, AI agent, autonomous agent, tool use, function calling, multi-agent, agent memory, agent planning, langchain agent, crewai, autogen, claude agent sdk, ai-agents, langchain, autogen, crewai, tool-use, function-calling, autonomous, llm, orchestration\" mentioned.",
+      "path": "ai-and-llm/ai-agents-architect"
+    },
+    {
+      "name": "ai-code-security",
+      "folder": "ai-code-security",
+      "category": "ai-and-llm",
+      "description": "Security vulnerabilities in AI-generated code and LLM applications, covering OWASP Top 10 for LLMs, secure coding patterns, and AI-specific threat modelsUse when \"ai code security, llm vulnerabilities, ai generated code review, owasp llm, secure ai development, security, ai, llm, owasp, code-review, vulnerabilities\" mentioned.",
+      "path": "ai-and-llm/ai-code-security"
+    },
+    {
+      "name": "ai-first-engineering",
+      "folder": "ai-first-engineering",
+      "category": "ai-and-llm",
+      "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+      "path": "ai-and-llm/ai-first-engineering"
+    },
+    {
+      "name": "ai-observability",
+      "folder": "ai-observability",
+      "category": "ai-and-llm",
+      "description": "Implement comprehensive observability for LLM applications including tracing (Langfuse/Helicone), cost tracking, token optimization, RAG evaluation metrics (RAGAS), hallucination detection, and production monitoring. Essential for debugging, optimizing costs, and ensuring AI output quality. Use when \", llm-monitoring, tracing, langfuse, helicone, cost-tracking, ragas, evaluation, hallucination-detection, prompt-caching\" mentioned.",
+      "path": "ai-and-llm/ai-observability"
+    },
+    {
+      "name": "ai-product",
+      "folder": "ai-product",
+      "category": "ai-and-llm",
+      "description": "Every product will be AI-powered. The question is whether you'll build it right or ship a demo that falls apart in production.  This skill covers LLM integration patterns, RAG architecture, prompt engineering that scales, AI UX that users trust, and cost optimization that doesn't bankrupt you. Use when \"keywords, file_patterns, code_patterns, \" mentioned.",
+      "path": "ai-and-llm/ai-product"
+    },
+    {
+      "name": "ai-safety-alignment",
+      "folder": "ai-safety-alignment",
+      "category": "ai-and-llm",
+      "description": "Implement comprehensive safety guardrails for LLM applications including content moderation (OpenAI Moderation API), jailbreak prevention, prompt injection defense, PII detection, topic guardrails, and output validation. Essential for production AI applications handling user-generated content. Use when \", guardrails, content-moderation, prompt-injection, jailbreak-prevention, pii-detection, nemo-guardrails, openai-moderation, llama-guard, safety\" mentioned.",
+      "path": "ai-and-llm/ai-safety-alignment"
+    },
+    {
+      "name": "ai-wrapper-product",
+      "folder": "ai-wrapper-product",
+      "category": "ai-and-llm",
+      "description": "Expert in building products that wrap AI APIs (OpenAI, Anthropic, etc.) into focused tools people will pay for. Not just \"ChatGPT but different\" - products that solve specific problems with AI. Covers prompt engineering for products, cost management, rate limiting, and building defensible AI businesses. Use when \"AI wrapper, GPT product, AI tool, wrap AI, AI SaaS, Claude API product, \" mentioned.",
+      "path": "ai-and-llm/ai-wrapper-product"
+    },
+    {
+      "name": "autogpt-agents",
+      "folder": "autogpt-agents",
+      "category": "ai-and-llm",
+      "description": "Autonomous AI agent platform for building and deploying continuous agents. Use when creating visual workflow agents, deploying persistent autonomous agents, or building complex multi-step AI automation systems.",
+      "path": "ai-and-llm/autogpt-agents"
+    },
+    {
+      "name": "crewai-multi-agent",
+      "folder": "crewai-multi-agent",
+      "category": "ai-and-llm",
+      "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution.",
+      "path": "ai-and-llm/crewai-multi-agent"
+    },
+    {
+      "name": "dspy",
+      "folder": "dspy",
+      "category": "ai-and-llm",
+      "description": "Build complex AI systems with declarative programming, optimize prompts automatically, create modular RAG systems and agents with DSPy - Stanford NLP's framework for systematic LM programming",
+      "path": "ai-and-llm/dspy"
+    },
+    {
+      "name": "evaluating-code-models",
+      "folder": "evaluating-code-models",
+      "category": "ai-and-llm",
+      "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
+      "path": "ai-and-llm/evaluating-code-models"
+    },
+    {
+      "name": "evaluating-llms-harness",
+      "folder": "evaluating-llms-harness",
+      "category": "ai-and-llm",
+      "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
+      "path": "ai-and-llm/evaluating-llms-harness"
+    },
+    {
+      "name": "evaluation-methodology",
+      "folder": "evaluation-methodology",
+      "category": "ai-and-llm",
+      "description": "PluginEval quality methodology — dimensions, rubrics, statistical methods, and scoring formulas. Use this skill when understanding how plugin quality is measured, when interpreting a low score on a specific dimension, when deciding how to improve a skill's triggering accuracy or orchestration fitness, when calibrating scoring thresholds for your marketplace, or when explaining quality badges to external partners like Neon.",
+      "path": "ai-and-llm/evaluation-methodology"
+    },
+    {
+      "name": "langchain",
+      "folder": "langchain",
+      "category": "ai-and-llm",
+      "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
+      "path": "ai-and-llm/langchain"
+    },
+    {
+      "name": "langchain-architecture",
+      "folder": "langchain-architecture",
+      "category": "ai-and-llm",
+      "description": "Design LLM applications using LangChain 1.x and LangGraph for agents, memory, and tool integration. Use when building LangChain applications, implementing AI agents, or creating complex LLM workflows.",
+      "path": "ai-and-llm/langchain-architecture"
+    },
+    {
+      "name": "langgraph",
+      "folder": "langgraph",
+      "category": "ai-and-llm",
+      "description": "Expert in LangGraph - the production-grade framework for building stateful, multi-actor AI applications. Covers graph construction, state management, cycles and branches, persistence with checkpointers, human-in-the-loop patterns, and the ReAct agent pattern. Used in production at LinkedIn, Uber, and 400+ companies. This is LangChain's recommended approach for building agents. Use when \"langgraph, langchain agent, stateful agent, agent graph, react agent, agent workflow, multi-step agent, langgraph, langchain, agents, state-machine, workflow, graph, ai-agents, orchestration\" mentioned.",
+      "path": "ai-and-llm/langgraph"
+    },
+    {
+      "name": "langgraph-docs",
+      "folder": "langgraph-docs",
+      "category": "ai-and-llm",
+      "description": "Fetches and references LangGraph Python documentation to build stateful agents, create multi-agent workflows, and implement human-in-the-loop patterns. Use when the user asks about LangGraph, graph agents, state machines, agent orchestration, LangGraph API, or needs LangGraph implementation guidance.",
+      "path": "ai-and-llm/langgraph-docs"
+    },
+    {
+      "name": "langsmith-observability",
+      "folder": "langsmith-observability",
+      "category": "ai-and-llm",
+      "description": "LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.",
+      "path": "ai-and-llm/langsmith-observability"
+    },
+    {
+      "name": "llamaindex",
+      "folder": "llamaindex",
+      "category": "ai-and-llm",
+      "description": "Data framework for building LLM applications with RAG. Specializes in document ingestion (300+ connectors), indexing, and querying. Features vector indices, query engines, agents, and multi-modal support. Use for document Q&A, chatbots, knowledge retrieval, or building RAG pipelines. Best for data-centric LLM applications.",
+      "path": "ai-and-llm/llamaindex"
+    },
+    {
+      "name": "llm-evaluation",
+      "folder": "llm-evaluation",
+      "category": "ai-and-llm",
+      "description": "Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. Use when testing LLM performance, measuring AI application quality, or establishing evaluation frameworks.",
+      "path": "ai-and-llm/llm-evaluation"
+    },
+    {
+      "name": "long-context",
+      "folder": "long-context",
+      "category": "ai-and-llm",
+      "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
+      "path": "ai-and-llm/long-context"
+    },
+    {
+      "name": "mcp-builder",
+      "folder": "mcp-builder",
+      "category": "ai-and-llm",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "path": "ai-and-llm/mcp-builder"
+    },
+    {
+      "name": "meta-prompt-engineering",
+      "folder": "meta-prompt-engineering",
+      "category": "ai-and-llm",
+      "description": "Use when prompts produce inconsistent or unreliable outputs, need explicit structure and constraints, require safety guardrails or quality checks, involve multi-step reasoning that needs decomposition, need domain expertise encoding, or when user mentions improving prompts, prompt templates, structured prompts, prompt optimization, reliable AI outputs, or prompt patterns.",
+      "path": "ai-and-llm/meta-prompt-engineering"
+    },
+    {
+      "name": "openai-docs",
+      "folder": "openai-docs",
+      "category": "ai-and-llm",
+      "description": "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.",
+      "path": "ai-and-llm/openai-docs"
+    },
+    {
+      "name": "prompt-engineer",
+      "folder": "prompt-engineer",
+      "category": "ai-and-llm",
+      "description": "Expert in designing effective prompts for LLM-powered applications. Masters prompt structure, context management, output formatting, and prompt evaluation. Use when \"prompt engineering, system prompt, few-shot, chain of thought, prompt design, LLM prompt, instruction tuning, prompt template, output format, prompts, llm, gpt, claude, system-prompt, few-shot, chain-of-thought, evaluation\" mentioned.",
+      "path": "ai-and-llm/prompt-engineer"
+    },
+    {
+      "name": "prompt-engineering-patterns",
+      "folder": "prompt-engineering-patterns",
+      "category": "ai-and-llm",
+      "description": "Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production. Use when optimizing prompts, improving LLM outputs, or designing production prompt templates.",
+      "path": "ai-and-llm/prompt-engineering-patterns"
+    },
+    {
+      "name": "prompt-injection-defense",
+      "folder": "prompt-injection-defense",
+      "category": "ai-and-llm",
+      "description": "Defense techniques against prompt injection attacks including direct injection, indirect injection, and jailbreaks - theUse when \"prompt injection, jailbreak prevention, input sanitization, llm security, injection attack, security, prompt-injection, llm, owasp, jailbreak, ai-safety\" mentioned.",
+      "path": "ai-and-llm/prompt-injection-defense"
+    },
+    {
+      "name": "prompt-optimizer",
+      "folder": "prompt-optimizer",
+      "category": "ai-and-llm",
+      "description": ">-",
+      "path": "ai-and-llm/prompt-optimizer"
+    },
+    {
+      "name": "animejs",
+      "folder": "animejs",
+      "category": "animation-motion",
+      "description": "Anime.js adapter patterns for HyperFrames. Use when writing Anime.js animations or timelines inside HyperFrames compositions, registering animations on window.__hfAnime, making Anime.js seek-driven and deterministic, or translating Anime.js examples into render-safe HyperFrames HTML.",
+      "path": "animation-motion/animejs"
+    },
+    {
+      "name": "contribute-catalog",
+      "folder": "contribute-catalog",
+      "category": "animation-motion",
+      "description": "Author a new HyperFrames registry block (caption style, VFX block, transition, lower third) or component (text effect, overlay, snippet) and ship it as an upstream PR to the hyperframes repo. Use ONLY when the user wants to CONTRIBUTE to the public catalog — for in-project caption/transition authoring use the `hyperframes` skill, for installing existing registry items use the `hyperframes-registry` skill.",
+      "path": "animation-motion/contribute-catalog"
+    },
+    {
+      "name": "css-animations",
+      "folder": "css-animations",
+      "category": "animation-motion",
+      "description": "CSS animation adapter patterns for HyperFrames. Use when authoring CSS keyframes, animation-delay based timing, animation-fill-mode, animation-play-state, or CSS-only motion that HyperFrames must seek deterministically during preview and rendering.",
+      "path": "animation-motion/css-animations"
+    },
+    {
+      "name": "gsap",
+      "folder": "gsap",
+      "category": "animation-motion",
+      "description": "GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.",
+      "path": "animation-motion/gsap"
+    },
+    {
+      "name": "gsap-core",
+      "folder": "gsap-core",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user needs timelines, scroll-driven animation, or a framework-agnostic library. GSAP runs in any framework or vanilla JS; powers Webflow Interactions.",
+      "path": "animation-motion/gsap-core"
+    },
+    {
+      "name": "gsap-frameworks",
+      "folder": "gsap-frameworks",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react.",
+      "path": "animation-motion/gsap-frameworks"
+    },
+    {
+      "name": "gsap-performance",
+      "folder": "gsap-performance",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+      "path": "animation-motion/gsap-performance"
+    },
+    {
+      "name": "gsap-plugins",
+      "folder": "gsap-plugins",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.",
+      "path": "animation-motion/gsap-plugins"
+    },
+    {
+      "name": "gsap-react",
+      "folder": "gsap-react",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.",
+      "path": "animation-motion/gsap-react"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "folder": "gsap-scrolltrigger",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.",
+      "path": "animation-motion/gsap-scrolltrigger"
+    },
+    {
+      "name": "gsap-timeline",
+      "folder": "gsap-timeline",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).",
+      "path": "animation-motion/gsap-timeline"
+    },
+    {
+      "name": "gsap-utils",
+      "folder": "gsap-utils",
+      "category": "animation-motion",
+      "description": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.",
+      "path": "animation-motion/gsap-utils"
+    },
+    {
+      "name": "hyperframes",
+      "folder": "hyperframes",
+      "category": "animation-motion",
+      "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For dev-loop CLI commands (init, lint, inspect, preview, render) see the hyperframes-cli skill; for asset preprocessing commands (tts, transcribe, remove-background) see the hyperframes-media skill.",
+      "path": "animation-motion/hyperframes"
+    },
+    {
+      "name": "hyperframes-cli",
+      "folder": "hyperframes-cli",
+      "category": "animation-motion",
+      "description": "HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doctor, browser, info, upgrade). Use when running any of these commands or troubleshooting the HyperFrames build/render environment. For asset preprocessing commands (`tts`, `transcribe`, `remove-background`), invoke the `hyperframes-media` skill instead.",
+      "path": "animation-motion/hyperframes-cli"
+    },
+    {
+      "name": "hyperframes-media",
+      "folder": "hyperframes-media",
+      "category": "animation-motion",
+      "description": "Asset preprocessing for HyperFrames compositions — text-to-speech narration (Kokoro), audio/video transcription (Whisper), and background removal for transparent overlays (u2net). Use when generating voiceover from text, transcribing speech for captions, removing the background from a video or image to use as a transparent overlay, choosing a TTS voice or whisper model, or chaining these (TTS → transcribe → captions). Each command downloads its own model on first run.",
+      "path": "animation-motion/hyperframes-media"
+    },
+    {
+      "name": "hyperframes-registry",
+      "folder": "hyperframes-registry",
+      "category": "animation-motion",
+      "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.",
+      "path": "animation-motion/hyperframes-registry"
+    },
+    {
+      "name": "lottie",
+      "folder": "lottie",
+      "category": "animation-motion",
+      "description": "Lottie and dotLottie adapter patterns for HyperFrames. Use when embedding lottie-web JSON animations, .lottie files, @lottiefiles/dotlottie-web players, registering instances on window.__hfLottie, or making After Effects exports deterministic in HyperFrames.",
+      "path": "animation-motion/lottie"
+    },
+    {
+      "name": "motion-design",
+      "folder": "motion-design",
+      "category": "animation-motion",
+      "description": ">",
+      "path": "animation-motion/motion-design"
+    },
+    {
+      "name": "remotion-best-practices",
+      "folder": "remotion-best-practices",
+      "category": "animation-motion",
+      "description": "Best practices for Remotion - Video creation in React",
+      "path": "animation-motion/remotion-best-practices"
+    },
+    {
+      "name": "remotion-to-hyperframes",
+      "folder": "remotion-to-hyperframes",
+      "category": "animation-motion",
+      "description": "Translate an existing Remotion (React-based) video composition into a HyperFrames HTML composition. Use ONLY when the user explicitly asks to port, convert, migrate, translate, or rewrite a Remotion composition as HyperFrames (e.g. \"port my Remotion project to HyperFrames\"). Do NOT use when (a) authoring a NEW HyperFrames composition (even if A/B-testing a Remotion video); (b) Remotion is mentioned in passing; (c) Remotion code is shared as reference, not for translation; (d) the user wants \"the same video as my Remotion one\" without explicitly asking to migrate the source — treat as a fresh HyperFrames build. When in doubt, default to the `hyperframes` skill. Detects unsupported patterns (useState, useEffect side effects, async calculateMetadata, third-party React component libraries, `@remotion/lambda`) and recommends the runtime interop escape hatch instead of a lossy translation.",
+      "path": "animation-motion/remotion-to-hyperframes"
+    },
+    {
+      "name": "tailwind",
+      "folder": "tailwind",
+      "category": "animation-motion",
+      "description": "Tailwind CSS v4.2 browser-runtime patterns for HyperFrames compositions. Use when scaffolding or editing projects created with `hyperframes init --tailwind`, writing Tailwind utility classes in composition HTML, adding CSS-first Tailwind v4 theme tokens, debugging v3 vs v4 syntax, or deciding when to compile Tailwind to CSS instead of using the browser runtime.",
+      "path": "animation-motion/tailwind"
+    },
+    {
+      "name": "three",
+      "folder": "three",
+      "category": "animation-motion",
+      "description": "Three.js and WebGL adapter patterns for HyperFrames. Use when creating deterministic Three.js scenes, WebGL canvas layers, AnimationMixer timelines, camera motion, shader-driven visuals, or canvas renders that respond to HyperFrames hf-seek events.",
+      "path": "animation-motion/three"
+    },
+    {
+      "name": "typegpu",
+      "folder": "typegpu",
+      "category": "animation-motion",
+      "description": "TypeGPU and raw WebGPU adapter patterns for HyperFrames. Use when creating GPU-rendered compositions with TypeGPU, raw WebGPU, WGSL fragment shaders, compute pipelines, liquid glass effects, particle systems, or any canvas layer driven by navigator.gpu that responds to HyperFrames hf-seek events.",
+      "path": "animation-motion/typegpu"
+    },
+    {
+      "name": "waapi",
+      "folder": "waapi",
+      "category": "animation-motion",
+      "description": "Web Animations API adapter patterns for HyperFrames. Use when authoring element.animate() motion, Animation currentTime seeking, document.getAnimations(), KeyframeEffect timing, fill modes, or native browser animations that must render deterministically in HyperFrames.",
+      "path": "animation-motion/waapi"
+    },
+    {
+      "name": "website-to-hyperframes",
+      "folder": "website-to-hyperframes",
+      "category": "animation-motion",
+      "description": "|",
+      "path": "animation-motion/website-to-hyperframes"
+    },
+    {
+      "name": "api-design",
+      "folder": "api-design",
+      "category": "backend-api",
+      "description": "Expert at designing clean, consistent, and developer-friendly APIs. Covers RESTful conventions, versioning strategies, error handling, pagination, rate limiting, and OpenAPI documentation. Designs APIs that are intuitive to use and easy to evolve. Use when \"API design, REST API, RESTful, API versioning, API documentation, OpenAPI, Swagger, API error handling, pagination, rate limiting, api, rest, http, versioning, pagination, openapi, swagger\" mentioned.",
+      "path": "backend-api/api-design"
+    },
+    {
+      "name": "api-design-principles",
+      "folder": "api-design-principles",
+      "category": "backend-api",
+      "description": "Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers. Use when designing new APIs, reviewing API specifications, or establishing API design standards.",
+      "path": "backend-api/api-design-principles"
+    },
+    {
+      "name": "api-designer",
+      "folder": "api-designer",
+      "category": "backend-api",
+      "description": "API design specialist for REST, GraphQL, gRPC, versioning strategies, and developer experienceUse when \"api design, rest, graphql, grpc, openapi, swagger, versioning, pagination, rate limiting, endpoint, api, rest, graphql, grpc, openapi, swagger, versioning, pagination, rate-limiting, ml-memory\" mentioned.",
+      "path": "backend-api/api-designer"
+    },
+    {
+      "name": "architecture-patterns",
+      "folder": "architecture-patterns",
+      "category": "backend-api",
+      "description": "Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design. Use this skill when designing clean architecture for a new microservice, when refactoring a monolith to use bounded contexts, when implementing hexagonal or onion architecture patterns, or when debugging dependency cycles between application layers.",
+      "path": "backend-api/architecture-patterns"
+    },
+    {
+      "name": "backend-patterns",
+      "folder": "backend-patterns",
+      "category": "backend-api",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "path": "backend-api/backend-patterns"
+    },
+    {
+      "name": "error-handling-patterns",
+      "folder": "error-handling-patterns",
+      "category": "backend-api",
+      "description": "Master error handling patterns across languages including exceptions, Result types, error propagation, and graceful degradation to build resilient applications. Use when implementing error handling, designing APIs, or improving application reliability.",
+      "path": "backend-api/error-handling-patterns"
+    },
+    {
+      "name": "nodejs-backend-patterns",
+      "folder": "nodejs-backend-patterns",
+      "category": "backend-api",
+      "description": "Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js servers, REST APIs, GraphQL backends, or microservices architectures.",
+      "path": "backend-api/nodejs-backend-patterns"
+    },
+    {
+      "name": "rate-limiting",
+      "folder": "rate-limiting",
+      "category": "backend-api",
+      "description": "Patterns for implementing rate limiting to protect APIs from abuse, ensure fair usage, and maintain system stability. Covers token bucket, sliding window, distributed rate limiting, and per-user quotas. Use when \", \" mentioned.",
+      "path": "backend-api/rate-limiting"
+    },
+    {
+      "name": "data-analysis",
+      "folder": "data-analysis",
+      "category": "database-data",
+      "description": "Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any form of structured data exploration. Supports multi-sheet Excel workbooks, aggregation, filtering, joins, and exporting results to CSV/JSON/Markdown.",
+      "path": "database-data/data-analysis"
+    },
+    {
+      "name": "data-analyst",
+      "folder": "data-analyst",
+      "category": "database-data",
+      "description": "|",
+      "path": "database-data/data-analyst"
+    },
+    {
+      "name": "data-quality-frameworks",
+      "folder": "data-quality-frameworks",
+      "category": "database-data",
+      "description": "Implement data quality validation with Great Expectations, dbt tests, and data contracts. Use when building data quality pipelines, implementing validation rules, or establishing data contracts.",
+      "path": "database-data/data-quality-frameworks"
+    },
+    {
+      "name": "data-scraper-agent",
+      "folder": "data-scraper-agent",
+      "category": "database-data",
+      "description": "Build a fully automated AI-powered data collection agent for any public source — job boards, prices, news, GitHub, sports, anything. Scrapes on a schedule, enriches data with a free LLM (Gemini Flash), stores results in Notion/Sheets/Supabase, and learns from user feedback. Runs 100% free on GitHub Actions. Use when the user wants to monitor, collect, or track any public data automatically.",
+      "path": "database-data/data-scraper-agent"
+    },
+    {
+      "name": "data-storytelling",
+      "folder": "data-storytelling",
+      "category": "database-data",
+      "description": "Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations.",
+      "path": "database-data/data-storytelling"
+    },
+    {
+      "name": "database-migration",
+      "folder": "database-migration",
+      "category": "database-data",
+      "description": "Execute database migrations across ORMs and platforms with zero-downtime strategies, data transformation, and rollback procedures. Use when migrating databases, changing schemas, performing data transformations, or implementing zero-downtime deployment strategies.",
+      "path": "database-data/database-migration"
+    },
+    {
+      "name": "neo4j-cli-tools-skill",
+      "folder": "neo4j-cli-tools-skill",
+      "category": "database-data",
+      "description": "Use when working with Neo4j command-line tools including neo4j-admin, cypher-shell, aura-cli, and neo4j-mcp",
+      "path": "database-data/neo4j-cli-tools-skill"
+    },
+    {
+      "name": "neo4j-cypher-skill",
+      "folder": "neo4j-cypher-skill",
+      "category": "database-data",
+      "description": "Use when upgrading Neo4j 4.x and 5.x Cypher queries to 2025.x/2026.x versions",
+      "path": "database-data/neo4j-cypher-skill"
+    },
+    {
+      "name": "neo4j-migration-skill",
+      "folder": "neo4j-migration-skill",
+      "category": "database-data",
+      "description": "Use when upgrading Neo4j drivers to new major versions",
+      "path": "database-data/neo4j-migration-skill"
+    },
+    {
+      "name": "sql-optimization-patterns",
+      "folder": "sql-optimization-patterns",
+      "category": "database-data",
+      "description": "Master SQL query optimization, indexing strategies, and EXPLAIN analysis to dramatically improve database performance and eliminate slow queries. Use when debugging slow queries, designing database schemas, or optimizing application performance.",
+      "path": "database-data/sql-optimization-patterns"
+    },
+    {
+      "name": "3d-modeling",
+      "folder": "3d-modeling",
+      "category": "design-ui-ux",
+      "description": "Expert 3D modeling specialist with deep knowledge of topology, UV mapping, game-ready and film-ready pipelines, DCC tool workflows (Blender, Maya, ZBrush, 3ds Max, Houdini), retopology, LOD systems, and export pipelines. This skill represents years of production experience distilled into actionable guidance. Use when \"3d model, 3d modeling, mesh topology, uv unwrap, uv mapping, retopology, retopo, low poly, high poly, subdivision, subdiv, edge flow, edge loops, polygon modeling, box modeling, hard surface, organic modeling, sculpting, zbrush, blender modeling, maya modeling, 3ds max, LOD, level of detail, game ready mesh, film ready, baking normals, high to low, fbx export, gltf export, texel density, 3d, modeling, topology, uv, game-dev, vfx, blender, maya, zbrush, retopology, lod, hard-surface, organic, sculpting\" mentioned.",
+      "path": "design-ui-ux/3d-modeling"
+    },
+    {
+      "name": "Accessibility Auditor",
+      "folder": "Accessibility Auditor",
+      "category": "design-ui-ux",
+      "description": "Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design. Use when auditing websites for accessibility issues, implementing WCAG 2.1 AA/AAA standards, testing with screen readers, or ensuring ADA compliance. Expert in semantic HTML, keyboard navigation, and assistive technology compatibility.",
+      "path": "design-ui-ux/Accessibility Auditor"
+    },
+    {
+      "name": "ai-brand-kit",
+      "folder": "ai-brand-kit",
+      "category": "design-ui-ux",
+      "description": "Build comprehensive AI-native brand asset systems that maintain consistency across all AI-generated content. Train AI tools on brand guidelines, create reusable prompt libraries, and manage visual/voice assets at scale. Use when \", \" mentioned.",
+      "path": "design-ui-ux/ai-brand-kit"
+    },
+    {
+      "name": "ai-visual-effects",
+      "folder": "ai-visual-effects",
+      "category": "design-ui-ux",
+      "description": "The enhancement layer for AI-generated content. This skill covers AI-powered visual effects, compositing, upscaling, restoration, and post-production magic—turning raw AI output into polished, professional content.  AI generation gets you 80% of the way. Visual effects get you the remaining 20% that separates \"clearly AI\" from \"how did they do that?\" This skill covers ComfyUI workflows, Runway's AI tools, intelligent upscaling, rotoscoping, color grading, and the integration of AI elements into traditional footage.  The practitioners of this skill are technical artists who understand both traditional VFX workflows and the new AI-native approaches that are revolutionizing post-production. Use when \"AI visual effects, VFX, upscale, upscaling, composite, rotoscope, background removal, color grade, inpaint, outpaint, style transfer, enhance, ComfyUI, post-production AI, vfx, visual-effects, compositing, upscaling, post-production, comfyui, enhancement, color-grading\" mentioned.",
+      "path": "design-ui-ux/ai-visual-effects"
+    },
+    {
+      "name": "brand-guidelines",
+      "folder": "brand-guidelines",
+      "category": "design-ui-ux",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "path": "design-ui-ux/brand-guidelines"
+    },
+    {
+      "name": "canvas-design",
+      "folder": "canvas-design",
+      "category": "design-ui-ux",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "path": "design-ui-ux/canvas-design"
+    },
+    {
+      "name": "design-system",
+      "folder": "design-system",
+      "category": "design-ui-ux",
+      "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+      "path": "design-ui-ux/design-system"
+    },
+    {
+      "name": "design-system-patterns",
+      "folder": "design-system-patterns",
+      "category": "design-ui-ux",
+      "description": "Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns. Use when creating design tokens, implementing theme switching, building component libraries, or establishing design system foundations.",
+      "path": "design-ui-ux/design-system-patterns"
+    },
+    {
+      "name": "easter-egg-design",
+      "folder": "easter-egg-design",
+      "category": "design-ui-ux",
+      "description": "Expert in designing hidden features, secret codes, and delightful surprises in products. Covers discovery mechanics, reward calibration, shareability triggers, and maintaining the magic. Knows how to create moments that make users feel special for finding them. Use when \"easter egg, hidden feature, secret code, surprise and delight, konami code, hidden message, secret mode, \" mentioned.",
+      "path": "design-ui-ux/easter-egg-design"
+    },
+    {
+      "name": "kpi-dashboard-design",
+      "folder": "kpi-dashboard-design",
+      "category": "design-ui-ux",
+      "description": "Design effective KPI dashboards with metrics selection, visualization best practices, and real-time monitoring patterns. Use when building business dashboards, selecting metrics, or designing data visualization layouts.",
+      "path": "design-ui-ux/kpi-dashboard-design"
+    },
+    {
+      "name": "pixel-art",
+      "folder": "pixel-art",
+      "category": "design-ui-ux",
+      "description": "Deep pixel art expertise covering fundamentals, limited palettes, dithering patterns, subpixel animation, tile design, retro hardware constraints, and HD-2D hybrid techniques. Knowledge Claude wouldn't normally have from indie masters like Pedro Medeiros (saint11). Use when \"pixel art, sprite art, dithering, limited palette, subpixel animation, tileset, autotile, pillow shading, selective outline, selout, hue shifting, color ramp, NES style, SNES style, HD-2D, Aseprite, retro game art, 8-bit, 16-bit, pixel-art, sprites, animation, retro, indie-games, dithering, palettes, tiles, subpixel, aseprite, NES, SNES, GBA, HD-2D\" mentioned.",
+      "path": "design-ui-ux/pixel-art"
+    },
+    {
+      "name": "pixel-art-sprites",
+      "folder": "pixel-art-sprites",
+      "category": "design-ui-ux",
+      "description": "Specialist in pixel art creation, sprite animation, and limited palette designUse when \"pixel art, sprites, sprite sheet, sprite animation, retro game art, 8-bit, 16-bit, character sprites, tile art, pixel animation, aseprite, pixel-art, sprites, animation, game-art, retro, indie-games, 2d-graphics, sprite-sheets\" mentioned.",
+      "path": "design-ui-ux/pixel-art-sprites"
+    },
+    {
+      "name": "screen-reader-testing",
+      "folder": "screen-reader-testing",
+      "category": "design-ui-ux",
+      "description": "Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support.",
+      "path": "design-ui-ux/screen-reader-testing"
+    },
+    {
+      "name": "ui-design-system",
+      "folder": "ui-design-system",
+      "category": "design-ui-ux",
+      "description": "UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and developer handoff tools. Use for creating design systems, maintaining visual consistency, and facilitating design-dev collaboration.",
+      "path": "design-ui-ux/ui-design-system"
+    },
+    {
+      "name": "ux-researcher-designer",
+      "folder": "ux-researcher-designer",
+      "category": "design-ui-ux",
+      "description": "UX research and design toolkit for Senior UX Designer/Researcher including data-driven persona generation, journey mapping, usability testing frameworks, and research synthesis. Use for user research, persona creation, journey mapping, and design validation.",
+      "path": "design-ui-ux/ux-researcher-designer"
+    },
+    {
+      "name": "visual-design-foundations",
+      "folder": "visual-design-foundations",
+      "category": "design-ui-ux",
+      "description": "Apply typography, color theory, spacing systems, and iconography principles to create cohesive visual designs. Use when establishing design tokens, building style guides, or improving visual hierarchy and consistency.",
+      "path": "design-ui-ux/visual-design-foundations"
+    },
+    {
+      "name": "changelog-automation",
+      "folder": "changelog-automation",
+      "category": "devops",
+      "description": "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions.",
+      "path": "devops/changelog-automation"
+    },
+    {
+      "name": "dependency-upgrade",
+      "folder": "dependency-upgrade",
+      "category": "devops",
+      "description": "Manage major dependency version upgrades with compatibility analysis, staged rollout, and comprehensive testing. Use when upgrading framework versions, updating major dependencies, or managing breaking changes in libraries.",
+      "path": "devops/dependency-upgrade"
+    },
+    {
+      "name": "deployment-patterns",
+      "folder": "deployment-patterns",
+      "category": "devops",
+      "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.",
+      "path": "devops/deployment-patterns"
+    },
+    {
+      "name": "deployment-pipeline-design",
+      "folder": "deployment-pipeline-design",
+      "category": "devops",
+      "description": "Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use this skill when designing zero-downtime deployment pipelines, implementing canary rollout strategies, setting up multi-environment promotion workflows, or debugging failed deployment gates in CI/CD.",
+      "path": "devops/deployment-pipeline-design"
+    },
+    {
+      "name": "github-actions-templates",
+      "folder": "github-actions-templates",
+      "category": "devops",
+      "description": "Create production-ready GitHub Actions workflows for automated testing, building, and deploying applications. Use when setting up CI/CD with GitHub Actions, automating development workflows, or creating reusable workflow templates.",
+      "path": "devops/github-actions-templates"
+    },
+    {
+      "name": "gitlab-ci-patterns",
+      "folder": "gitlab-ci-patterns",
+      "category": "devops",
+      "description": "Build GitLab CI/CD pipelines with multi-stage workflows, caching, and distributed runners for scalable automation. Use when implementing GitLab CI/CD, optimizing pipeline performance, or setting up automated testing and deployment.",
+      "path": "devops/gitlab-ci-patterns"
+    },
+    {
+      "name": "using-git-worktrees",
+      "folder": "using-git-worktrees",
+      "category": "devops",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification",
+      "path": "devops/using-git-worktrees"
+    },
+    {
+      "name": "workflow-orchestration-patterns",
+      "folder": "workflow-orchestration-patterns",
+      "category": "devops",
+      "description": "Design durable workflows with Temporal for distributed systems. Covers workflow vs activity separation, saga patterns, state management, and determinism constraints. Use when building long-running processes, distributed transactions, or microservice orchestration.",
+      "path": "devops/workflow-orchestration-patterns"
+    },
+    {
+      "name": "workflow-patterns",
+      "folder": "workflow-patterns",
+      "category": "devops",
+      "description": "Use this skill when implementing tasks according to Conductor's TDD workflow, handling phase checkpoints, managing git commits for tasks, or understanding the verification protocol.",
+      "path": "devops/workflow-patterns"
+    },
+    {
+      "name": "architecture-decision-records",
+      "folder": "architecture-decision-records",
+      "category": "docs-writing",
+      "description": "Write and maintain Architecture Decision Records (ADRs) following best practices for technical decision documentation. Use when documenting significant technical decisions, reviewing past architectural choices, or establishing decision processes.",
+      "path": "docs-writing/architecture-decision-records"
+    },
+    {
+      "name": "doc",
+      "folder": "doc",
+      "category": "docs-writing",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "path": "docs-writing/doc"
+    },
+    {
+      "name": "meeting-notes",
+      "folder": "meeting-notes",
+      "category": "docs-writing",
+      "description": "|",
+      "path": "docs-writing/meeting-notes"
+    },
+    {
+      "name": "writing-plans",
+      "folder": "writing-plans",
+      "category": "docs-writing",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "path": "docs-writing/writing-plans"
+    },
+    {
+      "name": "writing-skills",
+      "folder": "writing-skills",
+      "category": "docs-writing",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+      "path": "docs-writing/writing-skills"
+    },
+    {
+      "name": "docling",
+      "folder": "docling",
+      "category": "document-processing",
+      "description": "Use when working with Docling document conversion, PDF extraction, table and cell structure, bbox overlays, chunking, model selection, or the repo's viewer and benchmark outputs.",
+      "path": "document-processing/docling"
+    },
+    {
+      "name": "Extract structured data from unstructured files (PDF, PPTX, DOCX...)",
+      "folder": "extract-structured-data-from-unstructured-files-pdf-pptx-docx",
+      "category": "document-processing",
+      "description": "Invoke this skill BEFORE implementing any structured data extraction from documents to learn the correct llama_cloud_services API usage. Required reading before writing extraction code. Requires llama_cloud_services package and LLAMA_CLOUD_API_KEY as an environment variable.",
+      "path": "document-processing/extract-structured-data-from-unstructured-files-pdf-pptx-docx"
+    },
+    {
+      "name": "liteparse",
+      "folder": "liteparse",
+      "category": "document-processing",
+      "description": "Use this skill when the user asks to parse, perform multi-format document conversion or spatially extract text from an unstructured file (PDF, DOCX, PPTX, XLSX, images, etc.) locally without cloud dependencies.",
+      "path": "document-processing/liteparse"
+    },
+    {
+      "name": "pdf",
+      "folder": "pdf",
+      "category": "document-processing",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "path": "document-processing/pdf"
+    },
+    {
+      "name": "PDF Processing",
+      "folder": "pdf-processing",
+      "category": "document-processing",
+      "description": "Invoke this skill BEFORE implementing any text extraction/parsing logic to learn how to use LlamaParse to process any document accurately. Requires llama_cloud_services package and LLAMA_CLOUD_API_KEY as an environment variable.",
+      "path": "document-processing/pdf-processing"
+    },
+    {
+      "name": "ppt-generation",
+      "folder": "ppt-generation",
+      "category": "document-processing",
+      "description": "Use this skill when the user requests to generate, create, or make presentations (PPT/PPTX). Creates visually rich slides by generating images for each slide and composing them into a PowerPoint file.",
+      "path": "document-processing/ppt-generation"
+    },
+    {
+      "name": "pptx",
+      "folder": "pptx",
+      "category": "document-processing",
+      "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+      "path": "document-processing/pptx"
+    },
+    {
+      "name": "spreadsheet",
+      "folder": "spreadsheet",
+      "category": "document-processing",
+      "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.",
+      "path": "document-processing/spreadsheet"
+    },
+    {
+      "name": "xlsx",
+      "folder": "xlsx",
+      "category": "document-processing",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
+      "path": "document-processing/xlsx"
+    },
+    {
+      "name": "3d-web-experience",
+      "folder": "3d-web-experience",
+      "category": "frontend-web",
+      "description": "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences. Use when \"3D website, three.js, WebGL, react three fiber, 3D experience, spline, product configurator, \" mentioned.",
+      "path": "frontend-web/3d-web-experience"
+    },
+    {
+      "name": "develop-web-game",
+      "folder": "develop-web-game",
+      "category": "frontend-web",
+      "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
+      "path": "frontend-web/develop-web-game"
+    },
+    {
+      "name": "frontend-design",
+      "folder": "frontend-design",
+      "category": "frontend-web",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "path": "frontend-web/frontend-design"
+    },
+    {
+      "name": "frontend-slides",
+      "folder": "frontend-slides",
+      "category": "frontend-web",
+      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
+      "path": "frontend-web/frontend-slides"
+    },
+    {
+      "name": "fullstack-developer",
+      "folder": "fullstack-developer",
+      "category": "frontend-web",
+      "description": "|",
+      "path": "frontend-web/fullstack-developer"
+    },
+    {
+      "name": "nextjs-app-router-patterns",
+      "folder": "nextjs-app-router-patterns",
+      "category": "frontend-web",
+      "description": "Master Next.js 14+ App Router with Server Components, streaming, parallel routes, and advanced data fetching. Use when building Next.js applications, implementing SSR/SSG, or optimizing React Server Components.",
+      "path": "frontend-web/nextjs-app-router-patterns"
+    },
+    {
+      "name": "nextjs-turbopack",
+      "folder": "nextjs-turbopack",
+      "category": "frontend-web",
+      "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+      "path": "frontend-web/nextjs-turbopack"
+    },
+    {
+      "name": "react-doctor",
+      "folder": "react-doctor",
+      "category": "frontend-web",
+      "description": "Run after making React changes to catch issues early. Use when reviewing code, finishing a feature, or fixing bugs in a React project.",
+      "path": "frontend-web/react-doctor"
+    },
+    {
+      "name": "react-native-architecture",
+      "folder": "react-native-architecture",
+      "category": "frontend-web",
+      "description": "Build production React Native apps with Expo, navigation, native modules, offline sync, and cross-platform patterns. Use when developing mobile apps, implementing native integrations, or architecting React Native projects.",
+      "path": "frontend-web/react-native-architecture"
+    },
+    {
+      "name": "react-state-management",
+      "folder": "react-state-management",
+      "category": "frontend-web",
+      "description": "Master modern React state management with Redux Toolkit, Zustand, Jotai, and React Query. Use when setting up global state, managing server state, or choosing between state management solutions.",
+      "path": "frontend-web/react-state-management"
+    },
+    {
+      "name": "typescript-advanced-types",
+      "folder": "typescript-advanced-types",
+      "category": "frontend-web",
+      "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.",
+      "path": "frontend-web/typescript-advanced-types"
+    },
+    {
+      "name": "web-component-design",
+      "folder": "web-component-design",
+      "category": "frontend-web",
+      "description": "Master React, Vue, and Svelte component patterns including CSS-in-JS, composition strategies, and reusable component architecture. Use when building UI component libraries, designing component APIs, or implementing frontend design systems.",
+      "path": "frontend-web/web-component-design"
+    },
+    {
+      "name": "kedhar-fastapi-backend",
+      "folder": "kedhar-fastapi-backend",
+      "category": "kedhar-playbooks",
+      "description": "Build a FastAPI backend with Kedhar's conventions — clean layout, Pydantic v2 models, async endpoints, CORS for web frontends, error handling, env config, and deployment. Use when building a Python API, backend service, or REST endpoints for Kedhar. Keywords \"FastAPI, python backend, REST API, endpoints, Pydantic, async API, CORS, microservice, uvicorn\".",
+      "path": "kedhar-playbooks/kedhar-fastapi-backend"
+    },
+    {
+      "name": "kedhar-ml-model-to-webapp",
+      "folder": "kedhar-ml-model-to-webapp",
+      "category": "kedhar-playbooks",
+      "description": "Turn a trained ML/DL model (TensorFlow/Keras/PyTorch/scikit-learn) into a deployable app — a FastAPI inference service plus a lightweight web UI (or Streamlit) — then deploy. Use when shipping a model or notebook as a demo/app for Kedhar — image-to-X, classifiers, computer vision, audio/speech, emotion recognition. Keywords \"deploy model, model to app, inference API, FastAPI model serving, streamlit, ML demo, computer vision app, image to\".",
+      "path": "kedhar-playbooks/kedhar-ml-model-to-webapp"
+    },
+    {
+      "name": "kedhar-nextjs-vercel-app",
+      "folder": "kedhar-nextjs-vercel-app",
+      "category": "kedhar-playbooks",
+      "description": "Scaffold and ship a Next.js + TypeScript + Tailwind + shadcn/ui web app deployed to Vercel — Kedhar's default web stack. Use when building a web app, frontend, dashboard, landing page, or interactive site for Kedhar, or deploying a Next.js app to Vercel. Keywords \"next.js, nextjs, react, frontend, web app, tailwind, shadcn, vercel, dashboard, landing page\".",
+      "path": "kedhar-playbooks/kedhar-nextjs-vercel-app"
+    },
+    {
+      "name": "kedhar-project-conventions",
+      "folder": "kedhar-project-conventions",
+      "category": "kedhar-playbooks",
+      "description": "Kedhar's house style for any project an agent builds for him — default tech stack, repo structure, README format, naming, and deployment targets. Use FIRST when starting, scaffolding, or documenting ANY new project for Kedhar, or when choosing stack/deploy defaults. Keywords \"new project, scaffold, project setup, conventions, house style, README, deploy, Vercel, repo structure\".",
+      "path": "kedhar-playbooks/kedhar-project-conventions"
+    },
+    {
+      "name": "kedhar-rag-webapp",
+      "folder": "kedhar-rag-webapp",
+      "category": "kedhar-playbooks",
+      "description": "Build a Retrieval-Augmented Generation (chat-with-documents) web app the way Kedhar does — ingest/parse docs, chunk, embed, vector store, multi-provider LLM, citations, guardrails, and evaluation. Use when building a RAG app, PDF/document QA, chatbot over documents, knowledge base, or semantic search app for Kedhar. Keywords \"RAG, retrieval augmented generation, chat with PDF, document QA, vector search, embeddings, knowledge base, citations, semantic search\".",
+      "path": "kedhar-playbooks/kedhar-rag-webapp"
+    },
+    {
+      "name": "imagegen",
+      "folder": "imagegen",
+      "category": "media-content",
+      "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
+      "path": "media-content/imagegen"
+    },
+    {
+      "name": "screenshot",
+      "folder": "screenshot",
+      "category": "media-content",
+      "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+      "path": "media-content/screenshot"
+    },
+    {
+      "name": "sora",
+      "folder": "sora",
+      "category": "media-content",
+      "description": "Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\\u2019s video API using the bundled CLI (`scripts/sora.py`), including requests like \\u201cgenerate AI video,\\u201d \\u201cSora,\\u201d \\u201cvideo remix,\\u201d \\u201cdownload video/thumbnail/spritesheet,\\u201d and batch video generation; requires `OPENAI_API_KEY` and Sora API access.",
+      "path": "media-content/sora"
+    },
+    {
+      "name": "speech",
+      "folder": "speech",
+      "category": "media-content",
+      "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+      "path": "media-content/speech"
+    },
+    {
+      "name": "transcribe",
+      "folder": "transcribe",
+      "category": "media-content",
+      "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+      "path": "media-content/transcribe"
+    },
+    {
+      "name": "deepspeed",
+      "folder": "deepspeed",
+      "category": "ml-training",
+      "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention",
+      "path": "ml-training/deepspeed"
+    },
+    {
+      "name": "huggingface-accelerate",
+      "folder": "huggingface-accelerate",
+      "category": "ml-training",
+      "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
+      "path": "ml-training/huggingface-accelerate"
+    },
+    {
+      "name": "knowledge-distillation",
+      "folder": "knowledge-distillation",
+      "category": "ml-training",
+      "description": "Compress large language models using knowledge distillation from teacher to student models. Use when deploying smaller models with retained performance, transferring GPT-4 capabilities to open-source models, or reducing inference costs. Covers temperature scaling, soft targets, reverse KLD, logit distillation, and MiniLLM training strategies.",
+      "path": "ml-training/knowledge-distillation"
+    },
+    {
+      "name": "ml-pipeline-workflow",
+      "folder": "ml-pipeline-workflow",
+      "category": "ml-training",
+      "description": "Build end-to-end MLOps pipelines from data preparation through model training, validation, and production deployment. Use when creating ML pipelines, implementing MLOps practices, or automating model training and deployment workflows.",
+      "path": "ml-training/ml-pipeline-workflow"
+    },
+    {
+      "name": "moe-training",
+      "folder": "moe-training",
+      "category": "ml-training",
+      "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.",
+      "path": "ml-training/moe-training"
+    },
+    {
+      "name": "nemo-curator",
+      "folder": "nemo-curator",
+      "category": "ml-training",
+      "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+      "path": "ml-training/nemo-curator"
+    },
+    {
+      "name": "pytorch-fsdp",
+      "folder": "pytorch-fsdp",
+      "category": "ml-training",
+      "description": "Expert guidance for Fully Sharded Data Parallel training with PyTorch FSDP - parameter sharding, mixed precision, CPU offloading, FSDP2",
+      "path": "ml-training/pytorch-fsdp"
+    },
+    {
+      "name": "pytorch-lightning",
+      "folder": "pytorch-lightning",
+      "category": "ml-training",
+      "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
+      "path": "ml-training/pytorch-lightning"
+    },
+    {
+      "name": "training-llms-megatron",
+      "folder": "training-llms-megatron",
+      "category": "ml-training",
+      "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
+      "path": "ml-training/training-llms-megatron"
+    },
+    {
+      "name": "async-python-patterns",
+      "folder": "async-python-patterns",
+      "category": "python",
+      "description": "Master Python asyncio, concurrent programming, and async/await patterns for high-performance applications. Use when building async APIs, concurrent systems, or I/O-bound applications requiring non-blocking operations.",
+      "path": "python/async-python-patterns"
+    },
+    {
+      "name": "fastapi",
+      "folder": "fastapi",
+      "category": "python",
+      "description": "FastAPI best practices and conventions. Use when working with FastAPI APIs and Pydantic models for them. Keeps FastAPI code clean and up to date with the latest features and patterns, updated with new versions. Write new code or refactor and update old code.",
+      "path": "python/fastapi"
+    },
+    {
+      "name": "fastapi-templates",
+      "folder": "fastapi-templates",
+      "category": "python",
+      "description": "Create production-ready FastAPI projects with async patterns, dependency injection, and comprehensive error handling. Use when building new FastAPI applications or setting up backend API projects.",
+      "path": "python/fastapi-templates"
+    },
+    {
+      "name": "jupyter-notebook",
+      "folder": "jupyter-notebook",
+      "category": "python",
+      "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+      "path": "python/jupyter-notebook"
+    },
+    {
+      "name": "python-anti-patterns",
+      "folder": "python-anti-patterns",
+      "category": "python",
+      "description": "Use this skill when reviewing Python code for common anti-patterns to avoid. Use as a checklist when reviewing code, before finalizing implementations, or when debugging issues that might stem from known bad practices.",
+      "path": "python/python-anti-patterns"
+    },
+    {
+      "name": "python-background-jobs",
+      "folder": "python-background-jobs",
+      "category": "python",
+      "description": "Python background job patterns including task queues, workers, and event-driven architecture. Use when implementing async task processing, job queues, long-running operations, or decoupling work from request/response cycles.",
+      "path": "python/python-background-jobs"
+    },
+    {
+      "name": "python-code-style",
+      "folder": "python-code-style",
+      "category": "python",
+      "description": "Python code style, linting, formatting, naming conventions, and documentation standards. Use when writing new code, reviewing style, configuring linters, writing docstrings, or establishing project standards.",
+      "path": "python/python-code-style"
+    },
+    {
+      "name": "python-design-patterns",
+      "folder": "python-design-patterns",
+      "category": "python",
+      "description": "Python design patterns including KISS, Separation of Concerns, Single Responsibility, and composition over inheritance. Use this skill when designing a new service or component from scratch and choosing how to layer responsibilities, when refactoring a God class or monolithic function that has grown too large, when deciding whether to add a new abstraction or live with duplication, when evaluating a pull request for structural issues like tight coupling or leaking internal types, when choosing between inheritance and composition for a new class hierarchy, or when a codebase is becoming hard to test because of entangled I/O and business logic.",
+      "path": "python/python-design-patterns"
+    },
+    {
+      "name": "python-error-handling",
+      "folder": "python-error-handling",
+      "category": "python",
+      "description": "Python error handling patterns including input validation, exception hierarchies, and partial failure handling. Use when implementing validation logic, designing exception strategies, handling batch processing failures, or building robust APIs.",
+      "path": "python/python-error-handling"
+    },
+    {
+      "name": "python-expert",
+      "folder": "python-expert",
+      "category": "python",
+      "description": "|",
+      "path": "python/python-expert"
+    },
+    {
+      "name": "python-observability",
+      "folder": "python-observability",
+      "category": "python",
+      "description": "Python observability patterns including structured logging, metrics, and distributed tracing. Use when adding logging, implementing metrics collection, setting up tracing, or debugging production systems.",
+      "path": "python/python-observability"
+    },
+    {
+      "name": "python-packaging",
+      "folder": "python-packaging",
+      "category": "python",
+      "description": "Create distributable Python packages with proper project structure, setup.py/pyproject.toml, and publishing to PyPI. Use when packaging Python libraries, creating CLI tools, or distributing Python code.",
+      "path": "python/python-packaging"
+    },
+    {
+      "name": "python-patterns",
+      "folder": "python-patterns",
+      "category": "python",
+      "description": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.",
+      "path": "python/python-patterns"
+    },
+    {
+      "name": "python-performance-optimization",
+      "folder": "python-performance-optimization",
+      "category": "python",
+      "description": "Profile and optimize Python code using cProfile, memory profilers, and performance best practices. Use when debugging slow Python code, optimizing bottlenecks, or improving application performance.",
+      "path": "python/python-performance-optimization"
+    },
+    {
+      "name": "python-project-structure",
+      "folder": "python-project-structure",
+      "category": "python",
+      "description": "Python project organization, module architecture, and public API design. Use when setting up new projects, organizing modules, defining public interfaces with __all__, or planning directory layouts.",
+      "path": "python/python-project-structure"
+    },
+    {
+      "name": "python-resource-management",
+      "folder": "python-resource-management",
+      "category": "python",
+      "description": "Python resource management with context managers, cleanup patterns, and streaming. Use when managing connections, file handles, implementing cleanup logic, or building streaming responses with accumulated state.",
+      "path": "python/python-resource-management"
+    },
+    {
+      "name": "python-testing",
+      "folder": "python-testing",
+      "category": "python",
+      "description": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
+      "path": "python/python-testing"
+    },
+    {
+      "name": "python-testing-patterns",
+      "folder": "python-testing-patterns",
+      "category": "python",
+      "description": "Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.",
+      "path": "python/python-testing-patterns"
+    },
+    {
+      "name": "python-type-safety",
+      "folder": "python-type-safety",
+      "category": "python",
+      "description": "Python type safety with type hints, generics, protocols, and strict type checking. Use when adding type annotations, implementing generic classes, defining structural interfaces, or configuring mypy/pyright.",
+      "path": "python/python-type-safety"
+    },
+    {
+      "name": "uv-package-manager",
+      "folder": "uv-package-manager",
+      "category": "python",
+      "description": "Master the uv package manager for fast Python dependency management, virtual environments, and modern Python project workflows. Use when setting up Python projects, managing dependencies, or optimizing Python development workflows with uv.",
+      "path": "python/uv-package-manager"
+    },
+    {
+      "name": "chroma",
+      "folder": "chroma",
+      "category": "rag-and-search",
+      "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.",
+      "path": "rag-and-search/chroma"
+    },
+    {
+      "name": "deep-research",
+      "folder": "deep-research",
+      "category": "rag-and-search",
+      "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+      "path": "rag-and-search/deep-research"
+    },
+    {
+      "name": "embedding-fusion-strategy",
+      "folder": "embedding-fusion-strategy",
+      "category": "rag-and-search",
+      "description": "Use when designing embedding strategies that fuse semantic and structural information for knowledge graphs. Invoke when user mentions node embeddings, structural embeddings, semantic embeddings, contrastive alignment, embedding fusion, vector representations for graphs, or combining text and graph signals. Provides embedding selection, fusion design, and implementation guidance.",
+      "path": "rag-and-search/embedding-fusion-strategy"
+    },
+    {
+      "name": "embedding-strategies",
+      "folder": "embedding-strategies",
+      "category": "rag-and-search",
+      "description": "Select and optimize embedding models for semantic search and RAG applications. Use when choosing embedding models, implementing chunking strategies, or optimizing embedding quality for specific domains.",
+      "path": "rag-and-search/embedding-strategies"
+    },
+    {
+      "name": "faiss",
+      "folder": "faiss",
+      "category": "rag-and-search",
+      "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications.",
+      "path": "rag-and-search/faiss"
+    },
+    {
+      "name": "graphrag-evaluation",
+      "folder": "graphrag-evaluation",
+      "category": "rag-and-search",
+      "description": "Use when evaluating GraphRAG system quality across knowledge graph completeness, retrieval relevance, answer correctness, and reasoning verification. Invoke when user mentions evaluate GraphRAG, quality metrics, benchmark, hallucination reduction, answer correctness, multi-step reasoning evaluation, test my GraphRAG, or measure RAG performance. Provides evaluation frameworks, metric selection, and testing protocols.",
+      "path": "rag-and-search/graphrag-evaluation"
+    },
+    {
+      "name": "graphrag-system-design",
+      "folder": "graphrag-system-design",
+      "category": "rag-and-search",
+      "description": "Use when designing complete GraphRAG systems that combine graph retrieval with LLM reasoning. Invoke when user mentions GraphRAG system, technology stack, Neo4j with LLM, LangChain graph, LlamaIndex knowledge graph, community detection for RAG, hybrid symbol-vector integration, production GraphRAG, or domain-specific graph RAG. Provides architecture design, technology selection, and domain customization guidance.",
+      "path": "rag-and-search/graphrag-system-design"
+    },
+    {
+      "name": "hybrid-search-implementation",
+      "folder": "hybrid-search-implementation",
+      "category": "rag-and-search",
+      "description": "Combine vector and keyword search for improved retrieval. Use when implementing RAG systems, building search engines, or when neither approach alone provides sufficient recall.",
+      "path": "rag-and-search/hybrid-search-implementation"
+    },
+    {
+      "name": "knowledge-graph-construction",
+      "folder": "knowledge-graph-construction",
+      "category": "rag-and-search",
+      "description": "Use when designing and building knowledge graphs from unstructured data. Invoke when user mentions entity extraction, schema design, LPG vs RDF, graph data model, ontology alignment, knowledge graph construction, or building a KG for RAG. Provides extraction pipelines, schema patterns, and data model selection guidance.",
+      "path": "rag-and-search/knowledge-graph-construction"
+    },
+    {
+      "name": "pinecone",
+      "folder": "pinecone",
+      "category": "rag-and-search",
+      "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure.",
+      "path": "rag-and-search/pinecone"
+    },
+    {
+      "name": "qdrant-vector-search",
+      "folder": "qdrant-vector-search",
+      "category": "rag-and-search",
+      "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
+      "path": "rag-and-search/qdrant-vector-search"
+    },
+    {
+      "name": "rag-engineer",
+      "folder": "rag-engineer",
+      "category": "rag-and-search",
+      "description": "Expert in building Retrieval-Augmented Generation systems. Masters embedding models, vector databases, chunking strategies, and retrieval optimization for LLM applications. Use when \"building RAG, vector search, embeddings, semantic search, document retrieval, context retrieval, knowledge base, LLM with documents, chunking strategy, pinecone, weaviate, chromadb, pgvector, rag, embeddings, vector-database, retrieval, semantic-search, llm, ai, langchain, llamaindex\" mentioned.",
+      "path": "rag-and-search/rag-engineer"
+    },
+    {
+      "name": "rag-implementation",
+      "folder": "rag-implementation",
+      "category": "rag-and-search",
+      "description": "Retrieval-Augmented Generation patterns including chunking, embeddings, vector stores, and retrieval optimizationUse when \"rag, retrieval augmented, vector search, embeddings, semantic search, document qa, rag, retrieval, embeddings, vector, search, llm\" mentioned.",
+      "path": "rag-and-search/rag-implementation"
+    },
+    {
+      "name": "Retrieve relevant information through RAG",
+      "folder": "retrieve-relevant-information-through-rag",
+      "category": "rag-and-search",
+      "description": "Leverage Retrieval Augmented Generation to retrieve relevant information from a a LlamaCloud Index. Requires the llama_cloud_services package and LLAMA_CLOUD_API_KEY as an environment variable.",
+      "path": "rag-and-search/retrieve-relevant-information-through-rag"
+    },
+    {
+      "name": "semantic-search",
+      "folder": "semantic-search",
+      "category": "rag-and-search",
+      "description": "Build production-ready semantic search systems using vector databases, embeddings, and retrieval-augmented generation (RAG). Covers vector DB selection (Pinecone/Qdrant/Weaviate), embedding models (OpenAI/Voyage/Cohere), chunking strategies, hybrid search, and reranking for high-quality retrieval. Use when \", vector-search, embeddings, rag, pinecone, qdrant, weaviate, llama-index, langchain, hybrid-search, reranking\" mentioned.",
+      "path": "rag-and-search/semantic-search"
+    },
+    {
+      "name": "sentence-transformers",
+      "folder": "sentence-transformers",
+      "category": "rag-and-search",
+      "description": "Framework for state-of-the-art sentence, text, and image embeddings. Provides 5000+ pre-trained models for semantic similarity, clustering, and retrieval. Supports multilingual, domain-specific, and multimodal models. Use for generating embeddings for RAG, semantic search, or similarity tasks. Best for production embedding generation.",
+      "path": "rag-and-search/sentence-transformers"
+    },
+    {
+      "name": "similarity-search-patterns",
+      "folder": "similarity-search-patterns",
+      "category": "rag-and-search",
+      "description": "Implement efficient similarity search with vector databases. Use when building semantic search, implementing nearest neighbor queries, or optimizing retrieval performance.",
+      "path": "rag-and-search/similarity-search-patterns"
+    },
+    {
+      "name": "vector-index-tuning",
+      "folder": "vector-index-tuning",
+      "category": "rag-and-search",
+      "description": "Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure.",
+      "path": "rag-and-search/vector-index-tuning"
+    },
+    {
+      "name": "weaviate",
+      "folder": "weaviate",
+      "category": "rag-and-search",
+      "description": "Search, query, and manage Weaviate vector database collections. Use for semantic search, hybrid search, keyword search, natural language queries with AI-generated answers, collection management, data exploration, filtered fetching, data imports from PDF/CSV/JSON/JSONL files, create example data and collection creation.",
+      "path": "rag-and-search/weaviate"
+    },
+    {
+      "name": "weaviate-cookbooks",
+      "folder": "weaviate-cookbooks",
+      "category": "rag-and-search",
+      "description": "Use this skill when the user wants to build AI applications with Weaviate. It contains a high-level index of architectural patterns, 'one-shot' blueprints, and best practices for common use cases. Currently, it includes references for building a Query Agent Chatbot, Data Explorer, Multimodal PDF RAG (Document Search), Basic RAG, Advanced RAG, Basic Agent, Agentic RAG, and optional guidance on how to build a frontend for each of them.",
+      "path": "rag-and-search/weaviate-cookbooks"
+    },
+    {
+      "name": "arxiv-search",
+      "folder": "arxiv-search",
+      "category": "research-scraping",
+      "description": "Searches arXiv for preprints and academic papers, retrieves abstracts, and filters by topic. Use when the user asks to find research papers, search arXiv, look up preprints, find academic articles in physics, math, CS, biology, statistics, or related fields.",
+      "path": "research-scraping/arxiv-search"
+    },
+    {
+      "name": "fact-checker",
+      "folder": "fact-checker",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/fact-checker"
+    },
+    {
+      "name": "firecrawl",
+      "folder": "firecrawl",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl"
+    },
+    {
+      "name": "firecrawl-agent",
+      "folder": "firecrawl-agent",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-agent"
+    },
+    {
+      "name": "firecrawl-build-interact",
+      "folder": "firecrawl-build-interact",
+      "category": "research-scraping",
+      "description": "Integrate Firecrawl `/interact` into product code for dynamic pages and browser actions after scraping. Use when a feature needs clicks, form fills, pagination, authentication-aware flows, or other multi-step interactions that plain `/scrape` cannot complete.",
+      "path": "research-scraping/firecrawl-build-interact"
+    },
+    {
+      "name": "firecrawl-build-onboarding",
+      "folder": "firecrawl-build-onboarding",
+      "category": "research-scraping",
+      "description": "Get Firecrawl credentials and SDK setup into a project. Use when an application needs `FIRECRAWL_API_KEY`, when an agent should add Firecrawl to `.env`, when the user wants to authenticate Firecrawl for app code, or when choosing the first SDK and docs for a new Firecrawl integration. This skill includes its own browser auth flow, so it does not depend on the website onboarding skill.",
+      "path": "research-scraping/firecrawl-build-onboarding"
+    },
+    {
+      "name": "firecrawl-build-scrape",
+      "folder": "firecrawl-build-scrape",
+      "category": "research-scraping",
+      "description": "Integrate Firecrawl `/scrape` into product code for single-page extraction. Use when an app already has a URL and needs markdown, HTML, links, screenshots, metadata, or structured page output. Prefer this skill over broader crawl patterns when the feature is page-level.",
+      "path": "research-scraping/firecrawl-build-scrape"
+    },
+    {
+      "name": "firecrawl-build-search",
+      "folder": "firecrawl-build-search",
+      "category": "research-scraping",
+      "description": "Integrate Firecrawl `/search` into product code and agent workflows. Use when an app needs discovery before extraction, when the feature starts with a query instead of a URL, or when the system should search the web and optionally hydrate result content.",
+      "path": "research-scraping/firecrawl-build-search"
+    },
+    {
+      "name": "firecrawl-crawl",
+      "folder": "firecrawl-crawl",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-crawl"
+    },
+    {
+      "name": "firecrawl-download",
+      "folder": "firecrawl-download",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-download"
+    },
+    {
+      "name": "firecrawl-interact",
+      "folder": "firecrawl-interact",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-interact"
+    },
+    {
+      "name": "firecrawl-map",
+      "folder": "firecrawl-map",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-map"
+    },
+    {
+      "name": "firecrawl-scrape",
+      "folder": "firecrawl-scrape",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-scrape"
+    },
+    {
+      "name": "firecrawl-search",
+      "folder": "firecrawl-search",
+      "category": "research-scraping",
+      "description": "|",
+      "path": "research-scraping/firecrawl-search"
+    },
+    {
+      "name": "web-research",
+      "folder": "web-research",
+      "category": "research-scraping",
+      "description": "Searches multiple web sources, synthesizes findings, and produces cited research reports using delegated subagents. Use when the user asks to research a topic online, search the web, look something up, find current information, compare options, or produce a research report.",
+      "path": "research-scraping/web-research"
+    },
+    {
+      "name": "security-best-practices",
+      "folder": "security-best-practices",
+      "category": "security",
+      "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+      "path": "security/security-best-practices"
+    },
+    {
+      "name": "security-review",
+      "folder": "security-review",
+      "category": "security",
+      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "path": "security/security-review"
+    },
+    {
+      "name": "security-scan",
+      "folder": "security-scan",
+      "category": "security",
+      "description": "Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions.",
+      "path": "security/security-scan"
+    },
+    {
+      "name": "SEO Optimizer",
+      "folder": "SEO Optimizer",
+      "category": "seo-marketing",
+      "description": "Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements. Use when optimizing website content, improving search rankings, conducting keyword analysis, or implementing SEO best practices. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.",
+      "path": "seo-marketing/SEO Optimizer"
+    },
+    {
+      "name": "ai-workflow-automation",
+      "folder": "ai-workflow-automation",
+      "category": "seo-marketing",
+      "description": "The systematic orchestration of AI-powered marketing workflows that combine content generation, approval processes, multi-channel distribution, and quality gates into cohesive automation systems. This skill integrates AI generation tools (Jasper, Claude, GPT) with automation platforms (Zapier, Make, n8n) and marketing systems to build scalable content pipelines. It focuses on maintaining brand consistency, implementing rigorous quality gates, and balancing automation with strategic human oversight. Key capabilities include designing parallel approval flows, monitoring costs, and architecting \"invisible\" automation that enhances productivity without sacrificing quality.Use when \"AI workflow, automate content, content automation, workflow automation, AI pipeline, automated marketing, content distribution automation, approval workflow, scale content production, AI orchestration, automation, workflow, ai-orchestration, content-pipeline, approval-workflow, multi-channel, quality-gates, cost-control\" mentioned.",
+      "path": "seo-marketing/ai-workflow-automation"
+    },
+    {
+      "name": "automation-ai-tools",
+      "folder": "automation-ai-tools",
+      "category": "seo-marketing",
+      "description": "Master the AI tools that automate repetitive work and connect your tools. From simple Zapier integrations to complex AI-powered workflows, reclaim hours every week. Use when \"automation, workflow, integrate tools, connect apps, zapier, no-code, automate process, rpa, automation, workflow, integration, no-code, zapier, make, rpa\" mentioned.",
+      "path": "seo-marketing/automation-ai-tools"
+    },
+    {
+      "name": "employment-contract-templates",
+      "folder": "employment-contract-templates",
+      "category": "seo-marketing",
+      "description": "Create employment contracts, offer letters, and HR policy documents following legal best practices. Use when drafting employment agreements, creating HR policies, or standardizing employment documentation.",
+      "path": "seo-marketing/employment-contract-templates"
+    },
+    {
+      "name": "geo",
+      "folder": "geo",
+      "category": "seo-marketing",
+      "description": ">",
+      "path": "seo-marketing/geo"
+    },
+    {
+      "name": "geo-audit",
+      "folder": "geo-audit",
+      "category": "seo-marketing",
+      "description": "Full website GEO+SEO audit with parallel subagent delegation. Orchestrates a comprehensive Generative Engine Optimization audit across AI citability, platform analysis, technical infrastructure, content quality, and schema markup. Produces a composite GEO Score (0-100) with prioritized action plan.",
+      "path": "seo-marketing/geo-audit"
+    },
+    {
+      "name": "geo-brand-mentions",
+      "folder": "geo-brand-mentions",
+      "category": "seo-marketing",
+      "description": "Brand mention and authority scanner for AI visibility. Analyzes brand presence across platforms that AI models rely on for entity recognition and citation decisions. Produces a Brand Authority Score (0-100) with platform-specific recommendations.",
+      "path": "seo-marketing/geo-brand-mentions"
+    },
+    {
+      "name": "geo-citability",
+      "folder": "geo-citability",
+      "category": "seo-marketing",
+      "description": "AI citability scoring and optimization. Analyzes web page content to determine how likely AI systems (ChatGPT, Claude, Perplexity, Gemini) are to cite or quote passages from the page. Provides a citability score (0-100) with specific rewrite suggestions.",
+      "path": "seo-marketing/geo-citability"
+    },
+    {
+      "name": "geo-content",
+      "folder": "geo-content",
+      "category": "seo-marketing",
+      "description": "Content quality and E-E-A-T assessment for AI citability — evaluate experience, expertise, authoritativeness, trustworthiness, and content structure",
+      "path": "seo-marketing/geo-content"
+    },
+    {
+      "name": "geo-crawlers",
+      "folder": "geo-crawlers",
+      "category": "seo-marketing",
+      "description": "AI crawler access analysis. Checks robots.txt, meta tags, and HTTP headers to determine which AI crawlers can access the site. Provides a complete access map and recommendations for maximizing AI visibility while maintaining appropriate control.",
+      "path": "seo-marketing/geo-crawlers"
+    },
+    {
+      "name": "geo-llmstxt",
+      "folder": "geo-llmstxt",
+      "category": "seo-marketing",
+      "description": "Analyzes and generates llms.txt files -- the emerging standard for helping AI systems understand website structure and content. Can validate existing llms.txt files or generate new ones from scratch by crawling the site.",
+      "path": "seo-marketing/geo-llmstxt"
+    },
+    {
+      "name": "geo-platform-optimizer",
+      "folder": "geo-platform-optimizer",
+      "category": "seo-marketing",
+      "description": "Platform-specific AI search optimization — audit and optimize for Google AI Overviews, ChatGPT, Perplexity, Gemini, and Bing Copilot individually",
+      "path": "seo-marketing/geo-platform-optimizer"
+    },
+    {
+      "name": "geo-report",
+      "folder": "geo-report",
+      "category": "seo-marketing",
+      "description": "Generate a professional, client-facing GEO report combining all audit results into a single deliverable with scores, findings, and prioritized actions",
+      "path": "seo-marketing/geo-report"
+    },
+    {
+      "name": "geo-report-pdf",
+      "folder": "geo-report-pdf",
+      "category": "seo-marketing",
+      "description": "Generate a professional PDF report from GEO audit data using ReportLab. Creates a polished, client-ready PDF with score gauges, bar charts, platform readiness visualizations, color-coded tables, and prioritized action plans.",
+      "path": "seo-marketing/geo-report-pdf"
+    },
+    {
+      "name": "geo-schema",
+      "folder": "geo-schema",
+      "category": "seo-marketing",
+      "description": "Schema.org structured data audit and generation optimized for AI discoverability — detect, validate, and generate JSON-LD markup",
+      "path": "seo-marketing/geo-schema"
+    },
+    {
+      "name": "geo-technical",
+      "folder": "geo-technical",
+      "category": "seo-marketing",
+      "description": "Technical SEO audit with GEO-specific checks — crawlability, indexability, security, performance, SSR, and AI crawler access",
+      "path": "seo-marketing/geo-technical"
+    },
+    {
+      "name": "hr-recruiting-ai-tools",
+      "folder": "hr-recruiting-ai-tools",
+      "category": "seo-marketing",
+      "description": "Master the AI tools that transform hiring and HR operations. From sourcing candidates to onboarding, find and retain great talent faster. Use when \"hiring, recruiting, HR, talent, performance management, hr, recruiting, hiring, talent, people\" mentioned.",
+      "path": "seo-marketing/hr-recruiting-ai-tools"
+    },
+    {
+      "name": "lead-intelligence",
+      "folder": "lead-intelligence",
+      "category": "seo-marketing",
+      "description": "AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice modeling, and channel-specific outreach across email, LinkedIn, and X. Use when the user wants to find, qualify, and reach high-value contacts.",
+      "path": "seo-marketing/lead-intelligence"
+    },
+    {
+      "name": "lead-research-assistant",
+      "folder": "lead-research-assistant",
+      "category": "seo-marketing",
+      "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.",
+      "path": "seo-marketing/lead-research-assistant"
+    },
+    {
+      "name": "seo",
+      "folder": "seo",
+      "category": "seo-marketing",
+      "description": "Search engine optimization for startups. Covers technical SEO, content strategy, and link building. Focus on sustainable approaches that compound over time rather than tricks that get penalized. Use when \"seo, search engine optimization, organic traffic, google ranking, keyword research, backlinks, content strategy, search visibility, \" mentioned.",
+      "path": "seo-marketing/seo"
+    },
+    {
+      "name": "backtesting-frameworks",
+      "folder": "backtesting-frameworks",
+      "category": "specialized",
+      "description": "Build robust backtesting systems for trading strategies with proper handling of look-ahead bias, survivorship bias, and transaction costs. Use when developing trading algorithms, validating strategies, or building backtesting infrastructure.",
+      "path": "specialized/backtesting-frameworks"
+    },
+    {
+      "name": "coding-standards",
+      "folder": "coding-standards",
+      "category": "specialized",
+      "description": "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development.",
+      "path": "specialized/coding-standards"
+    },
+    {
+      "name": "physics-simulation",
+      "folder": "physics-simulation",
+      "category": "specialized",
+      "description": "Patterns for physics-based simulation including numerical integration, rigid body dynamics, fluid simulation, finite element methods, and multi-physics coupling. Covers accuracy, stability, and performance. Use when \", \" mentioned.",
+      "path": "specialized/physics-simulation"
+    },
+    {
+      "name": "rust-patterns",
+      "folder": "rust-patterns",
+      "category": "specialized",
+      "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.",
+      "path": "specialized/rust-patterns"
+    },
+    {
+      "name": "benchmark",
+      "folder": "benchmark",
+      "category": "testing-quality",
+      "description": "Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.",
+      "path": "testing-quality/benchmark"
+    },
+    {
+      "name": "code-quality",
+      "folder": "code-quality",
+      "category": "testing-quality",
+      "description": "Writing maintainable code - readability principles, SOLID patterns applied pragmatically, and the judgment to know when rules should bendUse when \"code quality, clean code, readability, naming, SOLID, refactor, code review, best practices, maintainable, how should I structure, clean-code, solid, readability, maintainability, code-review, naming, functions, principles\" mentioned.",
+      "path": "testing-quality/code-quality"
+    },
+    {
+      "name": "code-review-excellence",
+      "folder": "code-review-excellence",
+      "category": "testing-quality",
+      "description": "Master effective code review practices to provide constructive feedback, catch bugs early, and foster knowledge sharing while maintaining team morale. Use when reviewing pull requests, establishing review standards, or mentoring developers.",
+      "path": "testing-quality/code-review-excellence"
+    },
+    {
+      "name": "code-reviewer",
+      "folder": "code-reviewer",
+      "category": "testing-quality",
+      "description": "|",
+      "path": "testing-quality/code-reviewer"
+    },
+    {
+      "name": "codebase-optimization",
+      "folder": "codebase-optimization",
+      "category": "testing-quality",
+      "description": "Keeping codebases healthy, performant, and maintainable - refactoring, performance optimization, and technical debt managementUse when \"refactor, optimize, performance, technical debt, cleanup, architecture, speed up, bundle size, memory leak, slow query, code smell, complexity, dead code, performance, refactoring, optimization, technical-debt, architecture, cleanup, bundle, memory\" mentioned.",
+      "path": "testing-quality/codebase-optimization"
+    },
+    {
+      "name": "debugger",
+      "folder": "debugger",
+      "category": "testing-quality",
+      "description": "|",
+      "path": "testing-quality/debugger"
+    },
+    {
+      "name": "debugging-strategies",
+      "folder": "debugging-strategies",
+      "category": "testing-quality",
+      "description": "Master systematic debugging techniques, profiling tools, and root cause analysis to efficiently track down bugs across any codebase or technology stack. Use when investigating bugs, performance issues, or unexpected behavior.",
+      "path": "testing-quality/debugging-strategies"
+    },
+    {
+      "name": "e2e-testing-patterns",
+      "folder": "e2e-testing-patterns",
+      "category": "testing-quality",
+      "description": "Master end-to-end testing with Playwright and Cypress to build reliable test suites that catch bugs, improve confidence, and enable fast deployment. Use when implementing E2E tests, debugging flaky tests, or establishing testing standards.",
+      "path": "testing-quality/e2e-testing-patterns"
+    },
+    {
+      "name": "parallel-debugging",
+      "folder": "parallel-debugging",
+      "category": "testing-quality",
+      "description": "Debug complex issues using competing hypotheses with parallel investigation, evidence collection, and root cause arbitration. Use this skill when debugging bugs with multiple potential causes, performing root cause analysis, or organizing parallel investigation workflows.",
+      "path": "testing-quality/parallel-debugging"
+    },
+    {
+      "name": "playwright",
+      "folder": "playwright",
+      "category": "testing-quality",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "path": "testing-quality/playwright"
+    },
+    {
+      "name": "rust-testing",
+      "folder": "rust-testing",
+      "category": "testing-quality",
+      "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.",
+      "path": "testing-quality/rust-testing"
+    },
+    {
+      "name": "systematic-debugging",
+      "folder": "systematic-debugging",
+      "category": "testing-quality",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "path": "testing-quality/systematic-debugging"
+    },
+    {
+      "name": "test-driven-development",
+      "folder": "test-driven-development",
+      "category": "testing-quality",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "path": "testing-quality/test-driven-development"
+    },
+    {
+      "name": "verification-before-completion",
+      "folder": "verification-before-completion",
+      "category": "testing-quality",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "path": "testing-quality/verification-before-completion"
+    },
+    {
+      "name": "webapp-testing",
+      "folder": "webapp-testing",
+      "category": "testing-quality",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "path": "testing-quality/webapp-testing"
+    },
+    {
+      "name": "Agent Development",
+      "folder": "Agent Development",
+      "category": "workflow-meta",
+      "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
+      "path": "workflow-meta/Agent Development"
+    },
+    {
+      "name": "brainstorming",
+      "folder": "brainstorming",
+      "category": "workflow-meta",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "path": "workflow-meta/brainstorming"
+    },
+    {
+      "name": "codex",
+      "folder": "codex",
+      "category": "workflow-meta",
+      "description": ">",
+      "path": "workflow-meta/codex"
+    },
+    {
+      "name": "context-driven-development",
+      "folder": "context-driven-development",
+      "category": "workflow-meta",
+      "description": ">-",
+      "path": "workflow-meta/context-driven-development"
+    },
+    {
+      "name": "decision-helper",
+      "folder": "decision-helper",
+      "category": "workflow-meta",
+      "description": "|",
+      "path": "workflow-meta/decision-helper"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "folder": "dispatching-parallel-agents",
+      "category": "workflow-meta",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "path": "workflow-meta/dispatching-parallel-agents"
+    },
+    {
+      "name": "executing-plans",
+      "folder": "executing-plans",
+      "category": "workflow-meta",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "path": "workflow-meta/executing-plans"
+    },
+    {
+      "name": "find-skills",
+      "folder": "find-skills",
+      "category": "workflow-meta",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "path": "workflow-meta/find-skills"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "folder": "finishing-a-development-branch",
+      "category": "workflow-meta",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+      "path": "workflow-meta/finishing-a-development-branch"
+    },
+    {
+      "name": "graph-engineer",
+      "folder": "graph-engineer",
+      "category": "workflow-meta",
+      "description": "Knowledge graph specialist for entity and causal relationship modelingUse when \"knowledge graph, graph database, falkordb, neo4j, cypher query, entity resolution, causal relationships, graph traversal, graph-database, knowledge-graph, falkordb, neo4j, cypher, entity-resolution, causal-graph, ml-memory\" mentioned.",
+      "path": "workflow-meta/graph-engineer"
+    },
+    {
+      "name": "graphify-windows",
+      "folder": "graphify",
+      "category": "workflow-meta",
+      "description": "any input (code, docs, papers, images) → knowledge graph → clustered communities → HTML + JSON + audit report",
+      "path": "workflow-meta/graphify"
+    },
+    {
+      "name": "project-planner",
+      "folder": "project-planner",
+      "category": "workflow-meta",
+      "description": "|",
+      "path": "workflow-meta/project-planner"
+    },
+    {
+      "name": "receiving-code-review",
+      "folder": "receiving-code-review",
+      "category": "workflow-meta",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+      "path": "workflow-meta/receiving-code-review"
+    },
+    {
+      "name": "requesting-code-review",
+      "folder": "requesting-code-review",
+      "category": "workflow-meta",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "path": "workflow-meta/requesting-code-review"
+    },
+    {
+      "name": "skill-creator",
+      "folder": "skill-creator",
+      "category": "workflow-meta",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "path": "workflow-meta/skill-creator"
+    },
+    {
+      "name": "subagent-driven-development",
+      "folder": "subagent-driven-development",
+      "category": "workflow-meta",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "path": "workflow-meta/subagent-driven-development"
+    },
+    {
+      "name": "template-skill",
+      "folder": "template-skill",
+      "category": "workflow-meta",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "path": "workflow-meta/template-skill"
+    },
+    {
+      "name": "using-superpowers",
+      "folder": "using-superpowers",
+      "category": "workflow-meta",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "path": "workflow-meta/using-superpowers"
+    }
+  ]
+}
