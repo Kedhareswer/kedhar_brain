@@ -1,8 +1,8 @@
 {
   "$schema": "https://agentskills.io/specification/v1/index.schema.json",
   "name": "kedhar-agent-skills",
-  "version": "1.0.0",
-  "description": "Agent skills for building projects FOR Kedhar — 257 skills (5 custom playbooks + catalog). NOT Kedhar's personal skills.",
+  "version": "1.1.0",
+  "description": "Agent skills for building projects FOR Kedhar — 337 skills (5 custom playbooks + catalog). NOT Kedhar's personal skills.",
   "categories": [
     {
       "id": "kedhar-playbooks",
@@ -12,7 +12,7 @@
     {
       "id": "ai-and-llm",
       "name": "AI & LLM Development",
-      "count": 29
+      "count": 30
     },
     {
       "id": "rag-and-search",
@@ -32,7 +32,7 @@
     {
       "id": "frontend-web",
       "name": "Frontend / Web",
-      "count": 12
+      "count": 17
     },
     {
       "id": "backend-api",
@@ -47,7 +47,7 @@
     {
       "id": "testing-quality",
       "name": "Testing & Quality",
-      "count": 15
+      "count": 18
     },
     {
       "id": "devops",
@@ -62,17 +62,17 @@
     {
       "id": "design-ui-ux",
       "name": "Design / UI / UX",
-      "count": 16
+      "count": 31
     },
     {
       "id": "docs-writing",
       "name": "Docs & Writing",
-      "count": 5
+      "count": 6
     },
     {
       "id": "workflow-meta",
       "name": "Workflow & Meta",
-      "count": 18
+      "count": 20
     },
     {
       "id": "research-scraping",
@@ -87,12 +87,12 @@
     {
       "id": "document-processing",
       "name": "Document Processing",
-      "count": 9
+      "count": 10
     },
     {
       "id": "media-content",
       "name": "Media & Content",
-      "count": 5
+      "count": 10
     },
     {
       "id": "specialized",
@@ -102,10 +102,22 @@
     {
       "id": "animation-motion",
       "name": "Animation & Motion Graphics",
+      "count": 47
+    },
+    {
+      "id": "unhinged",
+      "name": "Unhinged Modes",
       "count": 25
     }
   ],
   "skills": [
+    {
+      "name": "agent-development",
+      "folder": "agent-development",
+      "category": "ai-and-llm",
+      "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
+      "path": "ai-and-llm/agent-development"
+    },
     {
       "name": "agentic-engineering",
       "folder": "agentic-engineering",
@@ -306,8 +318,29 @@
       "name": "prompt-optimizer",
       "folder": "prompt-optimizer",
       "category": "ai-and-llm",
-      "description": ">-",
+      "description": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a ready-to-paste optimized prompt. Advisory role only — never executes the task itself. TRIGGER when: user says \"optimize prompt\", \"improve my prompt\", \"how to write a prompt for\", \"help me prompt\", \"rewrite this prompt\", or explicitly asks to enhance prompt quality. Also triggers on Chin",
       "path": "ai-and-llm/prompt-optimizer"
+    },
+    {
+      "name": "animate",
+      "folder": "animate",
+      "category": "animation-motion",
+      "description": "Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.",
+      "path": "animation-motion/animate"
+    },
+    {
+      "name": "animate-expo",
+      "folder": "animate-expo",
+      "category": "animation-motion",
+      "description": "Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread it runs on, which properties, spring or timing, how the gesture hands off, how it degrades. Writes the implementation with Reanimated, Gesture Handler, Expo Router and expo-haptics. Use when animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device. For web animation use `animate`.",
+      "path": "animation-motion/animate-expo"
+    },
+    {
+      "name": "animation-vocabulary",
+      "folder": "animation-vocabulary",
+      "category": "animation-motion",
+      "description": "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\"the bouncy thing when a popover opens\" → Pop in; \"the iOS rubber-band scroll\" → Rubber-banding). Use when the user asks \"what's it called when…\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one.",
+      "path": "animation-motion/animation-vocabulary"
     },
     {
       "name": "animejs",
@@ -329,6 +362,13 @@
       "category": "animation-motion",
       "description": "CSS animation adapter patterns for HyperFrames. Use when authoring CSS keyframes, animation-delay based timing, animation-fill-mode, animation-play-state, or CSS-only motion that HyperFrames must seek deterministically during preview and rendering.",
       "path": "animation-motion/css-animations"
+    },
+    {
+      "name": "find-animation-opportunities",
+      "folder": "find-animation-opportunities",
+      "category": "animation-motion",
+      "description": "Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks \"what could be animated here?\" or wants to \"make this feel more alive\". For fixing existing animations, use improve-animations or review-animations instead.",
+      "path": "animation-motion/find-animation-opportunities"
     },
     {
       "name": "gsap",
@@ -401,11 +441,39 @@
       "path": "animation-motion/hyperframes"
     },
     {
+      "name": "hyperframes-animation",
+      "folder": "hyperframes-animation",
+      "category": "animation-motion",
+      "description": "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, Web Animations API, TypeGPU). Use for any motion or animation task: pick 2-4 rules and compose, or load a blueprint, or look up runtime-specific API (e.g. GSAP eases / Lottie player / Three.js mixer). Also covers auditing an existing composition's choreography (animation map) and 24 named text-animation effects. HyperFrames-native: single paused timeline, seek-safe, deterministic.",
+      "path": "animation-motion/hyperframes-animation"
+    },
+    {
       "name": "hyperframes-cli",
       "folder": "hyperframes-cli",
       "category": "animation-motion",
       "description": "HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doctor, browser, info, upgrade). Use when running any of these commands or troubleshooting the HyperFrames build/render environment. For asset preprocessing commands (`tts`, `transcribe`, `remove-background`), invoke the `hyperframes-media` skill instead.",
       "path": "animation-motion/hyperframes-cli"
+    },
+    {
+      "name": "hyperframes-core",
+      "folder": "hyperframes-core",
+      "category": "animation-motion",
+      "description": "The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class=\"clip\"`, tracks, sub-compositions, variables, framework-owned media playback, deterministic-render rules, and validation. Also covers Tailwind projects and the STORYBOARD.md / SCRIPT.md plan formats. Read before writing composition HTML.",
+      "path": "animation-motion/hyperframes-core"
+    },
+    {
+      "name": "hyperframes-creative",
+      "folder": "hyperframes-creative",
+      "category": "animation-motion",
+      "description": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For atomic motion patterns and scene blueprints, use `hyperframes-animation`.",
+      "path": "animation-motion/hyperframes-creative"
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "folder": "hyperframes-keyframes",
+      "category": "animation-motion",
+      "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or",
+      "path": "animation-motion/hyperframes-keyframes"
     },
     {
       "name": "hyperframes-media",
@@ -422,6 +490,13 @@
       "path": "animation-motion/hyperframes-registry"
     },
     {
+      "name": "improve-animations",
+      "folder": "improve-animations",
+      "category": "animation-motion",
+      "description": "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code — it plans improvements, it does not apply them. Use when the user asks to \"improve the animations\", \"audit the motion\", \"make this app feel better\", or wants a roadmap of animation fixes rather than a review of a single diff.",
+      "path": "animation-motion/improve-animations"
+    },
+    {
       "name": "lottie",
       "folder": "lottie",
       "category": "animation-motion",
@@ -432,8 +507,15 @@
       "name": "motion-design",
       "folder": "motion-design",
       "category": "animation-motion",
-      "description": ">",
+      "description": "Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreography, and Disney animation principles adapted for UI. Use when creating animations, transitions, micro-interactions, loading states, page transitions, scroll-triggered effects, or any motion work. Works with CSS, Framer Motion, GSAP, Lottie, Spring, or any a",
       "path": "animation-motion/motion-design"
+    },
+    {
+      "name": "oil-motion",
+      "folder": "oil-motion",
+      "category": "animation-motion",
+      "description": "Design, implement, optimize, and explain interactive web animations driven by scroll, pointer, drag, touch, device orientation, audio, data, or component state. Use when a webpage needs responsive visual motion for products, interfaces, diagrams, characters, or scene transitions.",
+      "path": "animation-motion/oil-motion"
     },
     {
       "name": "remotion-best-practices",
@@ -443,11 +525,95 @@
       "path": "animation-motion/remotion-best-practices"
     },
     {
+      "name": "remotion-captions",
+      "folder": "remotion-captions",
+      "category": "animation-motion",
+      "description": "Transcribing, displaying and animating captions",
+      "path": "animation-motion/remotion-captions"
+    },
+    {
+      "name": "remotion-create",
+      "folder": "remotion-create",
+      "category": "animation-motion",
+      "description": "Create a new Remotion video",
+      "path": "animation-motion/remotion-create"
+    },
+    {
+      "name": "remotion-docs",
+      "folder": "remotion-docs",
+      "category": "animation-motion",
+      "description": "Search Remotion documentation",
+      "path": "animation-motion/remotion-docs"
+    },
+    {
+      "name": "remotion-interactivity",
+      "folder": "remotion-interactivity",
+      "category": "animation-motion",
+      "description": "Structure Remotion markup for interactivity",
+      "path": "animation-motion/remotion-interactivity"
+    },
+    {
+      "name": "remotion-maps",
+      "folder": "remotion-maps",
+      "category": "animation-motion",
+      "description": "Remotion Map animation knowledge",
+      "path": "animation-motion/remotion-maps"
+    },
+    {
+      "name": "remotion-markup",
+      "folder": "remotion-markup",
+      "category": "animation-motion",
+      "description": "Content, animation and effects best practices",
+      "path": "animation-motion/remotion-markup"
+    },
+    {
+      "name": "remotion-multimedia",
+      "folder": "remotion-multimedia",
+      "category": "animation-motion",
+      "description": "Interacting with Mediabunny",
+      "path": "animation-motion/remotion-multimedia"
+    },
+    {
+      "name": "remotion-render",
+      "folder": "remotion-render",
+      "category": "animation-motion",
+      "description": "Export a Remotion video",
+      "path": "animation-motion/remotion-render"
+    },
+    {
+      "name": "remotion-saas",
+      "folder": "remotion-saas",
+      "category": "animation-motion",
+      "description": "Build an app with Remotion",
+      "path": "animation-motion/remotion-saas"
+    },
+    {
+      "name": "remotion-studio",
+      "folder": "remotion-studio",
+      "category": "animation-motion",
+      "description": "Preview a Remotion video",
+      "path": "animation-motion/remotion-studio"
+    },
+    {
       "name": "remotion-to-hyperframes",
       "folder": "remotion-to-hyperframes",
       "category": "animation-motion",
       "description": "Translate an existing Remotion (React-based) video composition into a HyperFrames HTML composition. Use ONLY when the user explicitly asks to port, convert, migrate, translate, or rewrite a Remotion composition as HyperFrames (e.g. \"port my Remotion project to HyperFrames\"). Do NOT use when (a) authoring a NEW HyperFrames composition (even if A/B-testing a Remotion video); (b) Remotion is mentioned in passing; (c) Remotion code is shared as reference, not for translation; (d) the user wants \"the same video as my Remotion one\" without explicitly asking to migrate the source — treat as a fresh HyperFrames build. When in doubt, default to the `hyperframes` skill. Detects unsupported patterns (useState, useEffect side effects, async calculateMetadata, third-party React component libraries, `@remotion/lambda`) and recommends the runtime interop escape hatch instead of a lossy translation.",
       "path": "animation-motion/remotion-to-hyperframes"
+    },
+    {
+      "name": "remotion-upgrade",
+      "folder": "remotion-upgrade",
+      "category": "animation-motion",
+      "description": "Upgrade Remotion, and related packages",
+      "path": "animation-motion/remotion-upgrade"
+    },
+    {
+      "name": "review-animations",
+      "folder": "review-animations",
+      "category": "animation-motion",
+      "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+      "path": "animation-motion/review-animations"
     },
     {
       "name": "tailwind",
@@ -481,7 +647,7 @@
       "name": "website-to-hyperframes",
       "folder": "website-to-hyperframes",
       "category": "animation-motion",
-      "description": "|",
+      "description": "Capture a website and create a HyperFrames video from it. Use when: (1) a user provides a URL and wants a video, (2) someone says \"capture this site\", \"turn this into a video\", \"make a promo from my site\", (3) the user wants a social ad, product tour, or any video based on an existing website, (4) the user shares a link and asks for any kind of video content. Even if the user just pastes a URL — t",
       "path": "animation-motion/website-to-hyperframes"
     },
     {
@@ -551,7 +717,7 @@
       "name": "data-analyst",
       "folder": "data-analyst",
       "category": "database-data",
-      "description": "|",
+      "description": "SQL, pandas, and statistical analysis expertise for data exploration and insights. Use when: analyzing data, writing SQL queries, using pandas, performing statistical analysis, or when user mentions data analysis, SQL, pandas, statistics, or needs help exploring datasets.",
       "path": "database-data/data-analyst"
     },
     {
@@ -625,6 +791,27 @@
       "path": "design-ui-ux/Accessibility Auditor"
     },
     {
+      "name": "accessibility-auditor",
+      "folder": "accessibility-auditor",
+      "category": "design-ui-ux",
+      "description": "Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design. Use when auditing websites for accessibility issues, implementing WCAG 2.1 AA/AAA standards, testing with screen readers, or ensuring ADA compliance. Expert in semantic HTML, keyboard navigation, and assistive technology compatibility.",
+      "path": "design-ui-ux/accessibility-auditor"
+    },
+    {
+      "name": "agentation",
+      "folder": "agentation",
+      "category": "design-ui-ux",
+      "description": "Add Agentation visual feedback toolbar to a Next.js project",
+      "path": "design-ui-ux/agentation"
+    },
+    {
+      "name": "agentation-self-driving",
+      "folder": "agentation-self-driving",
+      "category": "design-ui-ux",
+      "description": "Autonomous design critique mode using the Agentation annotation toolbar. Use when the user asks to \"critique this page,\" \"add design annotations,\" \"review the UI,\" \"self-driving mode,\" \"auto-annotate,\" or wants an AI agent to autonomously add design feedback annotations to a web page via the browser. Requires the Agentation toolbar to be installed on the target page and agent-browser skill to be available.",
+      "path": "design-ui-ux/agentation-self-driving"
+    },
+    {
       "name": "ai-brand-kit",
       "folder": "ai-brand-kit",
       "category": "design-ui-ux",
@@ -639,11 +826,25 @@
       "path": "design-ui-ux/ai-visual-effects"
     },
     {
+      "name": "apple-design",
+      "folder": "apple-design",
+      "category": "design-ui-ux",
+      "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+      "path": "design-ui-ux/apple-design"
+    },
+    {
       "name": "brand-guidelines",
       "folder": "brand-guidelines",
       "category": "design-ui-ux",
       "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
       "path": "design-ui-ux/brand-guidelines"
+    },
+    {
+      "name": "brandkit",
+      "folder": "brandkit",
+      "category": "design-ui-ux",
+      "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+      "path": "design-ui-ux/brandkit"
     },
     {
       "name": "canvas-design",
@@ -667,6 +868,13 @@
       "path": "design-ui-ux/design-system-patterns"
     },
     {
+      "name": "design-taste-frontend",
+      "folder": "design-taste-frontend",
+      "category": "design-ui-ux",
+      "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+      "path": "design-ui-ux/design-taste-frontend"
+    },
+    {
       "name": "easter-egg-design",
       "folder": "easter-egg-design",
       "category": "design-ui-ux",
@@ -674,11 +882,53 @@
       "path": "design-ui-ux/easter-egg-design"
     },
     {
+      "name": "emil-design-eng",
+      "folder": "emil-design-eng",
+      "category": "design-ui-ux",
+      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "path": "design-ui-ux/emil-design-eng"
+    },
+    {
+      "name": "gc-minimal-zine-poster-v0-1",
+      "folder": "gc-minimal-zine-poster-v0-1",
+      "category": "design-ui-ux",
+      "description": "Generate Minimal Zine Poster v0.1 poetic paper-poster prompts and the matching generated image. Use when the user gives a theme, sentence, object, mood, article idea, photo, or content brief and wants a quiet Japanese/Korean zine-like editorial poster with large negative space, aged paper texture, experimental typography, restrained color accents, and a generated bitmap image.",
+      "path": "design-ui-ux/gc-minimal-zine-poster-v0-1"
+    },
+    {
+      "name": "gpt-taste",
+      "folder": "gpt-taste",
+      "category": "design-ui-ux",
+      "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive section spacing.",
+      "path": "design-ui-ux/gpt-taste"
+    },
+    {
+      "name": "high-end-visual-design",
+      "folder": "high-end-visual-design",
+      "category": "design-ui-ux",
+      "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+      "path": "design-ui-ux/high-end-visual-design"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "folder": "industrial-brutalist-ui",
+      "category": "design-ui-ux",
+      "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+      "path": "design-ui-ux/industrial-brutalist-ui"
+    },
+    {
       "name": "kpi-dashboard-design",
       "folder": "kpi-dashboard-design",
       "category": "design-ui-ux",
       "description": "Design effective KPI dashboards with metrics selection, visualization best practices, and real-time monitoring patterns. Use when building business dashboards, selecting metrics, or designing data visualization layouts.",
       "path": "design-ui-ux/kpi-dashboard-design"
+    },
+    {
+      "name": "minimalist-ui",
+      "folder": "minimalist-ui",
+      "category": "design-ui-ux",
+      "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+      "path": "design-ui-ux/minimalist-ui"
     },
     {
       "name": "pixel-art",
@@ -695,11 +945,32 @@
       "path": "design-ui-ux/pixel-art-sprites"
     },
     {
+      "name": "prototype",
+      "folder": "prototype",
+      "category": "design-ui-ux",
+      "description": "Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote the one that feels right. Only runs when explicitly invoked; it does not trigger on its own.",
+      "path": "design-ui-ux/prototype"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "folder": "redesign-existing-projects",
+      "category": "design-ui-ux",
+      "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+      "path": "design-ui-ux/redesign-existing-projects"
+    },
+    {
       "name": "screen-reader-testing",
       "folder": "screen-reader-testing",
       "category": "design-ui-ux",
       "description": "Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support.",
       "path": "design-ui-ux/screen-reader-testing"
+    },
+    {
+      "name": "stitch-design-taste",
+      "folder": "stitch-design-taste",
+      "category": "design-ui-ux",
+      "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
+      "path": "design-ui-ux/stitch-design-taste"
     },
     {
       "name": "ui-design-system",
@@ -793,6 +1064,13 @@
       "path": "docs-writing/architecture-decision-records"
     },
     {
+      "name": "codebase-to-course",
+      "folder": "codebase-to-course",
+      "category": "docs-writing",
+      "description": "Turn any codebase into a beautiful, interactive single-page HTML course that teaches how the code works to non-technical people. Use this skill whenever someone wants to create an interactive course, tutorial, or educational walkthrough from a codebase or project. Also trigger when users mention 'turn this into a course,' 'explain this codebase interactively,' 'teach this code,' 'interactive tutorial from code,' 'codebase walkthrough,' 'learn from this codebase,' or 'make a course from this project.' This skill produces a stunning, self-contained HTML file with scroll-based navigation, animated visualizations, embedded quizzes, and code-with-plain-English side-by-side translations.",
+      "path": "docs-writing/codebase-to-course"
+    },
+    {
       "name": "doc",
       "folder": "doc",
       "category": "docs-writing",
@@ -803,7 +1081,7 @@
       "name": "meeting-notes",
       "folder": "meeting-notes",
       "category": "docs-writing",
-      "description": "|",
+      "description": "Structured meeting summaries with action items, decisions, and key discussion points. Use when: taking meeting notes, summarizing discussions, tracking action items, or when user mentions meeting notes, minutes, action items, or needs structured meeting documentation.",
       "path": "docs-writing/meeting-notes"
     },
     {
@@ -833,6 +1111,13 @@
       "category": "document-processing",
       "description": "Invoke this skill BEFORE implementing any structured data extraction from documents to learn the correct llama_cloud_services API usage. Required reading before writing extraction code. Requires llama_cloud_services package and LLAMA_CLOUD_API_KEY as an environment variable.",
       "path": "document-processing/extract-structured-data-from-unstructured-files-pdf-pptx-docx"
+    },
+    {
+      "name": "guizang-ppt-skill",
+      "folder": "guizang-ppt-skill",
+      "category": "document-processing",
+      "description": "生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背景、演讲者视图、观众屏同步、讲稿备注、章节幕封、数据大字报、图片网格等模板。提供两种风格：① \"电子杂志 × 电子墨水\"（衬线 + 流体背景 + 暖色） ② \"瑞士国际主义\"（无衬线 + 网格点阵 + IKB/柠檬黄/柠檬绿/安全橙高亮）。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"瑞士风 PPT\"、\"Swiss Style\"、\"horizontal swipe deck\"时使用。",
+      "path": "document-processing/guizang-ppt-skill"
     },
     {
       "name": "liteparse",
@@ -891,11 +1176,32 @@
       "path": "frontend-web/3d-web-experience"
     },
     {
+      "name": "ask-sonner",
+      "folder": "ask-sonner",
+      "category": "frontend-web",
+      "description": "Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and loading toasts, updating, dismissing and persisting toasts, styling, theming and icons, positioning and multiple toasters. Use when working with Sonner or troubleshooting it — toasts that don't appear, appear twice, lose their styles, ignore Tailwind classes, sit behind a modal, or don't follow dark mode.",
+      "path": "frontend-web/ask-sonner"
+    },
+    {
       "name": "develop-web-game",
       "folder": "develop-web-game",
       "category": "frontend-web",
       "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
       "path": "frontend-web/develop-web-game"
+    },
+    {
+      "name": "framer",
+      "folder": "framer",
+      "category": "frontend-web",
+      "description": "Use when the user wants to design, edit, analyze, or publish a website or web page — creating layouts, editing sections, updating text or images, querying site analytics, managing CMS collections and content, syncing external data, creating or modifying code components, managing color and text styles, handling localization, or publishing deployments. Trigger when the user mentions Framer, referenc",
+      "path": "frontend-web/framer"
+    },
+    {
+      "name": "framer-code-components",
+      "folder": "framer-code-components",
+      "category": "frontend-web",
+      "description": "Framer code component implementation guidance, platform constraints, layout annotations, property controls, and authoring best practices. Use only after loading the framer skill and reading the Components row of the generated projects/<safeProjectId>/index.md task map first in the same task; never load this skill directly as the entry point.",
+      "path": "frontend-web/framer-code-components"
     },
     {
       "name": "frontend-design",
@@ -915,8 +1221,15 @@
       "name": "fullstack-developer",
       "folder": "fullstack-developer",
       "category": "frontend-web",
-      "description": "|",
+      "description": "Modern web development expertise covering React, Node.js, databases, and full-stack architecture. Use when: building web applications, developing APIs, creating frontends, setting up databases, deploying web apps, or when user mentions React, Next.js, Express, REST API, GraphQL, MongoDB, PostgreSQL, or full-stack development.",
       "path": "frontend-web/fullstack-developer"
+    },
+    {
+      "name": "image-to-code",
+      "folder": "image-to-code",
+      "category": "frontend-web",
+      "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.",
+      "path": "frontend-web/image-to-code"
     },
     {
       "name": "nextjs-app-router-patterns",
@@ -931,6 +1244,13 @@
       "category": "frontend-web",
       "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
       "path": "frontend-web/nextjs-turbopack"
+    },
+    {
+      "name": "pick-ui-library",
+      "folder": "pick-ui-library",
+      "category": "frontend-web",
+      "description": "Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state, styling, and more. Only runs when explicitly invoked; it does not trigger on its own.",
+      "path": "frontend-web/pick-ui-library"
     },
     {
       "name": "react-doctor",
@@ -1003,11 +1323,39 @@
       "path": "kedhar-playbooks/kedhar-rag-webapp"
     },
     {
+      "name": "editor",
+      "folder": "editor",
+      "category": "media-content",
+      "description": "Understand, generate, and edit footage with Diffusion Studio via the `dapi` CLI: analyze video/audio/images, generate them with AI, and compose video compositions. Use for any media analysis, media generation, or video editing task.",
+      "path": "media-content/editor"
+    },
+    {
       "name": "imagegen",
       "folder": "imagegen",
       "category": "media-content",
       "description": "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.",
       "path": "media-content/imagegen"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "folder": "imagegen-frontend-mobile",
+      "category": "media-content",
+      "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mockup framing. By default, screens should be shown inside a subtle premium iPhone or similar phone mockup with a visible frame, while the main focus stays on the app content itself. This skill generates images only. It does not write code.",
+      "path": "media-content/imagegen-frontend-mobile"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "folder": "imagegen-frontend-web",
+      "category": "media-content",
+      "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
+      "path": "media-content/imagegen-frontend-web"
+    },
+    {
+      "name": "media-use",
+      "folder": "media-use",
+      "category": "media-content",
+      "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal.",
+      "path": "media-content/media-use"
     },
     {
       "name": "screenshot",
@@ -1036,6 +1384,13 @@
       "category": "media-content",
       "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
       "path": "media-content/transcribe"
+    },
+    {
+      "name": "watch",
+      "folder": "watch",
+      "category": "media-content",
+      "description": "Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video.",
+      "path": "media-content/watch"
     },
     {
       "name": "deepspeed",
@@ -1167,7 +1522,7 @@
       "name": "python-expert",
       "folder": "python-expert",
       "category": "python",
-      "description": "|",
+      "description": "Senior Python developer expertise for writing clean, efficient, and well-documented code. Use when: writing Python code, optimizing Python scripts, reviewing Python code for best practices, debugging Python issues, implementing type hints, or when user mentions Python, PEP 8, or needs help with Python data structures and algorithms.",
       "path": "python/python-expert"
     },
     {
@@ -1391,21 +1746,21 @@
       "name": "fact-checker",
       "folder": "fact-checker",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Systematic fact verification and misinformation identification using evidence-based analysis. Use when: verifying claims, checking facts, identifying misinformation, evaluating source credibility, or when user asks to \"fact check\", \"verify\", \"is this true\", or mentions claims that need validation.",
       "path": "research-scraping/fact-checker"
     },
     {
       "name": "firecrawl",
       "folder": "firecrawl",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Web scraping, search, crawling, and page interaction via the Firecrawl CLI. Use this skill whenever the user wants to search the web, find articles, research a topic, look something up online, scrape a webpage, grab content from a URL, extract data from a website, crawl documentation, download a site, or interact with pages that need clicks or logins. Also use when they say \"fetch this page\", \"pul",
       "path": "research-scraping/firecrawl"
     },
     {
       "name": "firecrawl-agent",
       "folder": "firecrawl-agent",
       "category": "research-scraping",
-      "description": "|",
+      "description": "AI-powered autonomous data extraction that navigates complex sites and returns structured JSON. Use this skill when the user wants structured data from websites, needs to extract pricing tiers, product listings, directory entries, or any data as JSON with a schema. Triggers on \"extract structured data\", \"get all the products\", \"pull pricing info\", \"extract as JSON\", or when the user provides a JSO",
       "path": "research-scraping/firecrawl-agent"
     },
     {
@@ -1440,42 +1795,42 @@
       "name": "firecrawl-crawl",
       "folder": "firecrawl-crawl",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Bulk extract content from an entire website or site section. Use this skill when the user wants to crawl a site, extract all pages from a docs section, bulk-scrape multiple pages following links, or says \"crawl\", \"get all the pages\", \"extract everything under /docs\", \"bulk extract\", or needs content from many pages on the same site. Handles depth limits, path filtering, and concurrent extraction.",
       "path": "research-scraping/firecrawl-crawl"
     },
     {
       "name": "firecrawl-download",
       "folder": "firecrawl-download",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Download an entire website as local files — markdown, screenshots, or multiple formats per page. Use this skill when the user wants to save a site locally, download documentation for offline use, bulk-save pages as files, or says \"download the site\", \"save as local files\", \"offline copy\", \"download all the docs\", or \"save for reference\". Combines site mapping and scraping into organized local dire",
       "path": "research-scraping/firecrawl-download"
     },
     {
       "name": "firecrawl-interact",
       "folder": "firecrawl-interact",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Control and interact with a live browser session on any scraped page — click buttons, fill forms, navigate flows, and extract data using natural language prompts or code. Use when the user needs to interact with a webpage beyond simple scraping: logging into a site, submitting forms, clicking through pagination, handling infinite scroll, navigating multi-step checkout or wizard flows, or when a re",
       "path": "research-scraping/firecrawl-interact"
     },
     {
       "name": "firecrawl-map",
       "folder": "firecrawl-map",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Discover and list all URLs on a website, with optional search filtering. Use this skill when the user wants to find a specific page on a large site, list all URLs, see the site structure, find where something is on a domain, or says \"map the site\", \"find the URL for\", \"what pages are on\", or \"list all pages\". Essential when the user knows which site but not which exact page.",
       "path": "research-scraping/firecrawl-map"
     },
     {
       "name": "firecrawl-scrape",
       "folder": "firecrawl-scrape",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Extract clean markdown from any URL, including JavaScript-rendered SPAs. Use this skill whenever the user provides a URL and wants its content, says \"scrape\", \"grab\", \"fetch\", \"pull\", \"get the page\", \"extract from this URL\", or \"read this webpage\". Handles JS-rendered pages, multiple concurrent URLs, and returns LLM-optimized markdown. Use this instead of WebFetch for any webpage content extractio",
       "path": "research-scraping/firecrawl-scrape"
     },
     {
       "name": "firecrawl-search",
       "folder": "firecrawl-search",
       "category": "research-scraping",
-      "description": "|",
+      "description": "Web search with full page content extraction. Use this skill whenever the user asks to search the web, find articles, research a topic, look something up, find recent news, discover sources, or says \"search for\", \"find me\", \"look up\", \"what are people saying about\", or \"find articles about\". Returns real search results with optional full-page markdown — not just snippets. Provides capabilities bey",
       "path": "research-scraping/firecrawl-search"
     },
     {
@@ -1538,7 +1893,7 @@
       "name": "geo",
       "folder": "geo",
       "category": "seo-marketing",
-      "description": ">",
+      "description": "GEO-first SEO analysis tool. Optimizes websites for AI-powered search engines (ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews) while maintaining traditional SEO foundations. Performs full GEO audits, citability scoring, AI crawler analysis, llms.txt generation, brand mention scanning, platform-specific optimization, schema markup, technical SEO, content quality (E-E-A-T), and client-read",
       "path": "seo-marketing/geo"
     },
     {
@@ -1699,7 +2054,7 @@
       "name": "code-reviewer",
       "folder": "code-reviewer",
       "category": "testing-quality",
-      "description": "|",
+      "description": "Thorough code review with focus on security, performance, and best practices. Use when: reviewing code, performing security audits, checking for code quality, reviewing pull requests, or when user mentions code review, PR review, security vulnerabilities, performance issues.",
       "path": "testing-quality/code-reviewer"
     },
     {
@@ -1713,7 +2068,7 @@
       "name": "debugger",
       "folder": "debugger",
       "category": "testing-quality",
-      "description": "|",
+      "description": "Systematic debugging and root cause analysis for identifying and fixing software issues. Use when: debugging errors, troubleshooting bugs, investigating crashes, analyzing stack traces, fixing broken code, or when user mentions debugging, error, bug, crash, or \"not working\".",
       "path": "testing-quality/debugger"
     },
     {
@@ -1745,6 +2100,20 @@
       "path": "testing-quality/playwright"
     },
     {
+      "name": "real-test-admin",
+      "folder": "real-test-admin",
+      "category": "testing-quality",
+      "description": "Drive the Neo Health ADMIN dashboard against a real deployment (Railway staging or local :3002) with playwright-cli and direct API calls. Use whenever asked to test, verify, smoke-test, sweep, or \"actually check\" the admin panel — a single admin screen or all of them. Covers admin auth (admin_token cookie + AdminRoleGuard), the full route inventory, the shared-staging blast radius, and the failure signatures unique to this app.",
+      "path": "testing-quality/real-test-admin"
+    },
+    {
+      "name": "real-test-playwright",
+      "folder": "real-test-playwright",
+      "category": "testing-quality",
+      "description": "Test Neo Health features against a REAL running stack (docker + backend + Next apps) using playwright-cli and direct API calls. Use whenever asked to \"test in the UI\", \"verify it actually works\", \"check the app\", or after building any provider/patient/admin feature. Covers bringing the stack up, seeded logins, enabling feature flags, driving the browser, and the gotchas that waste the most time.",
+      "path": "testing-quality/real-test-playwright"
+    },
+    {
       "name": "rust-testing",
       "folder": "rust-testing",
       "category": "testing-quality",
@@ -1773,11 +2142,193 @@
       "path": "testing-quality/verification-before-completion"
     },
     {
+      "name": "visual-regression",
+      "folder": "visual-regression",
+      "category": "testing-quality",
+      "description": "Measure what actually changed between two screenshots of a page, using content-masked SSIM. Fires when the user makes a CSS/layout/theme change and wants to know whether anything else moved, when verifying a refactor was visually neutral, when reviewing UI work before committing, or when asking \"did I break anything\" / \"does this look the same\" / \"compare before and after\". Produces a number and the coordinates of the biggest differences, instead of eyeballing two screenshots side by side.",
+      "path": "testing-quality/visual-regression"
+    },
+    {
       "name": "webapp-testing",
       "folder": "webapp-testing",
       "category": "testing-quality",
       "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
       "path": "testing-quality/webapp-testing"
+    },
+    {
+      "name": "apollo-13",
+      "folder": "apollo-13",
+      "category": "unhinged",
+      "description": "Works a critical failure under hard constraints — limited options, no clean fix — to get the broken thing home with whatever you have; invoke via /apollo-13 when something important is down, the usual tools are unavailable, and you must improvise a survival fix.",
+      "path": "unhinged/apollo-13"
+    },
+    {
+      "name": "autopilot-chaos",
+      "folder": "autopilot-chaos",
+      "category": "unhinged",
+      "description": "Takes the whole task and runs it end to end without stopping to ask, leaving the user to review at the finish line; invoke via /autopilot-chaos when you want a fully autonomous run and will inspect the result once it's done.",
+      "path": "unhinged/autopilot-chaos"
+    },
+    {
+      "name": "basement-hacker",
+      "folder": "basement-hacker",
+      "category": "unhinged",
+      "description": "Goes underground to reverse-engineer internals, read the source nobody reads, and explain how something actually works; invoke via /basement-hacker when documentation is missing or lying and you need ground truth from the implementation itself.",
+      "path": "unhinged/basement-hacker"
+    },
+    {
+      "name": "caffeine-overdose",
+      "folder": "caffeine-overdose",
+      "category": "unhinged",
+      "description": "Goes wide and exhaustive — every option, every edge, every step spelled out, the opposite of a compressor; invoke via /caffeine-overdose when you want maximum thoroughness and nothing left implicit.",
+      "path": "unhinged/caffeine-overdose"
+    },
+    {
+      "name": "chinese-grandpa",
+      "folder": "chinese-grandpa",
+      "category": "unhinged",
+      "description": "Compresses long, repeated sub-agent instructions by translating them into Mandarin (more meaning per character) to slash the token bill, then dispatches the compressed brief to a fleet of sub-agents while preserving original intent; invoke via /chinese-grandpa when you are about to fan out the same heavy instructions to many sub-agents and the cost is climbing.",
+      "path": "unhinged/chinese-grandpa"
+    },
+    {
+      "name": "cowboy-coder",
+      "folder": "cowboy-coder",
+      "category": "unhinged",
+      "description": "Makes the judgment calls itself and keeps moving instead of pausing at every fork — fast and opinionated, best on low-stakes work; invoke via /cowboy-coder when you'd rather get a decisive result than answer twenty clarifying questions.",
+      "path": "unhinged/cowboy-coder"
+    },
+    {
+      "name": "crackhead-energy",
+      "folder": "crackhead-energy",
+      "category": "unhinged",
+      "description": "Fires out ideas at full speed — twenty rough directions in a minute for the user to cherry-pick; invoke via /crackhead-energy when you're brainstorming and want raw quantity and range over polish.",
+      "path": "unhinged/crackhead-energy"
+    },
+    {
+      "name": "divorced-dad",
+      "folder": "divorced-dad",
+      "category": "unhinged",
+      "description": "Anti-gold-plating mode that builds the simplest functional version first, skips overengineering, and ships something usable today because working beats perfect; invoke via /divorced-dad when you need it live tonight, not pretty.",
+      "path": "unhinged/divorced-dad"
+    },
+    {
+      "name": "duct-tape-dev",
+      "folder": "duct-tape-dev",
+      "category": "unhinged",
+      "description": "Ships the quick patch that unblocks you right now and clearly flags it as debt to revisit later; invoke via /duct-tape-dev when you're blocked and need a working stopgap immediately, accepting that it's temporary.",
+      "path": "unhinged/duct-tape-dev"
+    },
+    {
+      "name": "feral-goblin",
+      "folder": "feral-goblin",
+      "category": "unhinged",
+      "description": "Drops the small talk and goes heads-down — no preamble, just code and short status lines until done; invoke via /feral-goblin when you want execution with minimal chatter.",
+      "path": "unhinged/feral-goblin"
+    },
+    {
+      "name": "gas-station-genius",
+      "folder": "gas-station-genius",
+      "category": "unhinged",
+      "description": "Solves the problem using only what is already in the repo — no new libraries, no installs, a fix built from parts on hand; invoke via /gas-station-genius when you can't or won't add dependencies and need a solution from existing code.",
+      "path": "unhinged/gas-station-genius"
+    },
+    {
+      "name": "goblin-mode",
+      "folder": "goblin-mode",
+      "category": "unhinged",
+      "description": "Gets it working ugly first — no naming debates, no structure until structure earns its place; invoke via /goblin-mode when you want raw forward progress and will refactor later, if ever.",
+      "path": "unhinged/goblin-mode"
+    },
+    {
+      "name": "keyboard-gremlin",
+      "folder": "keyboard-gremlin",
+      "category": "unhinged",
+      "description": "Makes the smallest possible change — surgical edits, minimal diff, nothing touched that didn't need to be; invoke via /keyboard-gremlin when you want a precise fix with the tiniest footprint and zero collateral changes.",
+      "path": "unhinged/keyboard-gremlin"
+    },
+    {
+      "name": "macgyver",
+      "folder": "macgyver",
+      "category": "unhinged",
+      "description": "Improvises a solution from primitives — standard library and cleverness instead of reaching for a new framework; invoke via /macgyver when the elegant answer is a few smart lines of plain code rather than another heavy dependency.",
+      "path": "unhinged/macgyver"
+    },
+    {
+      "name": "meth-lab",
+      "folder": "meth-lab",
+      "category": "unhinged",
+      "description": "Workflow and system optimizer that takes a messy system, bloated prompt, broken automation, or slow process and strips it to the fastest, cheapest, cleanest version that still works; invoke via /meth-lab when something runs but feels heavy, expensive, or held together with tape.",
+      "path": "unhinged/meth-lab"
+    },
+    {
+      "name": "panic-mode",
+      "folder": "panic-mode",
+      "category": "unhinged",
+      "description": "Triages a live incident — stop the bleeding first, smallest safe fix next, post-mortem once stable; invoke via /panic-mode when something is on fire in production and you need to restore service before understanding everything.",
+      "path": "unhinged/panic-mode"
+    },
+    {
+      "name": "questionable-engineering",
+      "folder": "questionable-engineering",
+      "category": "unhinged",
+      "description": "Picks the solution that works over the one that's technically correct — pragmatic, slightly cursed, perfect for prototypes; invoke via /questionable-engineering when you need a result that functions now and don't care that purists would wince.",
+      "path": "unhinged/questionable-engineering"
+    },
+    {
+      "name": "rage-compile",
+      "folder": "rage-compile",
+      "category": "unhinged",
+      "description": "Attacks the error list in one relentless pass — fix, rebuild, repeat, no commentary — until it builds clean; invoke via /rage-compile when you have a wall of build/type/lint errors and just want them gone.",
+      "path": "unhinged/rage-compile"
+    },
+    {
+      "name": "redneck-engineer",
+      "folder": "redneck-engineer",
+      "category": "unhinged",
+      "description": "Turns a vague idea into a clear build plan — short PRD, task list, user flows, constraints, and acceptance criteria — so Claude Code knows exactly what to build; invoke via /redneck-engineer when you know what you want but Claude keeps building the wrong thing.",
+      "path": "unhinged/redneck-engineer"
+    },
+    {
+      "name": "schizotech",
+      "folder": "schizotech",
+      "category": "unhinged",
+      "description": "Connects the dots nobody asked for — wild, lateral architecture ideas linking things you'd never pair on purpose; invoke via /schizotech when you want unconventional cross-domain inspiration, with the explicit understanding that you must filter it heavily.",
+      "path": "unhinged/schizotech"
+    },
+    {
+      "name": "sleep-deprived-founder",
+      "folder": "sleep-deprived-founder",
+      "category": "unhinged",
+      "description": "Cuts the backlog to the one or two things that actually move the needle and ignores the rest; invoke via /sleep-deprived-founder when you have too much to do and need ruthless prioritization, not a longer list.",
+      "path": "unhinged/sleep-deprived-founder"
+    },
+    {
+      "name": "speedrun",
+      "folder": "speedrun",
+      "category": "unhinged",
+      "description": "Finds the shortest path to done and takes it — no detours, no nice-to-haves; invoke via /speedrun when the only goal is to complete the task as fast as possible with nothing extra.",
+      "path": "unhinged/speedrun"
+    },
+    {
+      "name": "tax-fraud",
+      "folder": "tax-fraud",
+      "category": "unhinged",
+      "description": "Hunts cost everywhere — trims tokens, kills redundant calls, and reports the cheapest path to the same result; invoke via /tax-fraud when you want aggressive (but technically legal) cost optimization of an AI workflow, pipeline, or process.",
+      "path": "unhinged/tax-fraud"
+    },
+    {
+      "name": "weaponized-autism",
+      "folder": "weaponized-autism",
+      "category": "unhinged",
+      "description": "Obsessive-detail mode that reads every relevant file, checks every edge case, questions every assumption, and chases every dependency before answering; slower on purpose and far harder to fool — invoke via /weaponized-autism when a confident-but-wrong answer would be expensive, e.g. deep debugging, auditing, or high-stakes research.",
+      "path": "unhinged/weaponized-autism"
+    },
+    {
+      "name": "zero-sleep",
+      "folder": "zero-sleep",
+      "category": "unhinged",
+      "description": "Holds the thread across a big multi-step build without losing the plot — long-haul endurance and context-keeping; invoke via /zero-sleep when a task spans many steps and hours and you need consistency from start to finish.",
+      "path": "unhinged/zero-sleep"
     },
     {
       "name": "Agent Development",
@@ -1797,21 +2348,28 @@
       "name": "codex",
       "folder": "codex",
       "category": "workflow-meta",
-      "description": ">",
+      "description": "Enables Claude Code to invoke the Codex CLI (`codex exec` and session resumes) for automated code analysis, refactoring, and editing workflows. Triggers on any request to use Codex — \"use Codex to...\", \"run Codex on...\", \"analyze with Codex\", \"have Codex look at...\", \"let Codex handle...\", \"Codex review...\", \"send this to Codex\", etc.",
       "path": "workflow-meta/codex"
     },
     {
       "name": "context-driven-development",
       "folder": "context-driven-development",
       "category": "workflow-meta",
-      "description": ">-",
+      "description": "Creates and maintains project context artifacts (product.md, tech-stack.md, workflow.md, tracks.md) in a `conductor/` directory. Scaffolds new projects from scratch, extracts context from existing codebases, validates artifact consistency before implementation, and synchronizes documents as the project evolves. Use when setting up a project, creating or updating product docs, managing a tech stack",
       "path": "workflow-meta/context-driven-development"
+    },
+    {
+      "name": "cursor",
+      "folder": "cursor",
+      "category": "workflow-meta",
+      "description": "Enables Claude Code to delegate work to the Cursor Agent CLI (`cursor-agent -p`, resumes, and plan/ask modes) for automated code analysis, refactoring, and editing — then supervises the result. Triggers on any request to use Cursor — \"use Cursor to...\", \"run Cursor on...\", \"analyze with Cursor\", \"have Cursor look at...\", \"let Cursor handle...\", \"Cursor review...\", \"send this to Cursor\", \"delegate ",
+      "path": "workflow-meta/cursor"
     },
     {
       "name": "decision-helper",
       "folder": "decision-helper",
       "category": "workflow-meta",
-      "description": "|",
+      "description": "Structured decision-making frameworks for evaluating options and making informed choices. Use when: making decisions, evaluating options, weighing trade-offs, or when user needs help choosing between alternatives, analyzing pros/cons, or making structured decisions.",
       "path": "workflow-meta/decision-helper"
     },
     {
@@ -1843,6 +2401,13 @@
       "path": "workflow-meta/finishing-a-development-branch"
     },
     {
+      "name": "full-output-enforcement",
+      "folder": "full-output-enforcement",
+      "category": "workflow-meta",
+      "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+      "path": "workflow-meta/full-output-enforcement"
+    },
+    {
       "name": "graph-engineer",
       "folder": "graph-engineer",
       "category": "workflow-meta",
@@ -1860,7 +2425,7 @@
       "name": "project-planner",
       "folder": "project-planner",
       "category": "workflow-meta",
-      "description": "|",
+      "description": "Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones. Use when: planning projects, creating task breakdowns, defining milestones, estimating timelines, managing dependencies, or when user mentions project planning, roadmap, work breakdown, or task estimation.",
       "path": "workflow-meta/project-planner"
     },
     {

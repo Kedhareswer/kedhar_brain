@@ -1,4 +1,4 @@
-# Skills Catalog — 257 agent skills
+# Skills Catalog — 337 agent skills
 
 > ⚠️ Skills for **AI agents building projects for Kedhar**. NOT Kedhar's personal skills (see `../../myself/`).
 
@@ -10,8 +10,9 @@
 - **[kedhar-project-conventions](kedhar-playbooks/kedhar-project-conventions/SKILL.md)** — Kedhar's house style for any project an agent builds for him — default tech stack, repo structure, README format, naming, and deployment targets. Use 
 - **[kedhar-rag-webapp](kedhar-playbooks/kedhar-rag-webapp/SKILL.md)** — Build a Retrieval-Augmented Generation (chat-with-documents) web app the way Kedhar does — ingest/parse docs, chunk, embed, vector store, multi-provid
 
-## AI & LLM Development (29)
+## AI & LLM Development (30)
 
+- **[agent-development](ai-and-llm/agent-development/SKILL.md)** — This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description",
 - **[agentic-engineering](ai-and-llm/agentic-engineering/SKILL.md)** — Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
 - **[ai-agents-architect](ai-and-llm/ai-agents-architect/SKILL.md)** — Expert in designing and building autonomous AI agents. Masters tool use, memory systems, planning strategies, and multi-agent orchestration
 - **[ai-code-security](ai-and-llm/ai-code-security/SKILL.md)** — Security vulnerabilities in AI-generated code and LLM applications, covering OWASP Top 10 for LLMs, secure coding patterns, and AI-specific threat mod
@@ -40,7 +41,7 @@
 - **[prompt-engineer](ai-and-llm/prompt-engineer/SKILL.md)** — Expert in designing effective prompts for LLM-powered applications. Masters prompt structure, context management, output formatting, and prompt evalua
 - **[prompt-engineering-patterns](ai-and-llm/prompt-engineering-patterns/SKILL.md)** — Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production
 - **[prompt-injection-defense](ai-and-llm/prompt-injection-defense/SKILL.md)** — Defense techniques against prompt injection attacks including direct injection, indirect injection, and jailbreaks - theUse when "prompt injection, ja
-- **[prompt-optimizer](ai-and-llm/prompt-optimizer/SKILL.md)** — >-
+- **[prompt-optimizer](ai-and-llm/prompt-optimizer/SKILL.md)** — Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a ready-to-paste optimized prompt. Advi
 
 ## RAG & Vector Search (20)
 
@@ -88,7 +89,7 @@
 - **[python-code-style](python/python-code-style/SKILL.md)** — Python code style, linting, formatting, naming conventions, and documentation standards
 - **[python-design-patterns](python/python-design-patterns/SKILL.md)** — Python design patterns including KISS, Separation of Concerns, Single Responsibility, and composition over inheritance. Use this skill when designing 
 - **[python-error-handling](python/python-error-handling/SKILL.md)** — Python error handling patterns including input validation, exception hierarchies, and partial failure handling
-- **[python-expert](python/python-expert/SKILL.md)** — |
+- **[python-expert](python/python-expert/SKILL.md)** — Senior Python developer expertise for writing clean, efficient, and well-documented code
 - **[python-observability](python/python-observability/SKILL.md)** — Python observability patterns including structured logging, metrics, and distributed tracing
 - **[python-packaging](python/python-packaging/SKILL.md)** — Create distributable Python packages with proper project structure, setup.py/pyproject.toml, and publishing to PyPI
 - **[python-patterns](python/python-patterns/SKILL.md)** — Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.
@@ -100,15 +101,20 @@
 - **[python-type-safety](python/python-type-safety/SKILL.md)** — Python type safety with type hints, generics, protocols, and strict type checking
 - **[uv-package-manager](python/uv-package-manager/SKILL.md)** — Master the uv package manager for fast Python dependency management, virtual environments, and modern Python project workflows
 
-## Frontend / Web (12)
+## Frontend / Web (17)
 
 - **[3d-web-experience](frontend-web/3d-web-experience/SKILL.md)** — Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3
+- **[ask-sonner](frontend-web/ask-sonner/SKILL.md)** — Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and loading toasts, updating, dismiss
 - **[develop-web-game](frontend-web/develop-web-game/SKILL.md)** — Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwr
+- **[framer](frontend-web/framer/SKILL.md)** — Use when the user wants to design, edit, analyze, or publish a website or web page — creating layouts, editing sections, updating text or images, quer
+- **[framer-code-components](frontend-web/framer-code-components/SKILL.md)** — Framer code component implementation guidance, platform constraints, layout annotations, property controls, and authoring best practices. Use only aft
 - **[frontend-design](frontend-web/frontend-design/SKILL.md)** — Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, a
 - **[frontend-slides](frontend-web/frontend-slides/SKILL.md)** — Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files
-- **[fullstack-developer](frontend-web/fullstack-developer/SKILL.md)** — |
+- **[fullstack-developer](frontend-web/fullstack-developer/SKILL.md)** — Modern web development expertise covering React, Node.js, databases, and full-stack architecture
+- **[image-to-code](frontend-web/image-to-code/SKILL.md)** — Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them,
 - **[nextjs-app-router-patterns](frontend-web/nextjs-app-router-patterns/SKILL.md)** — Master Next.js 14+ App Router with Server Components, streaming, parallel routes, and advanced data fetching
 - **[nextjs-turbopack](frontend-web/nextjs-turbopack/SKILL.md)** — Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.
+- **[pick-ui-library](frontend-web/pick-ui-library/SKILL.md)** — Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag a
 - **[react-doctor](frontend-web/react-doctor/SKILL.md)** — Run after making React changes to catch issues early
 - **[react-native-architecture](frontend-web/react-native-architecture/SKILL.md)** — Build production React Native apps with Expo, navigation, native modules, offline sync, and cross-platform patterns
 - **[react-state-management](frontend-web/react-state-management/SKILL.md)** — Master modern React state management with Redux Toolkit, Zustand, Jotai, and React Query
@@ -129,7 +135,7 @@
 ## Database & Data (10)
 
 - **[data-analysis](database-data/data-analysis/SKILL.md)** — Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot 
-- **[data-analyst](database-data/data-analyst/SKILL.md)** — |
+- **[data-analyst](database-data/data-analyst/SKILL.md)** — SQL, pandas, and statistical analysis expertise for data exploration and insights
 - **[data-quality-frameworks](database-data/data-quality-frameworks/SKILL.md)** — Implement data quality validation with Great Expectations, dbt tests, and data contracts
 - **[data-scraper-agent](database-data/data-scraper-agent/SKILL.md)** — Build a fully automated AI-powered data collection agent for any public source — job boards, prices, news, GitHub, sports, anything. Scrapes on a sche
 - **[data-storytelling](database-data/data-storytelling/SKILL.md)** — Transform data into compelling narratives using visualization, context, and persuasive structure
@@ -139,22 +145,25 @@
 - **[neo4j-migration-skill](database-data/neo4j-migration-skill/SKILL.md)** — Use when upgrading Neo4j drivers to new major versions
 - **[sql-optimization-patterns](database-data/sql-optimization-patterns/SKILL.md)** — Master SQL query optimization, indexing strategies, and EXPLAIN analysis to dramatically improve database performance and eliminate slow queries
 
-## Testing & Quality (15)
+## Testing & Quality (18)
 
 - **[benchmark](testing-quality/benchmark/SKILL.md)** — Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.
 - **[code-quality](testing-quality/code-quality/SKILL.md)** — Writing maintainable code - readability principles, SOLID patterns applied pragmatically, and the judgment to know when rules should bendUse when "cod
 - **[code-review-excellence](testing-quality/code-review-excellence/SKILL.md)** — Master effective code review practices to provide constructive feedback, catch bugs early, and foster knowledge sharing while maintaining team morale
-- **[code-reviewer](testing-quality/code-reviewer/SKILL.md)** — |
+- **[code-reviewer](testing-quality/code-reviewer/SKILL.md)** — Thorough code review with focus on security, performance, and best practices
 - **[codebase-optimization](testing-quality/codebase-optimization/SKILL.md)** — Keeping codebases healthy, performant, and maintainable - refactoring, performance optimization, and technical debt managementUse when "refactor, opti
-- **[debugger](testing-quality/debugger/SKILL.md)** — |
+- **[debugger](testing-quality/debugger/SKILL.md)** — Systematic debugging and root cause analysis for identifying and fixing software issues
 - **[debugging-strategies](testing-quality/debugging-strategies/SKILL.md)** — Master systematic debugging techniques, profiling tools, and root cause analysis to efficiently track down bugs across any codebase or technology stac
 - **[e2e-testing-patterns](testing-quality/e2e-testing-patterns/SKILL.md)** — Master end-to-end testing with Playwright and Cypress to build reliable test suites that catch bugs, improve confidence, and enable fast deployment
 - **[parallel-debugging](testing-quality/parallel-debugging/SKILL.md)** — Debug complex issues using competing hypotheses with parallel investigation, evidence collection, and root cause arbitration. Use this skill when debu
 - **[playwright](testing-quality/playwright/SKILL.md)** — Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow deb
+- **[real-test-admin](testing-quality/real-test-admin/SKILL.md)** — Drive the Neo Health ADMIN dashboard against a real deployment (Railway staging or local :3002) with playwright-cli and direct API calls
+- **[real-test-playwright](testing-quality/real-test-playwright/SKILL.md)** — Test Neo Health features against a REAL running stack (docker + backend + Next apps) using playwright-cli and direct API calls
 - **[rust-testing](testing-quality/rust-testing/SKILL.md)** — Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.
 - **[systematic-debugging](testing-quality/systematic-debugging/SKILL.md)** — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 - **[test-driven-development](testing-quality/test-driven-development/SKILL.md)** — Use when implementing any feature or bugfix, before writing implementation code
 - **[verification-before-completion](testing-quality/verification-before-completion/SKILL.md)** — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming
+- **[visual-regression](testing-quality/visual-regression/SKILL.md)** — Measure what actually changed between two screenshots of a page, using content-masked SSIM. Fires when the user makes a CSS/layout/theme change and wa
 - **[webapp-testing](testing-quality/webapp-testing/SKILL.md)** — Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, ca
 
 ## DevOps & CI/CD (9)
@@ -175,47 +184,65 @@
 - **[security-review](security/security-review/SKILL.md)** — Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive featur
 - **[security-scan](security/security-scan/SKILL.md)** — Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Check
 
-## Design / UI / UX (16)
+## Design / UI / UX (31)
 
 - **[3d-modeling](design-ui-ux/3d-modeling/SKILL.md)** — Expert 3D modeling specialist with deep knowledge of topology, UV mapping, game-ready and film-ready pipelines, DCC tool workflows (Blender, Maya, ZBr
 - **[Accessibility Auditor](design-ui-ux/Accessibility Auditor/SKILL.md)** — Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design
+- **[accessibility-auditor](design-ui-ux/accessibility-auditor/SKILL.md)** — Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design
+- **[agentation](design-ui-ux/agentation/SKILL.md)** — Add Agentation visual feedback toolbar to a Next.js project
+- **[agentation-self-driving](design-ui-ux/agentation-self-driving/SKILL.md)** — Autonomous design critique mode using the Agentation annotation toolbar
 - **[ai-brand-kit](design-ui-ux/ai-brand-kit/SKILL.md)** — Build comprehensive AI-native brand asset systems that maintain consistency across all AI-generated content. Train AI tools on brand guidelines, creat
 - **[ai-visual-effects](design-ui-ux/ai-visual-effects/SKILL.md)** — The enhancement layer for AI-generated content. This skill covers AI-powered visual effects, compositing, upscaling, restoration, and post-production 
+- **[apple-design](design-ui-ux/apple-design/SKILL.md)** — Apple's approach to interface design and fluid, physical motion, translated for the web
 - **[brand-guidelines](design-ui-ux/brand-guidelines/SKILL.md)** — Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when b
+- **[brandkit](design-ui-ux/brandkit/SKILL.md)** — Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. 
 - **[canvas-design](design-ui-ux/canvas-design/SKILL.md)** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece
 - **[design-system](design-ui-ux/design-system/SKILL.md)** — Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.
 - **[design-system-patterns](design-ui-ux/design-system-patterns/SKILL.md)** — Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns
+- **[design-taste-frontend](design-ui-ux/design-taste-frontend/SKILL.md)** — Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfa
 - **[easter-egg-design](design-ui-ux/easter-egg-design/SKILL.md)** — Expert in designing hidden features, secret codes, and delightful surprises in products. Covers discovery mechanics, reward calibration, shareability 
+- **[emil-design-eng](design-ui-ux/emil-design-eng/SKILL.md)** — This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel g
+- **[gc-minimal-zine-poster-v0-1](design-ui-ux/gc-minimal-zine-poster-v0-1/SKILL.md)** — Generate Minimal Zine Poster v0.1 poetic paper-poster prompts and the matching generated image
+- **[gpt-taste](design-ui-ux/gpt-taste/SKILL.md)** — Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial
+- **[high-end-visual-design](design-ui-ux/high-end-visual-design/SKILL.md)** — Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel e
+- **[industrial-brutalist-ui](design-ui-ux/industrial-brutalist-ui/SKILL.md)** — Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian colo
 - **[kpi-dashboard-design](design-ui-ux/kpi-dashboard-design/SKILL.md)** — Design effective KPI dashboards with metrics selection, visualization best practices, and real-time monitoring patterns
+- **[minimalist-ui](design-ui-ux/minimalist-ui/SKILL.md)** — Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.
 - **[pixel-art](design-ui-ux/pixel-art/SKILL.md)** — Deep pixel art expertise covering fundamentals, limited palettes, dithering patterns, subpixel animation, tile design, retro hardware constraints, and
 - **[pixel-art-sprites](design-ui-ux/pixel-art-sprites/SKILL.md)** — Specialist in pixel art creation, sprite animation, and limited palette designUse when "pixel art, sprites, sprite sheet, sprite animation, retro game
+- **[prototype](design-ui-ux/prototype/SKILL.md)** — Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote 
+- **[redesign-existing-projects](design-ui-ux/redesign-existing-projects/SKILL.md)** — Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards w
 - **[screen-reader-testing](design-ui-ux/screen-reader-testing/SKILL.md)** — Test web applications with screen readers including VoiceOver, NVDA, and JAWS
+- **[stitch-design-taste](design-ui-ux/stitch-design-taste/SKILL.md)** — Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typo
 - **[ui-design-system](design-ui-ux/ui-design-system/SKILL.md)** — UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and develo
 - **[ux-researcher-designer](design-ui-ux/ux-researcher-designer/SKILL.md)** — UX research and design toolkit for Senior UX Designer/Researcher including data-driven persona generation, journey mapping, usability testing framewor
 - **[visual-design-foundations](design-ui-ux/visual-design-foundations/SKILL.md)** — Apply typography, color theory, spacing systems, and iconography principles to create cohesive visual designs
 
-## Docs & Writing (5)
+## Docs & Writing (6)
 
 - **[architecture-decision-records](docs-writing/architecture-decision-records/SKILL.md)** — Write and maintain Architecture Decision Records (ADRs) following best practices for technical decision documentation
+- **[codebase-to-course](docs-writing/codebase-to-course/SKILL.md)** — Turn any codebase into a beautiful, interactive single-page HTML course that teaches how the code works to non-technical people. Use this skill whenev
 - **[doc](docs-writing/doc/SKILL.md)** — Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx
-- **[meeting-notes](docs-writing/meeting-notes/SKILL.md)** — |
+- **[meeting-notes](docs-writing/meeting-notes/SKILL.md)** — Structured meeting summaries with action items, decisions, and key discussion points
 - **[writing-plans](docs-writing/writing-plans/SKILL.md)** — Use when you have a spec or requirements for a multi-step task, before touching code
 - **[writing-skills](docs-writing/writing-skills/SKILL.md)** — Use when creating new skills, editing existing skills, or verifying skills work before deployment
 
-## Workflow & Meta (18)
+## Workflow & Meta (20)
 
 - **[Agent Development](workflow-meta/Agent Development/SKILL.md)** — This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description",
 - **[brainstorming](workflow-meta/brainstorming/SKILL.md)** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent
-- **[codex](workflow-meta/codex/SKILL.md)** — >
-- **[context-driven-development](workflow-meta/context-driven-development/SKILL.md)** — >-
-- **[decision-helper](workflow-meta/decision-helper/SKILL.md)** — |
+- **[codex](workflow-meta/codex/SKILL.md)** — Enables Claude Code to invoke the Codex CLI (`codex exec` and session resumes) for automated code analysis, refactoring, and editing workflows. Trigge
+- **[context-driven-development](workflow-meta/context-driven-development/SKILL.md)** — Creates and maintains project context artifacts (product.md, tech-stack.md, workflow.md, tracks.md) in a `conductor/` directory. Scaffolds new project
+- **[cursor](workflow-meta/cursor/SKILL.md)** — Enables Claude Code to delegate work to the Cursor Agent CLI (`cursor-agent -p`, resumes, and plan/ask modes) for automated code analysis, refactoring
+- **[decision-helper](workflow-meta/decision-helper/SKILL.md)** — Structured decision-making frameworks for evaluating options and making informed choices
 - **[dispatching-parallel-agents](workflow-meta/dispatching-parallel-agents/SKILL.md)** — Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 - **[executing-plans](workflow-meta/executing-plans/SKILL.md)** — Use when you have a written implementation plan to execute in a separate session with review checkpoints
 - **[find-skills](workflow-meta/find-skills/SKILL.md)** — Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or e
 - **[finishing-a-development-branch](workflow-meta/finishing-a-development-branch/SKILL.md)** — Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by prese
+- **[full-output-enforcement](workflow-meta/full-output-enforcement/SKILL.md)** — Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply
 - **[graph-engineer](workflow-meta/graph-engineer/SKILL.md)** — Knowledge graph specialist for entity and causal relationship modelingUse when "knowledge graph, graph database, falkordb, neo4j, cypher query, entity
 - **[graphify-windows](workflow-meta/graphify/SKILL.md)** — any input (code, docs, papers, images) → knowledge graph → clustered communities → HTML + JSON + audit report
-- **[project-planner](workflow-meta/project-planner/SKILL.md)** — |
+- **[project-planner](workflow-meta/project-planner/SKILL.md)** — Breaks down complex projects into actionable tasks with timelines, dependencies, and milestones
 - **[receiving-code-review](workflow-meta/receiving-code-review/SKILL.md)** — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires 
 - **[requesting-code-review](workflow-meta/requesting-code-review/SKILL.md)** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 - **[skill-creator](workflow-meta/skill-creator/SKILL.md)** — Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude
@@ -226,19 +253,19 @@
 ## Research & Scraping (15)
 
 - **[arxiv-search](research-scraping/arxiv-search/SKILL.md)** — Searches arXiv for preprints and academic papers, retrieves abstracts, and filters by topic
-- **[fact-checker](research-scraping/fact-checker/SKILL.md)** — |
-- **[firecrawl](research-scraping/firecrawl/SKILL.md)** — |
-- **[firecrawl-agent](research-scraping/firecrawl-agent/SKILL.md)** — |
+- **[fact-checker](research-scraping/fact-checker/SKILL.md)** — Systematic fact verification and misinformation identification using evidence-based analysis
+- **[firecrawl](research-scraping/firecrawl/SKILL.md)** — Web scraping, search, crawling, and page interaction via the Firecrawl CLI. Use this skill whenever the user wants to search the web, find articles, r
+- **[firecrawl-agent](research-scraping/firecrawl-agent/SKILL.md)** — AI-powered autonomous data extraction that navigates complex sites and returns structured JSON. Use this skill when the user wants structured data fro
 - **[firecrawl-build-interact](research-scraping/firecrawl-build-interact/SKILL.md)** — Integrate Firecrawl `/interact` into product code for dynamic pages and browser actions after scraping
 - **[firecrawl-build-onboarding](research-scraping/firecrawl-build-onboarding/SKILL.md)** — Get Firecrawl credentials and SDK setup into a project
 - **[firecrawl-build-scrape](research-scraping/firecrawl-build-scrape/SKILL.md)** — Integrate Firecrawl `/scrape` into product code for single-page extraction
 - **[firecrawl-build-search](research-scraping/firecrawl-build-search/SKILL.md)** — Integrate Firecrawl `/search` into product code and agent workflows
-- **[firecrawl-crawl](research-scraping/firecrawl-crawl/SKILL.md)** — |
-- **[firecrawl-download](research-scraping/firecrawl-download/SKILL.md)** — |
-- **[firecrawl-interact](research-scraping/firecrawl-interact/SKILL.md)** — |
-- **[firecrawl-map](research-scraping/firecrawl-map/SKILL.md)** — |
-- **[firecrawl-scrape](research-scraping/firecrawl-scrape/SKILL.md)** — |
-- **[firecrawl-search](research-scraping/firecrawl-search/SKILL.md)** — |
+- **[firecrawl-crawl](research-scraping/firecrawl-crawl/SKILL.md)** — Bulk extract content from an entire website or site section. Use this skill when the user wants to crawl a site, extract all pages from a docs section
+- **[firecrawl-download](research-scraping/firecrawl-download/SKILL.md)** — Download an entire website as local files — markdown, screenshots, or multiple formats per page. Use this skill when the user wants to save a site loc
+- **[firecrawl-interact](research-scraping/firecrawl-interact/SKILL.md)** — Control and interact with a live browser session on any scraped page — click buttons, fill forms, navigate flows, and extract data using natural langu
+- **[firecrawl-map](research-scraping/firecrawl-map/SKILL.md)** — Discover and list all URLs on a website, with optional search filtering. Use this skill when the user wants to find a specific page on a large site, l
+- **[firecrawl-scrape](research-scraping/firecrawl-scrape/SKILL.md)** — Extract clean markdown from any URL, including JavaScript-rendered SPAs. Use this skill whenever the user provides a URL and wants its content, says "
+- **[firecrawl-search](research-scraping/firecrawl-search/SKILL.md)** — Web search with full page content extraction. Use this skill whenever the user asks to search the web, find articles, research a topic, look something
 - **[web-research](research-scraping/web-research/SKILL.md)** — Searches multiple web sources, synthesizes findings, and produces cited research reports using delegated subagents
 
 ## SEO & Marketing (20)
@@ -246,7 +273,7 @@
 - **[ai-workflow-automation](seo-marketing/ai-workflow-automation/SKILL.md)** — The systematic orchestration of AI-powered marketing workflows that combine content generation, approval processes, multi-channel distribution, and qu
 - **[automation-ai-tools](seo-marketing/automation-ai-tools/SKILL.md)** — Master the AI tools that automate repetitive work and connect your tools. From simple Zapier integrations to complex AI-powered workflows, reclaim hou
 - **[employment-contract-templates](seo-marketing/employment-contract-templates/SKILL.md)** — Create employment contracts, offer letters, and HR policy documents following legal best practices
-- **[geo](seo-marketing/geo/SKILL.md)** — >
+- **[geo](seo-marketing/geo/SKILL.md)** — GEO-first SEO analysis tool. Optimizes websites for AI-powered search engines (ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews) while maintai
 - **[geo-audit](seo-marketing/geo-audit/SKILL.md)** — Full website GEO+SEO audit with parallel subagent delegation. Orchestrates a comprehensive Generative Engine Optimization audit across AI citability, 
 - **[geo-brand-mentions](seo-marketing/geo-brand-mentions/SKILL.md)** — Brand mention and authority scanner for AI visibility. Analyzes brand presence across platforms that AI models rely on for entity recognition and cita
 - **[geo-citability](seo-marketing/geo-citability/SKILL.md)** — AI citability scoring and optimization. Analyzes web page content to determine how likely AI systems (ChatGPT, Claude, Perplexity, Gemini) are to cite
@@ -264,10 +291,11 @@
 - **[seo](seo-marketing/seo/SKILL.md)** — Search engine optimization for startups. Covers technical SEO, content strategy, and link building. Focus on sustainable approaches that compound over
 - **[SEO Optimizer](seo-marketing/SEO Optimizer/SKILL.md)** — Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements
 
-## Document Processing (9)
+## Document Processing (10)
 
 - **[docling](document-processing/docling/SKILL.md)** — Use when working with Docling document conversion, PDF extraction, table and cell structure, bbox overlays, chunking, model selection, or the repo's v
 - **[Extract structured data from unstructured files (PDF, PPTX, DOCX...)](document-processing/extract-structured-data-from-unstructured-files-pdf-pptx-docx/SKILL.md)** — Invoke this skill BEFORE implementing any structured data extraction from documents to learn the correct llama_cloud_services API usage. Required read
+- **[guizang-ppt-skill](document-processing/guizang-ppt-skill/SKILL.md)** — 生成横向翻页网页 PPT（单 HTML 文件），含 WebGL 背景、演讲者视图、观众屏同步、讲稿备注、章节幕封、数据大字报、图片网格等模板。提供两种风格：① "电子杂志 × 电子墨水"（衬线 + 流体背景 + 暖色） ② "瑞士国际主义"（无衬线 + 网格点阵 + IKB/柠檬黄/柠檬绿/安全橙高
 - **[liteparse](document-processing/liteparse/SKILL.md)** — Use this skill when the user asks to parse, perform multi-format document conversion or spatially extract text from an unstructured file (PDF, DOCX, P
 - **[pdf](document-processing/pdf/SKILL.md)** — Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) 
 - **[PDF Processing](document-processing/pdf-processing/SKILL.md)** — Invoke this skill BEFORE implementing any text extraction/parsing logic to learn how to use LlamaParse to process any document accurately. Requires ll
@@ -276,13 +304,18 @@
 - **[spreadsheet](document-processing/spreadsheet/SKILL.md)** — Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especia
 - **[xlsx](document-processing/xlsx/SKILL.md)** — Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs t
 
-## Media & Content (5)
+## Media & Content (10)
 
+- **[editor](media-content/editor/SKILL.md)** — Understand, generate, and edit footage with Diffusion Studio via the `dapi` CLI: analyze video/audio/images, generate them with AI, and compose video 
 - **[imagegen](media-content/imagegen/SKILL.md)** — Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or repl
+- **[imagegen-frontend-mobile](media-content/imagegen-frontend-mobile/SKILL.md)** — Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobi
+- **[imagegen-frontend-web](media-content/imagegen-frontend-web/SKILL.md)** — Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate 
+- **[media-use](media-content/media-use/SKILL.md)** — Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT 
 - **[screenshot](media-content/screenshot/SKILL.md)** — Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific c
 - **[sora](media-content/sora/SKILL.md)** — Use when the user asks to generate, remix, poll, list, download, or delete Sora videos via OpenAI\u2019s video API using the bundled CLI (`scripts/sor
 - **[speech](media-content/speech/SKILL.md)** — Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio 
 - **[transcribe](media-content/transcribe/SKILL.md)** — Transcribe audio files to text with optional diarization and known-speaker hints
+- **[watch](media-content/watch/SKILL.md)** — Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API 
 
 ## Specialized (4)
 
@@ -291,11 +324,15 @@
 - **[physics-simulation](specialized/physics-simulation/SKILL.md)** — Patterns for physics-based simulation including numerical integration, rigid body dynamics, fluid simulation, finite element methods, and multi-physic
 - **[rust-patterns](specialized/rust-patterns/SKILL.md)** — Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.
 
-## Animation & Motion Graphics (25)
+## Animation & Motion Graphics (47)
 
+- **[animate](animation-motion/animate/SKILL.md)** — Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, wh
+- **[animate-expo](animation-motion/animate-expo/SKILL.md)** — Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread
+- **[animation-vocabulary](animation-motion/animation-vocabulary/SKILL.md)** — Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term ("the bouncy thing when a popover opens
 - **[animejs](animation-motion/animejs/SKILL.md)** — Anime.js adapter patterns for HyperFrames
 - **[contribute-catalog](animation-motion/contribute-catalog/SKILL.md)** — Author a new HyperFrames registry block (caption style, VFX block, transition, lower third) or component (text effect, overlay, snippet) and ship it a
 - **[css-animations](animation-motion/css-animations/SKILL.md)** — CSS animation adapter patterns for HyperFrames
+- **[find-animation-opportunities](animation-motion/find-animation-opportunities/SKILL.md)** — Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact value
 - **[gsap](animation-motion/gsap/SKILL.md)** — GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position paramete
 - **[gsap-core](animation-motion/gsap-core/SKILL.md)** — Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduce
 - **[gsap-frameworks](animation-motion/gsap-frameworks/SKILL.md)** — Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount
@@ -306,25 +343,75 @@
 - **[gsap-timeline](animation-motion/gsap-timeline/SKILL.md)** — Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback
 - **[gsap-utils](animation-motion/gsap-utils/SKILL.md)** — Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe
 - **[hyperframes](animation-motion/hyperframes/SKILL.md)** — Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML
+- **[hyperframes-animation](animation-motion/hyperframes-animation/SKILL.md)** — All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND 
 - **[hyperframes-cli](animation-motion/hyperframes-cli/SKILL.md)** — HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doc
+- **[hyperframes-core](animation-motion/hyperframes-core/SKILL.md)** — The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class="clip"`, tr
+- **[hyperframes-creative](animation-motion/hyperframes-creative/SKILL.md)** — Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat pl
+- **[hyperframes-keyframes](animation-motion/hyperframes-keyframes/SKILL.md)** — Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other s
 - **[hyperframes-media](animation-motion/hyperframes-media/SKILL.md)** — Asset preprocessing for HyperFrames compositions — text-to-speech narration (Kokoro), audio/video transcription (Whisper), and background removal for 
 - **[hyperframes-registry](animation-motion/hyperframes-registry/SKILL.md)** — Install and wire registry blocks and components into HyperFrames compositions
+- **[improve-animations](animation-motion/improve-animations/SKILL.md)** — Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for
 - **[lottie](animation-motion/lottie/SKILL.md)** — Lottie and dotLottie adapter patterns for HyperFrames
-- **[motion-design](animation-motion/motion-design/SKILL.md)** — >
+- **[motion-design](animation-motion/motion-design/SKILL.md)** — Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreography, an
+- **[oil-motion](animation-motion/oil-motion/SKILL.md)** — Design, implement, optimize, and explain interactive web animations driven by scroll, pointer, drag, touch, device orientation, audio, data, or compon
 - **[remotion-best-practices](animation-motion/remotion-best-practices/SKILL.md)** — Best practices for Remotion - Video creation in React
+- **[remotion-captions](animation-motion/remotion-captions/SKILL.md)** — Transcribing, displaying and animating captions
+- **[remotion-create](animation-motion/remotion-create/SKILL.md)** — Create a new Remotion video
+- **[remotion-docs](animation-motion/remotion-docs/SKILL.md)** — Search Remotion documentation
+- **[remotion-interactivity](animation-motion/remotion-interactivity/SKILL.md)** — Structure Remotion markup for interactivity
+- **[remotion-maps](animation-motion/remotion-maps/SKILL.md)** — Remotion Map animation knowledge
+- **[remotion-markup](animation-motion/remotion-markup/SKILL.md)** — Content, animation and effects best practices
+- **[remotion-multimedia](animation-motion/remotion-multimedia/SKILL.md)** — Interacting with Mediabunny
+- **[remotion-render](animation-motion/remotion-render/SKILL.md)** — Export a Remotion video
+- **[remotion-saas](animation-motion/remotion-saas/SKILL.md)** — Build an app with Remotion
+- **[remotion-studio](animation-motion/remotion-studio/SKILL.md)** — Preview a Remotion video
 - **[remotion-to-hyperframes](animation-motion/remotion-to-hyperframes/SKILL.md)** — Translate an existing Remotion (React-based) video composition into a HyperFrames HTML composition. Use ONLY when the user explicitly asks to port, co
+- **[remotion-upgrade](animation-motion/remotion-upgrade/SKILL.md)** — Upgrade Remotion, and related packages
+- **[review-animations](animation-motion/review-animations/SKILL.md)** — Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval i
 - **[tailwind](animation-motion/tailwind/SKILL.md)** — Tailwind CSS v4.2 browser-runtime patterns for HyperFrames compositions
 - **[three](animation-motion/three/SKILL.md)** — Three.js and WebGL adapter patterns for HyperFrames
 - **[typegpu](animation-motion/typegpu/SKILL.md)** — TypeGPU and raw WebGPU adapter patterns for HyperFrames
 - **[waapi](animation-motion/waapi/SKILL.md)** — Web Animations API adapter patterns for HyperFrames
-- **[website-to-hyperframes](animation-motion/website-to-hyperframes/SKILL.md)** — |
+- **[website-to-hyperframes](animation-motion/website-to-hyperframes/SKILL.md)** — Capture a website and create a HyperFrames video from it
 
-## Quick Index — Alphabetical (257)
+## Unhinged Modes (25)
+
+- **[apollo-13](unhinged/apollo-13/SKILL.md)** — Works a critical failure under hard constraints — limited options, no clean fix — to get the broken thing home with whatever you have; invoke via /apo
+- **[autopilot-chaos](unhinged/autopilot-chaos/SKILL.md)** — Takes the whole task and runs it end to end without stopping to ask, leaving the user to review at the finish line; invoke via /autopilot-chaos when y
+- **[basement-hacker](unhinged/basement-hacker/SKILL.md)** — Goes underground to reverse-engineer internals, read the source nobody reads, and explain how something actually works; invoke via /basement-hacker wh
+- **[caffeine-overdose](unhinged/caffeine-overdose/SKILL.md)** — Goes wide and exhaustive — every option, every edge, every step spelled out, the opposite of a compressor; invoke via /caffeine-overdose when you want
+- **[chinese-grandpa](unhinged/chinese-grandpa/SKILL.md)** — Compresses long, repeated sub-agent instructions by translating them into Mandarin (more meaning per character) to slash the token bill, then dispatch
+- **[cowboy-coder](unhinged/cowboy-coder/SKILL.md)** — Makes the judgment calls itself and keeps moving instead of pausing at every fork — fast and opinionated, best on low-stakes work; invoke via /cowboy-
+- **[crackhead-energy](unhinged/crackhead-energy/SKILL.md)** — Fires out ideas at full speed — twenty rough directions in a minute for the user to cherry-pick; invoke via /crackhead-energy when you're brainstormin
+- **[divorced-dad](unhinged/divorced-dad/SKILL.md)** — Anti-gold-plating mode that builds the simplest functional version first, skips overengineering, and ships something usable today because working beat
+- **[duct-tape-dev](unhinged/duct-tape-dev/SKILL.md)** — Ships the quick patch that unblocks you right now and clearly flags it as debt to revisit later; invoke via /duct-tape-dev when you're blocked and nee
+- **[feral-goblin](unhinged/feral-goblin/SKILL.md)** — Drops the small talk and goes heads-down — no preamble, just code and short status lines until done; invoke via /feral-goblin when you want execution 
+- **[gas-station-genius](unhinged/gas-station-genius/SKILL.md)** — Solves the problem using only what is already in the repo — no new libraries, no installs, a fix built from parts on hand; invoke via /gas-station-gen
+- **[goblin-mode](unhinged/goblin-mode/SKILL.md)** — Gets it working ugly first — no naming debates, no structure until structure earns its place; invoke via /goblin-mode when you want raw forward progre
+- **[keyboard-gremlin](unhinged/keyboard-gremlin/SKILL.md)** — Makes the smallest possible change — surgical edits, minimal diff, nothing touched that didn't need to be; invoke via /keyboard-gremlin when you want 
+- **[macgyver](unhinged/macgyver/SKILL.md)** — Improvises a solution from primitives — standard library and cleverness instead of reaching for a new framework; invoke via /macgyver when the elegant
+- **[meth-lab](unhinged/meth-lab/SKILL.md)** — Workflow and system optimizer that takes a messy system, bloated prompt, broken automation, or slow process and strips it to the fastest, cheapest, cl
+- **[panic-mode](unhinged/panic-mode/SKILL.md)** — Triages a live incident — stop the bleeding first, smallest safe fix next, post-mortem once stable; invoke via /panic-mode when something is on fire i
+- **[questionable-engineering](unhinged/questionable-engineering/SKILL.md)** — Picks the solution that works over the one that's technically correct — pragmatic, slightly cursed, perfect for prototypes; invoke via /questionable-e
+- **[rage-compile](unhinged/rage-compile/SKILL.md)** — Attacks the error list in one relentless pass — fix, rebuild, repeat, no commentary — until it builds clean; invoke via /rage-compile when you have a 
+- **[redneck-engineer](unhinged/redneck-engineer/SKILL.md)** — Turns a vague idea into a clear build plan — short PRD, task list, user flows, constraints, and acceptance criteria — so Claude Code knows exactly wha
+- **[schizotech](unhinged/schizotech/SKILL.md)** — Connects the dots nobody asked for — wild, lateral architecture ideas linking things you'd never pair on purpose; invoke via /schizotech when you want
+- **[sleep-deprived-founder](unhinged/sleep-deprived-founder/SKILL.md)** — Cuts the backlog to the one or two things that actually move the needle and ignores the rest; invoke via /sleep-deprived-founder when you have too muc
+- **[speedrun](unhinged/speedrun/SKILL.md)** — Finds the shortest path to done and takes it — no detours, no nice-to-haves; invoke via /speedrun when the only goal is to complete the task as fast a
+- **[tax-fraud](unhinged/tax-fraud/SKILL.md)** — Hunts cost everywhere — trims tokens, kills redundant calls, and reports the cheapest path to the same result; invoke via /tax-fraud when you want agg
+- **[weaponized-autism](unhinged/weaponized-autism/SKILL.md)** — Obsessive-detail mode that reads every relevant file, checks every edge case, questions every assumption, and chases every dependency before answering
+- **[zero-sleep](unhinged/zero-sleep/SKILL.md)** — Holds the thread across a big multi-step build without losing the plot — long-haul endurance and context-keeping; invoke via /zero-sleep when a task s
+
+## Quick Index — Alphabetical (337)
 
 - [3d-modeling](design-ui-ux/3d-modeling/SKILL.md) · _Design / UI / UX_
 - [3d-web-experience](frontend-web/3d-web-experience/SKILL.md) · _Frontend / Web_
 - [Accessibility Auditor](design-ui-ux/Accessibility Auditor/SKILL.md) · _Design / UI / UX_
+- [accessibility-auditor](design-ui-ux/accessibility-auditor/SKILL.md) · _Design / UI / UX_
 - [Agent Development](workflow-meta/Agent Development/SKILL.md) · _Workflow & Meta_
+- [agent-development](ai-and-llm/agent-development/SKILL.md) · _AI & LLM Development_
+- [agentation](design-ui-ux/agentation/SKILL.md) · _Design / UI / UX_
+- [agentation-self-driving](design-ui-ux/agentation-self-driving/SKILL.md) · _Design / UI / UX_
 - [agentic-engineering](ai-and-llm/agentic-engineering/SKILL.md) · _AI & LLM Development_
 - [ai-agents-architect](ai-and-llm/ai-agents-architect/SKILL.md) · _AI & LLM Development_
 - [ai-brand-kit](design-ui-ux/ai-brand-kit/SKILL.md) · _Design / UI / UX_
@@ -336,34 +423,49 @@
 - [ai-visual-effects](design-ui-ux/ai-visual-effects/SKILL.md) · _Design / UI / UX_
 - [ai-workflow-automation](seo-marketing/ai-workflow-automation/SKILL.md) · _SEO & Marketing_
 - [ai-wrapper-product](ai-and-llm/ai-wrapper-product/SKILL.md) · _AI & LLM Development_
+- [animate](animation-motion/animate/SKILL.md) · _Animation & Motion Graphics_
+- [animate-expo](animation-motion/animate-expo/SKILL.md) · _Animation & Motion Graphics_
+- [animation-vocabulary](animation-motion/animation-vocabulary/SKILL.md) · _Animation & Motion Graphics_
 - [animejs](animation-motion/animejs/SKILL.md) · _Animation & Motion Graphics_
 - [api-design](backend-api/api-design/SKILL.md) · _Backend / API_
 - [api-design-principles](backend-api/api-design-principles/SKILL.md) · _Backend / API_
 - [api-designer](backend-api/api-designer/SKILL.md) · _Backend / API_
+- [apollo-13](unhinged/apollo-13/SKILL.md) · _Unhinged Modes_
+- [apple-design](design-ui-ux/apple-design/SKILL.md) · _Design / UI / UX_
 - [architecture-decision-records](docs-writing/architecture-decision-records/SKILL.md) · _Docs & Writing_
 - [architecture-patterns](backend-api/architecture-patterns/SKILL.md) · _Backend / API_
 - [arxiv-search](research-scraping/arxiv-search/SKILL.md) · _Research & Scraping_
+- [ask-sonner](frontend-web/ask-sonner/SKILL.md) · _Frontend / Web_
 - [async-python-patterns](python/async-python-patterns/SKILL.md) · _Python_
 - [autogpt-agents](ai-and-llm/autogpt-agents/SKILL.md) · _AI & LLM Development_
 - [automation-ai-tools](seo-marketing/automation-ai-tools/SKILL.md) · _SEO & Marketing_
+- [autopilot-chaos](unhinged/autopilot-chaos/SKILL.md) · _Unhinged Modes_
 - [backend-patterns](backend-api/backend-patterns/SKILL.md) · _Backend / API_
 - [backtesting-frameworks](specialized/backtesting-frameworks/SKILL.md) · _Specialized_
+- [basement-hacker](unhinged/basement-hacker/SKILL.md) · _Unhinged Modes_
 - [benchmark](testing-quality/benchmark/SKILL.md) · _Testing & Quality_
 - [brainstorming](workflow-meta/brainstorming/SKILL.md) · _Workflow & Meta_
 - [brand-guidelines](design-ui-ux/brand-guidelines/SKILL.md) · _Design / UI / UX_
+- [brandkit](design-ui-ux/brandkit/SKILL.md) · _Design / UI / UX_
+- [caffeine-overdose](unhinged/caffeine-overdose/SKILL.md) · _Unhinged Modes_
 - [canvas-design](design-ui-ux/canvas-design/SKILL.md) · _Design / UI / UX_
 - [changelog-automation](devops/changelog-automation/SKILL.md) · _DevOps & CI/CD_
+- [chinese-grandpa](unhinged/chinese-grandpa/SKILL.md) · _Unhinged Modes_
 - [chroma](rag-and-search/chroma/SKILL.md) · _RAG & Vector Search_
 - [code-quality](testing-quality/code-quality/SKILL.md) · _Testing & Quality_
 - [code-review-excellence](testing-quality/code-review-excellence/SKILL.md) · _Testing & Quality_
 - [code-reviewer](testing-quality/code-reviewer/SKILL.md) · _Testing & Quality_
 - [codebase-optimization](testing-quality/codebase-optimization/SKILL.md) · _Testing & Quality_
+- [codebase-to-course](docs-writing/codebase-to-course/SKILL.md) · _Docs & Writing_
 - [codex](workflow-meta/codex/SKILL.md) · _Workflow & Meta_
 - [coding-standards](specialized/coding-standards/SKILL.md) · _Specialized_
 - [context-driven-development](workflow-meta/context-driven-development/SKILL.md) · _Workflow & Meta_
 - [contribute-catalog](animation-motion/contribute-catalog/SKILL.md) · _Animation & Motion Graphics_
+- [cowboy-coder](unhinged/cowboy-coder/SKILL.md) · _Unhinged Modes_
+- [crackhead-energy](unhinged/crackhead-energy/SKILL.md) · _Unhinged Modes_
 - [crewai-multi-agent](ai-and-llm/crewai-multi-agent/SKILL.md) · _AI & LLM Development_
 - [css-animations](animation-motion/css-animations/SKILL.md) · _Animation & Motion Graphics_
+- [cursor](workflow-meta/cursor/SKILL.md) · _Workflow & Meta_
 - [data-analysis](database-data/data-analysis/SKILL.md) · _Database & Data_
 - [data-analyst](database-data/data-analyst/SKILL.md) · _Database & Data_
 - [data-quality-frameworks](database-data/data-quality-frameworks/SKILL.md) · _Database & Data_
@@ -380,15 +482,20 @@
 - [deployment-pipeline-design](devops/deployment-pipeline-design/SKILL.md) · _DevOps & CI/CD_
 - [design-system](design-ui-ux/design-system/SKILL.md) · _Design / UI / UX_
 - [design-system-patterns](design-ui-ux/design-system-patterns/SKILL.md) · _Design / UI / UX_
+- [design-taste-frontend](design-ui-ux/design-taste-frontend/SKILL.md) · _Design / UI / UX_
 - [develop-web-game](frontend-web/develop-web-game/SKILL.md) · _Frontend / Web_
 - [dispatching-parallel-agents](workflow-meta/dispatching-parallel-agents/SKILL.md) · _Workflow & Meta_
+- [divorced-dad](unhinged/divorced-dad/SKILL.md) · _Unhinged Modes_
 - [doc](docs-writing/doc/SKILL.md) · _Docs & Writing_
 - [docling](document-processing/docling/SKILL.md) · _Document Processing_
 - [dspy](ai-and-llm/dspy/SKILL.md) · _AI & LLM Development_
+- [duct-tape-dev](unhinged/duct-tape-dev/SKILL.md) · _Unhinged Modes_
 - [e2e-testing-patterns](testing-quality/e2e-testing-patterns/SKILL.md) · _Testing & Quality_
 - [easter-egg-design](design-ui-ux/easter-egg-design/SKILL.md) · _Design / UI / UX_
+- [editor](media-content/editor/SKILL.md) · _Media & Content_
 - [embedding-fusion-strategy](rag-and-search/embedding-fusion-strategy/SKILL.md) · _RAG & Vector Search_
 - [embedding-strategies](rag-and-search/embedding-strategies/SKILL.md) · _RAG & Vector Search_
+- [emil-design-eng](design-ui-ux/emil-design-eng/SKILL.md) · _Design / UI / UX_
 - [employment-contract-templates](seo-marketing/employment-contract-templates/SKILL.md) · _SEO & Marketing_
 - [error-handling-patterns](backend-api/error-handling-patterns/SKILL.md) · _Backend / API_
 - [evaluating-code-models](ai-and-llm/evaluating-code-models/SKILL.md) · _AI & LLM Development_
@@ -400,6 +507,8 @@
 - [faiss](rag-and-search/faiss/SKILL.md) · _RAG & Vector Search_
 - [fastapi](python/fastapi/SKILL.md) · _Python_
 - [fastapi-templates](python/fastapi-templates/SKILL.md) · _Python_
+- [feral-goblin](unhinged/feral-goblin/SKILL.md) · _Unhinged Modes_
+- [find-animation-opportunities](animation-motion/find-animation-opportunities/SKILL.md) · _Animation & Motion Graphics_
 - [find-skills](workflow-meta/find-skills/SKILL.md) · _Workflow & Meta_
 - [finishing-a-development-branch](workflow-meta/finishing-a-development-branch/SKILL.md) · _Workflow & Meta_
 - [firecrawl](research-scraping/firecrawl/SKILL.md) · _Research & Scraping_
@@ -414,9 +523,14 @@
 - [firecrawl-map](research-scraping/firecrawl-map/SKILL.md) · _Research & Scraping_
 - [firecrawl-scrape](research-scraping/firecrawl-scrape/SKILL.md) · _Research & Scraping_
 - [firecrawl-search](research-scraping/firecrawl-search/SKILL.md) · _Research & Scraping_
+- [framer](frontend-web/framer/SKILL.md) · _Frontend / Web_
+- [framer-code-components](frontend-web/framer-code-components/SKILL.md) · _Frontend / Web_
 - [frontend-design](frontend-web/frontend-design/SKILL.md) · _Frontend / Web_
 - [frontend-slides](frontend-web/frontend-slides/SKILL.md) · _Frontend / Web_
+- [full-output-enforcement](workflow-meta/full-output-enforcement/SKILL.md) · _Workflow & Meta_
 - [fullstack-developer](frontend-web/fullstack-developer/SKILL.md) · _Frontend / Web_
+- [gas-station-genius](unhinged/gas-station-genius/SKILL.md) · _Unhinged Modes_
+- [gc-minimal-zine-poster-v0-1](design-ui-ux/gc-minimal-zine-poster-v0-1/SKILL.md) · _Design / UI / UX_
 - [geo](seo-marketing/geo/SKILL.md) · _SEO & Marketing_
 - [geo-audit](seo-marketing/geo-audit/SKILL.md) · _SEO & Marketing_
 - [geo-brand-mentions](seo-marketing/geo-brand-mentions/SKILL.md) · _SEO & Marketing_
@@ -431,6 +545,8 @@
 - [geo-technical](seo-marketing/geo-technical/SKILL.md) · _SEO & Marketing_
 - [github-actions-templates](devops/github-actions-templates/SKILL.md) · _DevOps & CI/CD_
 - [gitlab-ci-patterns](devops/gitlab-ci-patterns/SKILL.md) · _DevOps & CI/CD_
+- [goblin-mode](unhinged/goblin-mode/SKILL.md) · _Unhinged Modes_
+- [gpt-taste](design-ui-ux/gpt-taste/SKILL.md) · _Design / UI / UX_
 - [graph-engineer](workflow-meta/graph-engineer/SKILL.md) · _Workflow & Meta_
 - [graphify-windows](workflow-meta/graphify/SKILL.md) · _Workflow & Meta_
 - [graphrag-evaluation](rag-and-search/graphrag-evaluation/SKILL.md) · _RAG & Vector Search_
@@ -444,20 +560,32 @@
 - [gsap-scrolltrigger](animation-motion/gsap-scrolltrigger/SKILL.md) · _Animation & Motion Graphics_
 - [gsap-timeline](animation-motion/gsap-timeline/SKILL.md) · _Animation & Motion Graphics_
 - [gsap-utils](animation-motion/gsap-utils/SKILL.md) · _Animation & Motion Graphics_
+- [guizang-ppt-skill](document-processing/guizang-ppt-skill/SKILL.md) · _Document Processing_
+- [high-end-visual-design](design-ui-ux/high-end-visual-design/SKILL.md) · _Design / UI / UX_
 - [hr-recruiting-ai-tools](seo-marketing/hr-recruiting-ai-tools/SKILL.md) · _SEO & Marketing_
 - [huggingface-accelerate](ml-training/huggingface-accelerate/SKILL.md) · _ML Training & Infra_
 - [hybrid-search-implementation](rag-and-search/hybrid-search-implementation/SKILL.md) · _RAG & Vector Search_
 - [hyperframes](animation-motion/hyperframes/SKILL.md) · _Animation & Motion Graphics_
+- [hyperframes-animation](animation-motion/hyperframes-animation/SKILL.md) · _Animation & Motion Graphics_
 - [hyperframes-cli](animation-motion/hyperframes-cli/SKILL.md) · _Animation & Motion Graphics_
+- [hyperframes-core](animation-motion/hyperframes-core/SKILL.md) · _Animation & Motion Graphics_
+- [hyperframes-creative](animation-motion/hyperframes-creative/SKILL.md) · _Animation & Motion Graphics_
+- [hyperframes-keyframes](animation-motion/hyperframes-keyframes/SKILL.md) · _Animation & Motion Graphics_
 - [hyperframes-media](animation-motion/hyperframes-media/SKILL.md) · _Animation & Motion Graphics_
 - [hyperframes-registry](animation-motion/hyperframes-registry/SKILL.md) · _Animation & Motion Graphics_
+- [image-to-code](frontend-web/image-to-code/SKILL.md) · _Frontend / Web_
 - [imagegen](media-content/imagegen/SKILL.md) · _Media & Content_
+- [imagegen-frontend-mobile](media-content/imagegen-frontend-mobile/SKILL.md) · _Media & Content_
+- [imagegen-frontend-web](media-content/imagegen-frontend-web/SKILL.md) · _Media & Content_
+- [improve-animations](animation-motion/improve-animations/SKILL.md) · _Animation & Motion Graphics_
+- [industrial-brutalist-ui](design-ui-ux/industrial-brutalist-ui/SKILL.md) · _Design / UI / UX_
 - [jupyter-notebook](python/jupyter-notebook/SKILL.md) · _Python_
 - [kedhar-fastapi-backend](kedhar-playbooks/kedhar-fastapi-backend/SKILL.md) · _Kedhar Playbooks (custom)_
 - [kedhar-ml-model-to-webapp](kedhar-playbooks/kedhar-ml-model-to-webapp/SKILL.md) · _Kedhar Playbooks (custom)_
 - [kedhar-nextjs-vercel-app](kedhar-playbooks/kedhar-nextjs-vercel-app/SKILL.md) · _Kedhar Playbooks (custom)_
 - [kedhar-project-conventions](kedhar-playbooks/kedhar-project-conventions/SKILL.md) · _Kedhar Playbooks (custom)_
 - [kedhar-rag-webapp](kedhar-playbooks/kedhar-rag-webapp/SKILL.md) · _Kedhar Playbooks (custom)_
+- [keyboard-gremlin](unhinged/keyboard-gremlin/SKILL.md) · _Unhinged Modes_
 - [knowledge-distillation](ml-training/knowledge-distillation/SKILL.md) · _ML Training & Infra_
 - [knowledge-graph-construction](rag-and-search/knowledge-graph-construction/SKILL.md) · _RAG & Vector Search_
 - [kpi-dashboard-design](design-ui-ux/kpi-dashboard-design/SKILL.md) · _Design / UI / UX_
@@ -473,9 +601,13 @@
 - [llm-evaluation](ai-and-llm/llm-evaluation/SKILL.md) · _AI & LLM Development_
 - [long-context](ai-and-llm/long-context/SKILL.md) · _AI & LLM Development_
 - [lottie](animation-motion/lottie/SKILL.md) · _Animation & Motion Graphics_
+- [macgyver](unhinged/macgyver/SKILL.md) · _Unhinged Modes_
 - [mcp-builder](ai-and-llm/mcp-builder/SKILL.md) · _AI & LLM Development_
+- [media-use](media-content/media-use/SKILL.md) · _Media & Content_
 - [meeting-notes](docs-writing/meeting-notes/SKILL.md) · _Docs & Writing_
 - [meta-prompt-engineering](ai-and-llm/meta-prompt-engineering/SKILL.md) · _AI & LLM Development_
+- [meth-lab](unhinged/meth-lab/SKILL.md) · _Unhinged Modes_
+- [minimalist-ui](design-ui-ux/minimalist-ui/SKILL.md) · _Design / UI / UX_
 - [ml-pipeline-workflow](ml-training/ml-pipeline-workflow/SKILL.md) · _ML Training & Infra_
 - [moe-training](ml-training/moe-training/SKILL.md) · _ML Training & Infra_
 - [motion-design](animation-motion/motion-design/SKILL.md) · _Animation & Motion Graphics_
@@ -486,11 +618,14 @@
 - [nextjs-app-router-patterns](frontend-web/nextjs-app-router-patterns/SKILL.md) · _Frontend / Web_
 - [nextjs-turbopack](frontend-web/nextjs-turbopack/SKILL.md) · _Frontend / Web_
 - [nodejs-backend-patterns](backend-api/nodejs-backend-patterns/SKILL.md) · _Backend / API_
+- [oil-motion](animation-motion/oil-motion/SKILL.md) · _Animation & Motion Graphics_
 - [openai-docs](ai-and-llm/openai-docs/SKILL.md) · _AI & LLM Development_
+- [panic-mode](unhinged/panic-mode/SKILL.md) · _Unhinged Modes_
 - [parallel-debugging](testing-quality/parallel-debugging/SKILL.md) · _Testing & Quality_
 - [pdf](document-processing/pdf/SKILL.md) · _Document Processing_
 - [PDF Processing](document-processing/pdf-processing/SKILL.md) · _Document Processing_
 - [physics-simulation](specialized/physics-simulation/SKILL.md) · _Specialized_
+- [pick-ui-library](frontend-web/pick-ui-library/SKILL.md) · _Frontend / Web_
 - [pinecone](rag-and-search/pinecone/SKILL.md) · _RAG & Vector Search_
 - [pixel-art](design-ui-ux/pixel-art/SKILL.md) · _Design / UI / UX_
 - [pixel-art-sprites](design-ui-ux/pixel-art-sprites/SKILL.md) · _Design / UI / UX_
@@ -502,6 +637,7 @@
 - [prompt-engineering-patterns](ai-and-llm/prompt-engineering-patterns/SKILL.md) · _AI & LLM Development_
 - [prompt-injection-defense](ai-and-llm/prompt-injection-defense/SKILL.md) · _AI & LLM Development_
 - [prompt-optimizer](ai-and-llm/prompt-optimizer/SKILL.md) · _AI & LLM Development_
+- [prototype](design-ui-ux/prototype/SKILL.md) · _Design / UI / UX_
 - [python-anti-patterns](python/python-anti-patterns/SKILL.md) · _Python_
 - [python-background-jobs](python/python-background-jobs/SKILL.md) · _Python_
 - [python-code-style](python/python-code-style/SKILL.md) · _Python_
@@ -520,19 +656,38 @@
 - [pytorch-fsdp](ml-training/pytorch-fsdp/SKILL.md) · _ML Training & Infra_
 - [pytorch-lightning](ml-training/pytorch-lightning/SKILL.md) · _ML Training & Infra_
 - [qdrant-vector-search](rag-and-search/qdrant-vector-search/SKILL.md) · _RAG & Vector Search_
+- [questionable-engineering](unhinged/questionable-engineering/SKILL.md) · _Unhinged Modes_
 - [rag-engineer](rag-and-search/rag-engineer/SKILL.md) · _RAG & Vector Search_
 - [rag-implementation](rag-and-search/rag-implementation/SKILL.md) · _RAG & Vector Search_
+- [rage-compile](unhinged/rage-compile/SKILL.md) · _Unhinged Modes_
 - [rate-limiting](backend-api/rate-limiting/SKILL.md) · _Backend / API_
 - [react-doctor](frontend-web/react-doctor/SKILL.md) · _Frontend / Web_
 - [react-native-architecture](frontend-web/react-native-architecture/SKILL.md) · _Frontend / Web_
 - [react-state-management](frontend-web/react-state-management/SKILL.md) · _Frontend / Web_
+- [real-test-admin](testing-quality/real-test-admin/SKILL.md) · _Testing & Quality_
+- [real-test-playwright](testing-quality/real-test-playwright/SKILL.md) · _Testing & Quality_
 - [receiving-code-review](workflow-meta/receiving-code-review/SKILL.md) · _Workflow & Meta_
+- [redesign-existing-projects](design-ui-ux/redesign-existing-projects/SKILL.md) · _Design / UI / UX_
+- [redneck-engineer](unhinged/redneck-engineer/SKILL.md) · _Unhinged Modes_
 - [remotion-best-practices](animation-motion/remotion-best-practices/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-captions](animation-motion/remotion-captions/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-create](animation-motion/remotion-create/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-docs](animation-motion/remotion-docs/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-interactivity](animation-motion/remotion-interactivity/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-maps](animation-motion/remotion-maps/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-markup](animation-motion/remotion-markup/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-multimedia](animation-motion/remotion-multimedia/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-render](animation-motion/remotion-render/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-saas](animation-motion/remotion-saas/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-studio](animation-motion/remotion-studio/SKILL.md) · _Animation & Motion Graphics_
 - [remotion-to-hyperframes](animation-motion/remotion-to-hyperframes/SKILL.md) · _Animation & Motion Graphics_
+- [remotion-upgrade](animation-motion/remotion-upgrade/SKILL.md) · _Animation & Motion Graphics_
 - [requesting-code-review](workflow-meta/requesting-code-review/SKILL.md) · _Workflow & Meta_
 - [Retrieve relevant information through RAG](rag-and-search/retrieve-relevant-information-through-rag/SKILL.md) · _RAG & Vector Search_
+- [review-animations](animation-motion/review-animations/SKILL.md) · _Animation & Motion Graphics_
 - [rust-patterns](specialized/rust-patterns/SKILL.md) · _Specialized_
 - [rust-testing](testing-quality/rust-testing/SKILL.md) · _Testing & Quality_
+- [schizotech](unhinged/schizotech/SKILL.md) · _Unhinged Modes_
 - [screen-reader-testing](design-ui-ux/screen-reader-testing/SKILL.md) · _Design / UI / UX_
 - [screenshot](media-content/screenshot/SKILL.md) · _Media & Content_
 - [security-best-practices](security/security-best-practices/SKILL.md) · _Security_
@@ -544,13 +699,17 @@
 - [SEO Optimizer](seo-marketing/SEO Optimizer/SKILL.md) · _SEO & Marketing_
 - [similarity-search-patterns](rag-and-search/similarity-search-patterns/SKILL.md) · _RAG & Vector Search_
 - [skill-creator](workflow-meta/skill-creator/SKILL.md) · _Workflow & Meta_
+- [sleep-deprived-founder](unhinged/sleep-deprived-founder/SKILL.md) · _Unhinged Modes_
 - [sora](media-content/sora/SKILL.md) · _Media & Content_
 - [speech](media-content/speech/SKILL.md) · _Media & Content_
+- [speedrun](unhinged/speedrun/SKILL.md) · _Unhinged Modes_
 - [spreadsheet](document-processing/spreadsheet/SKILL.md) · _Document Processing_
 - [sql-optimization-patterns](database-data/sql-optimization-patterns/SKILL.md) · _Database & Data_
+- [stitch-design-taste](design-ui-ux/stitch-design-taste/SKILL.md) · _Design / UI / UX_
 - [subagent-driven-development](workflow-meta/subagent-driven-development/SKILL.md) · _Workflow & Meta_
 - [systematic-debugging](testing-quality/systematic-debugging/SKILL.md) · _Testing & Quality_
 - [tailwind](animation-motion/tailwind/SKILL.md) · _Animation & Motion Graphics_
+- [tax-fraud](unhinged/tax-fraud/SKILL.md) · _Unhinged Modes_
 - [template-skill](workflow-meta/template-skill/SKILL.md) · _Workflow & Meta_
 - [test-driven-development](testing-quality/test-driven-development/SKILL.md) · _Testing & Quality_
 - [three](animation-motion/three/SKILL.md) · _Animation & Motion Graphics_
@@ -566,7 +725,10 @@
 - [vector-index-tuning](rag-and-search/vector-index-tuning/SKILL.md) · _RAG & Vector Search_
 - [verification-before-completion](testing-quality/verification-before-completion/SKILL.md) · _Testing & Quality_
 - [visual-design-foundations](design-ui-ux/visual-design-foundations/SKILL.md) · _Design / UI / UX_
+- [visual-regression](testing-quality/visual-regression/SKILL.md) · _Testing & Quality_
 - [waapi](animation-motion/waapi/SKILL.md) · _Animation & Motion Graphics_
+- [watch](media-content/watch/SKILL.md) · _Media & Content_
+- [weaponized-autism](unhinged/weaponized-autism/SKILL.md) · _Unhinged Modes_
 - [weaviate](rag-and-search/weaviate/SKILL.md) · _RAG & Vector Search_
 - [weaviate-cookbooks](rag-and-search/weaviate-cookbooks/SKILL.md) · _RAG & Vector Search_
 - [web-component-design](frontend-web/web-component-design/SKILL.md) · _Frontend / Web_
@@ -578,3 +740,4 @@
 - [writing-plans](docs-writing/writing-plans/SKILL.md) · _Docs & Writing_
 - [writing-skills](docs-writing/writing-skills/SKILL.md) · _Docs & Writing_
 - [xlsx](document-processing/xlsx/SKILL.md) · _Document Processing_
+- [zero-sleep](unhinged/zero-sleep/SKILL.md) · _Unhinged Modes_
